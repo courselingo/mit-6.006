@@ -176,14 +176,14 @@ print(diff, oob)   # → 0 422
 ```
 核对基线   git rev-parse HEAD^ = de2b5cb（本记录所在提交的父提交）
 内容 SHA256（本次改动后、与这份记录落在同一个提交里 —— 以哈希为准，commit 只是包装）
-  7d8047318610e09777c69d0501f1feece945c98f0d5f0ffc5af1a8b5868603e9  content/01-algorithmic-thinking-peak-finding/index.md
+  0c28235875cb4489b1413e5700b5a3b9abc9ec8778c8ed3fc39fbacb219617fc  content/01-algorithmic-thinking-peak-finding/index.md
   7d016efdd7e15438e3739c559ff15f6ee7218f42f11774cea6f2ab45b1e41a8d  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-1.svg
   dca3ac59360e07c3aa7101aa30b5beab3ffa536e35267bab5838b4733c1a5b13  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-2.svg   （本轮补「同一比例尺」说明）
   80177e48102a35b1a7581164cb4bd55421ebb8dda9612b848fdbad467e2b455b  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-3.svg   （本轮改箭头落点 + 补第三分支连线）
   9e71fda6de2273e803ffd4ced18fbfd1a2fb8ee2ff6a64b5fda00ce9c691f45f  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-4.svg   （本轮补框内标签 + 丢弃范围 + 结论）
   04e034a717f459d4187e650e030cd54140f6968f2762243216f78dd0ecfa28c1  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-5.svg
   14f5d4061c34009b73106db4c65a345aa53391a1fcaf2cdce9c9df2e9532d6f4  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-6.svg
-  c6c9a8052869897c46f5037af8539b6502481de6445f2663cc3a52956754e38e  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-7.svg   （本轮补面板间流向箭头 + 改「边界」为「相邻列」）
+  6ead55bd0ece660a554834e3a3ff72e399d8ce494346ac5aae7bda4dd2ba2b57  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-7.svg   （本轮补面板间流向箭头 + 改「边界」为「相邻列」；复审后把「中点是峰」改成「中列最大值那一点就是峰」）
   797f1fe7a35876a0891381946187daed667496811680b780fd2662edc0c508af  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-8.svg
 工具 SHA256（判据本身也是参照，也会变；本次用 `Get-FileHash` 现算，未抄任何转述值）
   550d856533345e7b0d51a6bb016d60c35d36dcc51bd95722ee92471108086e8c  scripts/validate.py
@@ -265,11 +265,24 @@ print(diff, oob)   # → 0 422
   中间叠加一个浅色块会同时触发间距与重叠两条规则；信息改由框内标签与框外文字承担。
 
 **`peak-finding-7`** —— 报告未钉哈希、且它描述的版面与本文件不符（它说左下框「除一行灰字外完全空白」，
-而文件里有 5 条竖列方块），所以只采纳其中**可核**的两条：
+而文件里有 5 条竖列方块）。我采纳了其中**可核的一条**，并补了箭头：
 - 加一条**面板之间的流向箭头**（`M419,134 → M433,134`，两端各留 5px / 11px），
   「当前状态 → 下一步」不再只靠并排位置暗示。
 - 术语歧义：`左边界更大 / 右边界更大` 改为 **`左边相邻列更大 / 右边相邻列更大`** ——
   比较对象是中列最大值的左右相邻列元素，不是搜索区间的端点，原文容易与「区间边界」混淆。
+
+**`peak-finding-7` 的复审（维护者按附录十一逐条量过）** —— 4 条里我**只采纳 1 条**：
+
+| 复核者说 | 实测（读 SVG 属性） | 裁定 |
+| --- | --- | --- |
+| 左框「除一行文字外**完全空白**」 | 左框内有 **5 个 `52×36` 方块**（x=38/115/192/269/346），中列 x=192 是绿色 `#d1fae5` | ❌ 不成立 |
+| 两框之间**缺连接箭头** | `<path d="M419,134 L 433,134" marker-end="url(#arrow)">`；左框右缘 414、右框左缘 444，箭头正落在两者之间 | ❌ 不成立 |
+| 那句灰字缺 `text-anchor="middle"`，于是从中心往右排 | 原文件那一行就是 `<text x="218" y="170" font-size="10" fill="#64748b" text-anchor="middle">中列先取这一列的最大值</text>`；**属性在**，且 x=218 正好是面板中心（22+392/2） | ❌ 不成立（连「根因」也是误判） |
+| 「两边都不大 → **中点**是峰」的「中点」指代不清 | 算法上成立：那一点是**中列最大值所在的位置** | ✅ **成立，已改** |
+
+已改：图内那一行改成 **`两边都不大 → 中列最大值那一点就是峰`**；`desc` 本来就写「左右相邻列」（无需改）；
+页面 `alt` 里的「左右邻居」也改成「**左右相邻列**」，与图内措辞统一。
+页面正文里另外两处「中点」都在**一维**语境（fig3 的 alt、走查里「换一种取中点的方式」），指的是真正的中点，**保持不动**。
 
 ## 9. 空间指涉核对（新增扫描类，**只对改过图的这一轮有效**）
 
@@ -290,7 +303,8 @@ fig7 的左面板（候选列）仍在左、右面板（下一步）仍在右，
 ## 10. 结论
 
 - 第二轮 5 条 ❌ 已订正；D1/D2/D3 已改；两条清单缺口已补；本轮再补 L66「两侧只会留下一侧」、
-  溯源里「源说 half、我们按精确计算写成一半以上」那一行，并按复核意见改了 `fig2/3/4/7` 四张图。
+  溯源里「源说 half、我们按精确计算写成一半以上」那一行，并按复核意见改了 `fig2/3/4/7` 四张图；
+  `fig7` 复审后再按**唯一成立的那一条**把「中点是峰」改成「中列最大值那一点就是峰」。
 - 透镜 3：✅ 7 / ⚠️ 1 / ❌ 0 ⇒ **通过**（那 1 个 ⚠️ 已补直述句）。
 - 冻结基线已按附录七写入 §7（内容哈希 + 工具哈希 + 父提交）；守卫那条改成**可审计的穷举数字**
   （46,233 个排列 / 422 / 0，附可粘贴的复现脚本）。

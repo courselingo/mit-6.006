@@ -37,6 +37,6 @@
   <path d="M419,134 L 433,134" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
   <text x="460" y="100" font-size="11" fill="#1e293b" text-anchor="start">左边相邻列更大 → 去左半边</text>
   <text x="460" y="128" font-size="11" fill="#1e293b" text-anchor="start">右边相邻列更大 → 去右半边</text>
-  <text x="460" y="156" font-size="11" fill="#1e293b" text-anchor="start">两边都不大 → 中点是峰</text>
+  <text x="460" y="156" font-size="11" fill="#1e293b" text-anchor="start">两边都不大 → 中列最大值那一点就是峰</text>
   <text x="460" y="184" font-size="11" fill="#64748b" text-anchor="start">列数每轮至少减半</text>
 </svg>
