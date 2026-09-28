@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 258" width="760" height="258"
      role="img" aria-labelledby="fig-peak-finding-4-title fig-peak-finding-4-desc">
-  <title id="fig-peak-finding-4-title">区间收缩三步：从 8 个元素收缩到 1 个</title>
-  <desc id="fig-peak-finding-4-desc">第一轮丢掉右半边只留位置 1 到 3，第二轮丢掉左半边只留位置 3，第三轮单元素 7 就是峰；每一轮候选范围减半。</desc>
+  <title id="fig-peak-finding-4-title">区间收缩三轮：从 8 个元素收缩到 1 个</title>
+  <desc id="fig-peak-finding-4-desc">第一轮丢掉右半边只留位置 1 到 3，第二轮再丢掉位置 2 到 3 只留位置 1，第三轮单元素 6 就是峰；每一轮候选范围减半。</desc>
 
   <defs>
     <style>
@@ -18,7 +18,7 @@
   </defs>
 
   <rect x="0" y="0" width="760" height="258" fill="#ffffff"/>
-  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">区间收缩三步：从 8 个元素收缩到 1 个</text>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">区间收缩三轮：从 8 个元素收缩到 1 个</text>
   <text x="58" y="66" font-size="10" fill="#64748b" text-anchor="middle">1</text>
   <text x="150" y="66" font-size="10" fill="#64748b" text-anchor="middle">2</text>
   <text x="242" y="66" font-size="10" fill="#64748b" text-anchor="middle">3</text>
@@ -30,7 +30,7 @@
   <rect x="24.5" y="78" width="711" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
   <text x="380" y="100" font-size="12" fill="#1e40af" text-anchor="middle">第 1 轮：中点 a[4] = 2，左邻居 7 更大，丢掉位置 4 到 8</text>
   <rect x="24.5" y="139" width="251" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
-  <text x="290.5" y="161" font-size="10" fill="#64748b" text-anchor="start">第 2 轮：只剩位置 1 到 3，中点 a[2] = 4，右邻居 7 更大</text>
-  <rect x="208.5" y="200" width="67" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
-  <text x="290.5" y="222" font-size="10" fill="#64748b" text-anchor="start">第 3 轮：只剩位置 3 的 7，它不小于左右邻居</text>
+  <text x="290.5" y="161" font-size="10" fill="#64748b" text-anchor="start">第 2 轮：只剩位置 1 到 3，中点 a[2] = 4，左邻居 6 更大</text>
+  <rect x="24.5" y="200" width="67" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="106.5" y="222" font-size="10" fill="#64748b" text-anchor="start">第 3 轮：只剩位置 1 的 6，它是端点，只和右邻居 4 比</text>
 </svg>

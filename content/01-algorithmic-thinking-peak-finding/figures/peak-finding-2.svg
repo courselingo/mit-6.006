@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 212" width="760" height="212"
      role="img" aria-labelledby="fig-peak-finding-2-title fig-peak-finding-2-desc">
   <title id="fig-peak-finding-2-title">两种做法的代价对比：Θ(n) 与 Θ(log n)</title>
-  <desc id="fig-peak-finding-2-desc">左图线性扫描的条形随输入线性变高，右图二分查找的条形几乎不变：同样 100 万个元素，前者约 100 万次比较，后者约 20 次。</desc>
+  <desc id="fig-peak-finding-2-desc">左右各四根条形对应输入 10、100、1000、10000 个元素：左边的条形随输入成倍变高，右边的几乎不变，输入越大差距越大。</desc>
 
   <defs>
     <style>
@@ -23,20 +23,20 @@
   <text x="32" y="74" font-size="11" fill="#64748b">Θ(n)：线性扫描</text>
   <rect x="388" y="58" width="350" height="132" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="6,4"/>
   <text x="398" y="74" font-size="11" fill="#64748b">Θ(log n)：二分峰值查找</text>
-  <rect x="40" y="146" width="60" height="24" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="40" y="138" width="60" height="32" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
   <text x="70" y="184" font-size="10" fill="#64748b" text-anchor="middle">10 个</text>
-  <rect x="125" y="126" width="60" height="44" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="125" y="120" width="60" height="50" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
   <text x="155" y="184" font-size="10" fill="#64748b" text-anchor="middle">100 个</text>
-  <rect x="210" y="106" width="60" height="64" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="210" y="102" width="60" height="68" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
   <text x="240" y="184" font-size="10" fill="#64748b" text-anchor="middle">1000 个</text>
   <rect x="295" y="86" width="60" height="84" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
   <text x="325" y="184" font-size="10" fill="#64748b" text-anchor="middle">10000 个</text>
-  <rect x="406" y="140" width="60" height="30" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <rect x="406" y="144" width="60" height="26" rx="6" fill="#d1fae5" stroke="#22c55e"/>
   <text x="436" y="184" font-size="10" fill="#64748b" text-anchor="middle">10 个</text>
-  <rect x="491" y="136" width="60" height="34" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <rect x="491" y="140" width="60" height="30" rx="6" fill="#d1fae5" stroke="#22c55e"/>
   <text x="521" y="184" font-size="10" fill="#64748b" text-anchor="middle">100 个</text>
-  <rect x="576" y="132" width="60" height="38" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <rect x="576" y="136" width="60" height="34" rx="6" fill="#d1fae5" stroke="#22c55e"/>
   <text x="606" y="184" font-size="10" fill="#64748b" text-anchor="middle">1000 个</text>
-  <rect x="661" y="128" width="60" height="42" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <rect x="661" y="132" width="60" height="38" rx="6" fill="#d1fae5" stroke="#22c55e"/>
   <text x="691" y="184" font-size="10" fill="#64748b" text-anchor="middle">10000 个</text>
 </svg>

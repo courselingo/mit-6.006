@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 196" width="760" height="196"
      role="img" aria-labelledby="fig-peak-finding-1-title fig-peak-finding-1-desc">
   <title id="fig-peak-finding-1-title">一维数组里的峰：不小于左右邻居的元素</title>
-  <desc id="fig-peak-finding-1-desc">8 个元素的数组，位置 3 的 7 与位置 5 的 9 都不小于左右邻居，因此都是峰；两个端点各只有一个邻居。</desc>
+  <desc id="fig-peak-finding-1-desc">8 个元素的数组里位置 1、3、5、7 都是峰；位置 1 与位置 8 是端点，只和唯一邻居比，所以最左端的 6 也算峰。</desc>
 
   <defs>
     <style>
@@ -19,8 +19,8 @@
 
   <rect x="0" y="0" width="760" height="196" fill="#ffffff"/>
   <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">一维数组里的峰：不小于左右邻居的元素</text>
-  <rect x="24.5" y="76" width="67" height="42" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="58" y="102" font-size="14" fill="#1e40af" text-anchor="middle">6</text>
+  <rect x="24.5" y="76" width="67" height="42" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="58" y="102" font-size="14" fill="#166534" text-anchor="middle">6</text>
   <text x="58" y="138" font-size="10" fill="#64748b" text-anchor="middle">1</text>
   <rect x="116.5" y="76" width="67" height="42" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
   <text x="150" y="102" font-size="14" fill="#1e40af" text-anchor="middle">4</text>
@@ -37,11 +37,11 @@
   <rect x="484.5" y="76" width="67" height="42" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
   <text x="518" y="102" font-size="14" fill="#1e40af" text-anchor="middle">1</text>
   <text x="518" y="138" font-size="10" fill="#64748b" text-anchor="middle">6</text>
-  <rect x="576.5" y="76" width="67" height="42" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="610" y="102" font-size="14" fill="#1e40af" text-anchor="middle">5</text>
+  <rect x="576.5" y="76" width="67" height="42" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="610" y="102" font-size="14" fill="#166534" text-anchor="middle">5</text>
   <text x="610" y="138" font-size="10" fill="#64748b" text-anchor="middle">7</text>
   <rect x="668.5" y="76" width="67" height="42" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
   <text x="702" y="102" font-size="14" fill="#1e40af" text-anchor="middle">3</text>
   <text x="702" y="138" font-size="10" fill="#64748b" text-anchor="middle">8</text>
-  <text x="380" y="172" font-size="10" fill="#64748b" text-anchor="middle">非端点的元素要和左右两个邻居比；位置 1 与位置 8 只有一个邻居</text>
+  <text x="380" y="172" font-size="10" fill="#64748b" text-anchor="middle">位置 1、3、5、7 都是峰；左端点的 6 只和右邻居 4 比就成立</text>
 </svg>
