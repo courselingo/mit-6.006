@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 232" width="760" height="232"
      role="img" aria-labelledby="fig-peak-finding-2-title fig-peak-finding-2-desc">
   <title id="fig-peak-finding-2-title">两种做法的代价对比：Θ(n) 与 Θ(log n)</title>
-  <desc id="fig-peak-finding-2-desc">左右各四根条形对应输入 10、100、1000、10000 个元素：左边的条形随输入成倍变高，右边的几乎不变，输入越大差距越大。柱高只为示意增长趋势，两组不是同一比例尺。</desc>
+  <desc id="fig-peak-finding-2-desc">横轴与柱高都取对数：左右各四根条形对应输入 10、100、1000、10000 个元素（每档乘 10）。左边的条形每档等量升高，是一条直线；右边的条形每档只多升一点，越来越平。两组只比形状，不比高低。</desc>
 
   <defs>
     <style>
@@ -33,11 +33,11 @@
   <text x="325" y="184" font-size="10" fill="#64748b" text-anchor="middle">10000 个</text>
   <rect x="406" y="144" width="60" height="26" rx="6" fill="#d1fae5" stroke="#22c55e"/>
   <text x="436" y="184" font-size="10" fill="#64748b" text-anchor="middle">10 个</text>
-  <rect x="491" y="140" width="60" height="30" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <rect x="491" y="141" width="60" height="29" rx="6" fill="#d1fae5" stroke="#22c55e"/>
   <text x="521" y="184" font-size="10" fill="#64748b" text-anchor="middle">100 个</text>
-  <rect x="576" y="136" width="60" height="34" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <rect x="576" y="139" width="60" height="31" rx="6" fill="#d1fae5" stroke="#22c55e"/>
   <text x="606" y="184" font-size="10" fill="#64748b" text-anchor="middle">1000 个</text>
-  <rect x="661" y="132" width="60" height="38" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <rect x="661" y="137" width="60" height="33" rx="6" fill="#d1fae5" stroke="#22c55e"/>
   <text x="691" y="184" font-size="10" fill="#64748b" text-anchor="middle">10000 个</text>
-  <text x="380" y="208" font-size="10" fill="#64748b" text-anchor="middle">柱高只为示意增长趋势，两组不是同一比例尺</text>
+  <text x="380" y="208" font-size="10" fill="#64748b" text-anchor="middle">横轴与柱高均为对数刻度，两组只比增长形状</text>
 </svg>
