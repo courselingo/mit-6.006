@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 226" width="760" height="226"
      role="img" aria-labelledby="fig-peak-finding-7-title fig-peak-finding-7-desc">
-  <title id="fig-peak-finding-7-title">按列二分：中间列取最大值，只保留一半列</title>
-  <desc id="fig-peak-finding-7-desc">候选列先取中间那一列的最大值，再与左右邻居比较：左边更大就保留左半边的列，右边更大就保留右半边的列，列数每轮减半。</desc>
+  <title id="fig-peak-finding-7-title">按列二分：中间列取最大值，至多保留一半列</title>
+  <desc id="fig-peak-finding-7-desc">候选列先取中间那一列的最大值，再与左右邻居比较：左边更大就保留左半边的列，右边更大就保留右半边的列，列数每轮至少减半。</desc>
 
   <defs>
     <style>
@@ -18,7 +18,7 @@
   </defs>
 
   <rect x="0" y="0" width="760" height="226" fill="#ffffff"/>
-  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">按列二分：中间列取最大值，只保留一半列</text>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">按列二分：中间列取最大值，至多保留一半列</text>
   <rect x="38" y="96" width="52" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
   <text x="64" y="118" font-size="12" fill="#1e40af" text-anchor="middle">列 1</text>
   <rect x="115" y="96" width="52" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
@@ -37,5 +37,5 @@
   <text x="460" y="100" font-size="11" fill="#1e293b" text-anchor="start">左边界更大 → 去左半边</text>
   <text x="460" y="128" font-size="11" fill="#1e293b" text-anchor="start">右边界更大 → 去右半边</text>
   <text x="460" y="156" font-size="11" fill="#1e293b" text-anchor="start">两边都不大 → 中点是峰</text>
-  <text x="460" y="184" font-size="11" fill="#64748b" text-anchor="start">列数每轮减半</text>
+  <text x="460" y="184" font-size="11" fill="#64748b" text-anchor="start">列数每轮至少减半</text>
 </svg>

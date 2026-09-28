@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 258" width="760" height="258"
      role="img" aria-labelledby="fig-peak-finding-4-title fig-peak-finding-4-desc">
   <title id="fig-peak-finding-4-title">区间收缩三轮：从 8 个元素收缩到 1 个</title>
-  <desc id="fig-peak-finding-4-desc">第一轮丢掉右半边只留位置 1 到 3，第二轮再丢掉位置 2 到 3 只留位置 1，第三轮单元素 6 就是峰；每一轮候选范围减半。</desc>
+  <desc id="fig-peak-finding-4-desc">第一轮丢掉右半边只留位置 1 到 3，第二轮再丢掉位置 2 到 3 只留位置 1，第三轮单元素 6 就是峰；每一轮候选范围至少减半。</desc>
 
   <defs>
     <style>

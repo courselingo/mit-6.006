@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 280" width="760" height="280"
      role="img" aria-labelledby="fig-peak-finding-3-title fig-peak-finding-3-desc">
-  <title id="fig-peak-finding-3-title">一次比较的分叉：只保留可能含峰的那一半</title>
+  <title id="fig-peak-finding-3-title">一次比较的分叉：只保留可能含峰的一侧</title>
   <desc id="fig-peak-finding-3-desc">中点与左右邻居比较后走向两条分支：左邻居更大就只去左半边，右邻居更大就只去右半边；两个都不大时中点是峰。</desc>
 
   <defs>
@@ -18,7 +18,7 @@
   </defs>
 
   <rect x="0" y="0" width="760" height="280" fill="#ffffff"/>
-  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">一次比较的分叉：只保留可能含峰的那一半</text>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">一次比较的分叉：只保留可能含峰的一侧</text>
   <rect x="250" y="64" width="260" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
   <text x="380" y="86" font-size="12" fill="#b45309" text-anchor="middle">取中点 m</text>
   <text x="380" y="104" font-size="12" fill="#b45309" text-anchor="middle">比较 a[m] 与左右邻居</text>
