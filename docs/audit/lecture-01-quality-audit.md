@@ -111,7 +111,58 @@ CLRS 全称、平均情况的分布假设、第 3 讲前向指针、空输入缺
 | A5-1 | 「教材是 CLRS」两份清单都没声明 | 已补：事实清单写「教材指定 CLRS（p.1 Course Overview 的 CLRS text）」，归属清单写「CLRS 的全称 Introduction to Algorithms，讲义只写了缩写」 |
 | A5-2 | 「平均 n/2 按随机排列理解」是我们的解读但未声明 | 已加进归属清单第三条 |
 
-**我自己独立复核的旁证**（不只是采信）：① 右优先版本确实返回位置 7 的 5 且 `is_peak` 为真；② 4800 个排列上删掉 `mid < hi` **0 次改变结果**，删掉 `mid > lo` **362 次 IndexError**；③ 字节级：`CLRS` 的**字面串**确实在 p1 内容流里（`(\\(CLRS)`，紧随其后是字体 C2_0 的 `<0003>` 字形），文本层则显示 `(CLRS text)`。
+**我自己独立复核的旁证**（不只是采信）：① 右优先版本确实返回位置 7 的 5 且 `is_peak` 为真；② 字节级：`CLRS` 的**字面串**确实在 p1 内容流里（`(\\(CLRS)`，紧随其后是字体 C2_0 的 `<0003>` 字形），文本层则显示 `(CLRS text)`；③ 守卫的穷举对照，见下面这一小节。
+
+### 守卫的穷举对照（**可审计版**，替换掉此前不可复现的「362 / 4800」）
+
+第一版记录里写的是「4800 个排列上删掉 `mid < hi` 0 次改变结果、删掉 `mid > lo` 362 次 IndexError」。
+**那个数字不可审计**：`4800` 既不是任何 n 的全部排列数（n ≤ 6 全部只有 873，n = 7 是 5040），
+也没写抽样的 n 集合、索引模型与取法。按附录七的口径，**结论必须绑在产生它的那次测量上**，所以重做并记全参数：
+
+| 项 | 取值 |
+| --- | --- |
+| 数组集合 | **n = 1…8 的全部排列，共 46,233 个**（穷举，无抽样） |
+| 索引模型 | 1-based；越界（下标 < 1 或 > n）抛 IndexError；算法为「左优先 + 两个守卫」 |
+| 对照 | 分别关掉 `mid < hi` / `mid > lo` 各跑一遍全量 |
+
+| 对照 | n=1…8 全排列（46,233） | n=6 全部（720） |
+| --- | --- | --- |
+| 删掉 `mid < hi` → 改变结果 | **0** | —— |
+| 删掉 `mid > lo` → IndexError | **422** | **360** |
+
+复现脚本（可直接粘贴运行，无外部依赖）：
+
+```python
+import itertools
+class OneBased:
+    def __init__(self, v): self.v = list(v)
+    def __getitem__(self, i):
+        if i < 1 or i > len(self.v): raise IndexError(i)
+        return self.v[i - 1]
+
+def run(vals, guard_left=True, guard_right=True):
+    a = OneBased(vals); lo, hi = 1, len(vals)
+    while True:
+        if lo == hi: return lo
+        mid = (lo + hi) // 2
+        if (mid > lo or not guard_left) and a[mid] < a[mid - 1]: hi = mid - 1
+        elif (mid < hi or not guard_right) and a[mid] < a[mid + 1]: lo = mid + 1
+        else: return mid
+
+diff = oob = 0
+for n in range(1, 9):
+    for p in itertools.permutations(range(1, n + 1)):
+        if run(list(p), guard_right=False) != run(list(p)): diff += 1
+        try: run(list(p), guard_left=False)
+        except IndexError: oob += 1
+print(diff, oob)   # → 0 422
+```
+
+同一套穷举还验证了 D1 的**更强结论**：允许**每层自由选先比哪边**时，可达返回集是
+`[(1,6), (3,7), (5,9), (7,5)]` —— **正好是这个数组的全部 4 个峰，4/4 合格**。
+也就是说「换序可能返回另一个峰、都合格」这句话的强度是对的（任意顺序都合格），
+而不只是「换序也能返回某一个合格峰」。
+（平台复核者独立给出同样的 46,233 / 422 / 360 与同一个可达集；两边取数一致。）
 
 ## 7. 冻结基线 · 内容哈希 + 工具哈希（附录七）
 
@@ -123,18 +174,18 @@ CLRS 全称、平均情况的分布假设、第 3 讲前向指针、空输入缺
 > **而两次的内容哈希完全一样**。所以这份记录必须把尺子也钉住。
 
 ```
-核对基线   git rev-parse HEAD = c069330daed4e5e90762c012ee24ec9c522a9c93
-内容 SHA256
-  3dc8ce88170f024c42305ec1662bab8075ecb595f863d4c622f2059d3ccc585e  content/01-algorithmic-thinking-peak-finding/index.md
+核对基线   git rev-parse HEAD = a4bb9d1（本次改动之前的那次提交）
+内容 SHA256（本次改动后、与这份记录落在同一个提交里 —— 以哈希为准，commit 只是包装）
+  7d8047318610e09777c69d0501f1feece945c98f0d5f0ffc5af1a8b5868603e9  content/01-algorithmic-thinking-peak-finding/index.md
   7d016efdd7e15438e3739c559ff15f6ee7218f42f11774cea6f2ab45b1e41a8d  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-1.svg
-  b8e9621f1746c7f763c5b3ac55e7bdbbecacbfa21ac7de5f11bbcc27f7ea30be  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-2.svg
-  dfd637803988b73530c81323864dd68fc258f139d8b96771e6d2d9b201c3f10d  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-3.svg   （本轮为 D3 改过）
-  50c9ec0d3d399e0feb0478f91bd9c2f44ed208467ce185c62c5353e3720a6872  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-4.svg   （同上）
+  dca3ac59360e07c3aa7101aa30b5beab3ffa536e35267bab5838b4733c1a5b13  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-2.svg   （本轮补「同一比例尺」说明）
+  80177e48102a35b1a7581164cb4bd55421ebb8dda9612b848fdbad467e2b455b  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-3.svg   （本轮改箭头落点 + 补第三分支连线）
+  9e71fda6de2273e803ffd4ced18fbfd1a2fb8ee2ff6a64b5fda00ce9c691f45f  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-4.svg   （本轮补框内标签 + 丢弃范围 + 结论）
   04e034a717f459d4187e650e030cd54140f6968f2762243216f78dd0ecfa28c1  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-5.svg
   14f5d4061c34009b73106db4c65a345aa53391a1fcaf2cdce9c9df2e9532d6f4  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-6.svg
-  f4d7791a37a01b076484befe27e9aa7ba8e30a6ffb9cfe2b4600f17bddb8790b  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-7.svg   （同上）
+  c6c9a8052869897c46f5037af8539b6502481de6445f2663cc3a52956754e38e  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-7.svg   （本轮补面板间流向箭头 + 改「边界」为「相邻列」）
   797f1fe7a35876a0891381946187daed667496811680b780fd2662edc0c508af  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-8.svg
-工具 SHA256（判据本身也是参照，也会变）
+工具 SHA256（判据本身也是参照，也会变；本次用 `Get-FileHash` 现算，未抄任何转述值）
   550d856533345e7b0d51a6bb016d60c35d36dcc51bd95722ee92471108086e8c  scripts/validate.py
   14536180fc2f661776f29fab82d382603b4603ea0bb8dad7ac96df96edc53df8  scripts/check_style.py
   333fd1b2f1eabdfa30b8633fa34273ea8b6eaef1a40fff58fc5eff86160050c2  scripts/audit_content.py
@@ -144,48 +195,79 @@ CLRS 全称、平均情况的分布假设、第 3 讲前向指针、空输入缺
 ```
 
 在这组哈希上：`validate.py` / `check_style.py` / `audit_content.py --strict` / `check_figures.py --strict` /
-`build_site.py` 五条**全部 exit 0，0 error 0 warning**（正文 4357 汉字 / 8 图 = 1.84）。
+`build_site.py` 五条**全部 exit 0，0 error 0 warning**；`check_reviewed.py` 在 `PYTHONIOENCODING=utf-8`
+下 exit 0（本页是 draft，它只提示；**在 GBK 控制台下它会因打印 ✅ 抛 UnicodeEncodeError 而 exit 1 —— 那是脚本缺 `force_utf8()`，与内容无关，已报维护者**）。
+
 工具哈希里 `check_style.py`(14536180…) / `audit_content.py`(333fd1b2…) / `direction_scan.py`(5d1a2125…)
 与平台 `quality-audit.md` 附录七里记的三个前 16 位一致，**说明本次用的是平台当前版本，不是中途那个过渡版本**。
 
-## 8. 配图视觉复核的当下状态（诚实记录）
+## 8. 配图视觉复核的当下状态（**用哈希核对，不用 mtime**）
 
-报告在 `<workspace>/preview/visual-review/mit-6.006__<figure>.md`。**报告里只写判定、不写被看版本的哈希**，
-所以「结论是否对应当前字节」只能靠「报告时间 vs 图片修改时间」推断；而我的生成脚本每次都会重写全部 8 个文件，
-**mtime 对未改动的图并不可靠**。据此逐张记：
+报告在 `<workspace>/preview/visual-review/mit-6.006__<figure>.md`。
+我第一版是拿「报告时间 vs 图片 mtime」当有效性依据 —— **那个办法不可靠**：我的生成脚本每次都会重写全部 8 个文件，
+未改动的内容也会刷新 mtime。**更好的依据是报告自己钉住的哈希**：多数报告开头就有
+`复核对象 SHA256(前16)：`，与当前文件哈希一比即可判「这份结论说的是不是我手上这一版」。
 
-| 图 | 判定 | 报告时间 | 图片最后写入 | 对该版本是否有效 |
-| --- | --- | --- | --- | --- |
-| peak-finding-1 | 可用 | 21:35:55 | 21:30:15 | ✅ 有效（报告在后） |
-| peak-finding-2 | **需小修** | 21:39:37 | 21:30:15 | ✅ **有效**，且是 D3 之后的新结论 |
-| peak-finding-3 | 需小修 | 21:25:45 | 21:30:15 | ❌ **过期**（报告早于我为 D3 改这张图） |
-| peak-finding-4 | 需小修 | 21:29:12 | 21:30:15 | ❌ **过期**（同上） |
-| peak-finding-5 | 可用 | 21:31:58 | 21:30:15 | ✅ 有效 |
-| peak-finding-6 | 可用 | 21:33:34 | 21:30:15 | ✅ 有效 |
-| peak-finding-7 | 需小修 | 18:33:36 | 21:30:15 | ❌ **过期**（同上） |
-| peak-finding-8 | 可用 | 18:34:16 | 21:30:15 | ⚠️ 报告很早，但该图自首版未再改动 |
+| 图 | 报告钉住的哈希(前16) | 当前哈希(前16) | 一致？ | 报告判定 | 结论 |
+| --- | --- | --- | --- | --- | --- |
+| peak-finding-1 | 7D016EFDD7E15438 | 7d016efdd7e15438 | ✅ | 可用 | **有效** |
+| peak-finding-2 | B8E9621F1746C7F7 | dca3ac59360e07c3 | ❌ | 需小修 | **本轮已按其第 3/4 条改**（加比例尺说明），报告随之过期 |
+| peak-finding-3 | DFD637803988B735 | 80177e48102a35b1 | ❌ | 需小修 | **本轮已按其两条改**（箭头落点、第三分支连线），报告随之过期 |
+| peak-finding-4 | A5878223A4741727 | 9e71fda6de2273e8 | ❌ | 需小修 | **本轮已按其四条改**，报告随之过期 |
+| peak-finding-5 | 04E034A717F459D4 | 04e034a717f459d4 | ✅ | 可用 | **有效** |
+| peak-finding-6 | 14F5D4061C34009B | 14f5d4061c34009b | ✅ | 可用 | **有效** |
+| peak-finding-7 | （报告未记哈希） | c6c9a8052869897c | ？ | 需小修 | 报告未钉哈希；它描述的版面（左框空白）与文件不符（实际有 5 条竖列）⇒ 按「看到的是别的一版」处理，只采纳其中可核的两条（见下） |
+| peak-finding-8 | （报告未记哈希） | 797f1fe7a35876a0 | ？ | 可用 | 无法核对，但该图自首版未再改动 |
 
-⇒ 当前**不满足 `check_reviewed.py` 的配图条件**（它按报告里的「判定：」字面判），
-所以页面**仍是 `draft`**。**这四张我不自行改动** —— 以免出现「核对着在看、图在变」。
+⇒ `check_reviewed.py` 按报告里的「判定：」字面判：`fig1/5/6` 判「可用」已无问题，
+`fig2/3/4/7` 的报告**都早于我这一轮改动**，等维护者一次性重跑后才会重新生成结论。
+**页面保持 `draft`。**
 
-### 我读 `peak-finding-2` 那份「需小修」的结论（尚未动手，先记下来）
+### 本轮对四张图的改动（逐条对着复核意见，并写明不采纳的理由）
 
-它给三条版面意见 + 一条实质意见：
+**`peak-finding-2`** —— 采纳 2 条、不采纳 2 条：
+- 采纳（第 3、4 条实质意见）：在两组柱形下方加一句 **`柱高只为示意增长趋势，两组不是同一比例尺`**，
+  并写进 `desc`。**为什么不写成「横轴与柱高均为对数刻度」**：我核算过，绿组 26/30/34/38 是**等差**而不是
+  `log(log n)` 的形状（后者在 10 → 10000 上约翻一倍），所以它不是严格的双对数图；写成「对数刻度」就是
+  一句新的不实陈述。**缺的确实是「怎么读」，而不是柱高。**
+- 不采纳（第 1、2 条「面板宽度不一」「柱间距不均」）：**复算坐标后不成立**。`fig2.svg` 里两个面板是
+  `x=22 w=350` 与 `x=388 w=350`；八根柱是 `40/125/210/295` 与 `406/491/576/661`，
+  即面板内偏移完全相同（18/103/188/273）、柱宽都是 60、间隙都是 25 —— **两面板几何全等**。
+  这两条应是栅格化后的目测误差；**我不会去「修」一个不存在的缺陷**。
 
-1. 「左右面板宽度不一致（约 710 vs 640px）」与 2.「右面板柱间距不均」—— 复算坐标后**这两条不成立**：
-   两个面板都是 `x=22/388, w=350`，柱位都是面板内偏移 18/103/188/273、柱宽 60、间隙 25，
-   两个面板几何全等。
-3. **实质**：柱高与数量级不符 —— 左组 32/50/68/84（2.6 倍）却标着 10 → 10000（千倍），
-   右组 26/30/34/38（1.5 倍）而真实 log₂ 比值约 4 倍；而且**图里没有一句话说明柱高不是同一比例尺**。
-   这条我认同一半：**手绘必然压缩比例尺**，但缺了那句说明，读者确实可能按「同一比例尺」去读。
-   可行的最小修法是加一句「柱高只为示意增长趋势，两组不是同一比例尺」，而不是把柱子拉成 750 倍
-   （那会同时撞上「同行方块尺寸差 ≤60px」的房规）。
-4. 缺纵轴/刻度/柱高含义 —— 与第 3 条同源，同一句说明可一并解决。
+**`peak-finding-3`** —— 两条都采纳：
+- 箭头落点：原来两支箭在 x=300 / x=460，而两个子框中心在 194 / 564.5 ⇒ **确实偏**（一偏右一偏左，都靠中缝）。
+  改法是把父框改为**横贯全宽**（`x=22 w=716`），于是两支箭可以从父框底边出发、**正对子框顶边中心**
+  （176 / 509）；子框相应收窄为 `22..330` 与 `355..663`（间隙仍是 25）。
+- 第三分支缺连线：底部横条补一支箭头，从父框底边右侧（x=700）**竖直落到横条顶边**，
+  贴着右子框（右边缘 663）外侧下来，间距 37px（房规要求 ≥20）。
+  且现在三条箭头都从同一个决策点出发，「两个方向都不成立」不再是孤立的一行。
+
+**`peak-finding-4`** —— 四条都采纳（都是「框里没话讲 + 结论缺失」类）：
+- 三个框现在**框内都有标签**（第 1 轮原文；第 2 轮 `第 2 轮：位置 1 到 3`；第 3 轮 `位置 1`），
+  不再有「空的绿框/橙框」。
+- 第 2 轮的框外说明补上**丢弃范围**：`中点 a[2] = 4，左邻居 6 更大，丢掉位置 2 到 3`。
+- 第 3 轮补上**比较结果与最终结论**：`第 3 轮：只剩 a[1] = 6，端点只需 6 ≥ 4，它就是答案`。
+- 标题由「区间收缩**三轮**」改为 **`区间收缩：8 个元素 → 3 个 → 1 个`**（第三轮确实没有收缩，只是认出答案）。
+  页面 `alt` 同步改成 `区间收缩 8 → 3 → 1`。
+- 「框宽与刻度不对齐」一条**不采纳**：第 2 轮框 `x=24.5 w=251` 正好覆盖刻度 1–3（格左边界 24.5，格 3 右边界 275.5），
+  第 3 轮框 `x=24.5 w=67` 正好是格 1；报告里读到的「约 235 / 266 / 710 / 737」与文件值不符。
+- 「没有任何丢弃标记」一条**不作图形化处理**：被丢弃的那段与保留段**相邻**，而房规要求实心方块间距 ≥25px，
+  中间叠加一个浅色块会同时触发间距与重叠两条规则；信息改由框内标签与框外文字承担。
+
+**`peak-finding-7`** —— 报告未钉哈希、且它描述的版面与本文件不符（它说左下框「除一行灰字外完全空白」，
+而文件里有 5 条竖列方块），所以只采纳其中**可核**的两条：
+- 加一条**面板之间的流向箭头**（`M419,134 → M433,134`，两端各留 5px / 11px），
+  「当前状态 → 下一步」不再只靠并排位置暗示。
+- 术语歧义：`左边界更大 / 右边界更大` 改为 **`左边相邻列更大 / 右边相邻列更大`** ——
+  比较对象是中列最大值的左右相邻列元素，不是搜索区间的端点，原文容易与「区间边界」混淆。
 
 ## 9. 结论
 
-- 第二轮 5 条 ❌ 已订正、D1/D2/D3 已改、两条清单缺口已补、两份 audit 文档已同步。
+- 第二轮 5 条 ❌ 已订正；D1/D2/D3 已改；两条清单缺口已补；本轮再补 L66「两侧只会留下一侧」、
+  溯源里「源说 half、我们按精确计算写成一半以上」那一行，并按复核意见改了 `fig2/3/4/7` 四张图。
 - 透镜 3：✅ 7 / ⚠️ 1 / ❌ 0 ⇒ **通过**（那 1 个 ⚠️ 已补直述句）。
-- 冻结基线已按附录七写入 §7（内容哈希 + 工具哈希 + 基线 commit）。
-- **仍不放行**：配图复核尚在刷新（§8），且订正与补句都是作者自改。
-  页面保持 `status = "draft"`，**提 `reviewed` 由维护者执行。**
+- 冻结基线已按附录七写入 §7（内容哈希 + 工具哈希 + 基线 commit）；守卫那条改成**可审计的穷举数字**
+  （46,233 个排列 / 422 / 0，附可粘贴的复现脚本）。
+- **仍不放行**：`fig2/3/4/7` 的报告都早于本轮改动（§8），需维护者**一次性重跑**这 8 张；
+  且以上改动都是作者自改。页面保持 `status = "draft"`，**提 `reviewed` 由维护者执行。**

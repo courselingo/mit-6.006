@@ -63,7 +63,7 @@ MIT 6.006 的第一讲就叫算法思维，副标题正是峰值查找。这门�
 
 ![一次比较的分叉：中点比较左邻居，只保留可能含峰的一侧](figures/peak-finding-3.svg)
 
-两半只会留下一半，另一半整块丢掉。
+两侧只会留下一侧，另一侧整块丢掉。
 
 ## 四、一维机制的完整走查
 
@@ -99,7 +99,7 @@ def find_peak(a, lo, hi):
 
 范围收缩的过程画在下面。
 
-![区间收缩三轮：8 个元素经两轮二分收到位置 1 的 6](figures/peak-finding-4.svg)
+![区间收缩 8 → 3 → 1：两轮二分收到位置 1 的 6](figures/peak-finding-4.svg)
 
 前两轮各丢掉一半以上，第三轮面对单元素直接给出答案。丢掉的部分不用再回头检查，这是本讲唯一需要记住的动作。
 
@@ -213,6 +213,8 @@ def find_peak(a, lo, hi):
 对应原文：MIT 6.006 Fall 2011 第 1 讲讲稿（MIT6_006F11_lec01.pdf，6 页）的 Course Overview、Peak Finder 一维与二维三节，以及同名视频。讲义页：<https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/pages/lecture-notes/>。
 
 本讲的事实都能在上述讲稿里逐条对上：峰的定义与端点规则、教材指定 CLRS（第 1 页 Course Overview 里写了 CLRS text）、实现用 Python、从左扫的 \(\Theta(n)\) 与平均 \(n/2\)、二分的 \(T(n) = T(n/2) + \Theta(1) = \Theta(\log n)\)、把 \(\Theta(1)\) 相加要先找一个通用常数、100 万元素时 13 秒与 0.001 秒的对比、贪心上升的 \(\Theta(nm)\)、第一次二维尝试可能停在非峰位置，以及 \(T(n, m) = T(n, m/2) + \Theta(n)\)。
+
+有一处表述比源更紧，登记一下：二维每轮保留的列数。源的原话是用 half the number of columns 描述新问题的规模，而保留的是 \(\lfloor m/2 \rfloor - 1\) 列，严格少于一半，所以正文写成「一半以上」。这是按精确计算收紧，不是与源冲突。
 
 属于我们自己的部分，也就是讲义没有写、只留成练习的地方：
 

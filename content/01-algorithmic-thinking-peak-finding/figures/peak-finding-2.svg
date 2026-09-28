@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 212" width="760" height="212"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 232" width="760" height="232"
      role="img" aria-labelledby="fig-peak-finding-2-title fig-peak-finding-2-desc">
   <title id="fig-peak-finding-2-title">两种做法的代价对比：Θ(n) 与 Θ(log n)</title>
-  <desc id="fig-peak-finding-2-desc">左右各四根条形对应输入 10、100、1000、10000 个元素：左边的条形随输入成倍变高，右边的几乎不变，输入越大差距越大。</desc>
+  <desc id="fig-peak-finding-2-desc">左右各四根条形对应输入 10、100、1000、10000 个元素：左边的条形随输入成倍变高，右边的几乎不变，输入越大差距越大。柱高只为示意增长趋势，两组不是同一比例尺。</desc>
 
   <defs>
     <style>
@@ -17,7 +17,7 @@
     </marker>
   </defs>
 
-  <rect x="0" y="0" width="760" height="212" fill="#ffffff"/>
+  <rect x="0" y="0" width="760" height="232" fill="#ffffff"/>
   <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两种做法的代价对比：Θ(n) 与 Θ(log n)</text>
   <rect x="22" y="58" width="350" height="132" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="6,4"/>
   <text x="32" y="74" font-size="11" fill="#64748b">Θ(n)：线性扫描</text>
@@ -39,4 +39,5 @@
   <text x="606" y="184" font-size="10" fill="#64748b" text-anchor="middle">1000 个</text>
   <rect x="661" y="132" width="60" height="38" rx="6" fill="#d1fae5" stroke="#22c55e"/>
   <text x="691" y="184" font-size="10" fill="#64748b" text-anchor="middle">10000 个</text>
+  <text x="380" y="208" font-size="10" fill="#64748b" text-anchor="middle">柱高只为示意增长趋势，两组不是同一比例尺</text>
 </svg>
