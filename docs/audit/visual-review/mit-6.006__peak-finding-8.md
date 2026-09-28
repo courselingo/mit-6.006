@@ -1,7 +1,7 @@
 # mit-6.006/figures/peak-finding-8.svg
 
 模型 qwen3.8-max
-复核对象 SHA256(前16)：`797F1FE7A35876A0`
+复核对象 SHA256(前16)：`A781E70DA4625C22`
 SVG mtime：2026-09-28 23:00:36
 
 ## 版面
