@@ -113,8 +113,79 @@ CLRS 全称、平均情况的分布假设、第 3 讲前向指针、空输入缺
 
 **我自己独立复核的旁证**（不只是采信）：① 右优先版本确实返回位置 7 的 5 且 `is_peak` 为真；② 4800 个排列上删掉 `mid < hi` **0 次改变结果**，删掉 `mid > lo` **362 次 IndexError**；③ 字节级：`CLRS` 的**字面串**确实在 p1 内容流里（`(\\(CLRS)`，紧随其后是字体 C2_0 的 `<0003>` 字形），文本层则显示 `(CLRS text)`。
 
-## 7. 结论
+## 7. 冻结基线 · 内容哈希 + 工具哈希（附录七）
+
+按 `quality-audit.md` 附录七：**「闸门通过」这句话必须同时给出内容哈希与工具哈希** ——
+只给内容哈希只能证明「测的是这一版内容」，证明不了「用的是同一把尺子」。
+
+> 本轮就撞到了这一点：`audit_content.py` 的单节判据在一个下午之内从「每千字 2.8」改成
+> 「节内图间距 ≥250 汉字」（`cap = 1 + seg_cjk // 250`），同一份内容先 ERROR 后 0 ERROR，
+> **而两次的内容哈希完全一样**。所以这份记录必须把尺子也钉住。
+
+```
+核对基线   git rev-parse HEAD = c069330daed4e5e90762c012ee24ec9c522a9c93
+内容 SHA256
+  3dc8ce88170f024c42305ec1662bab8075ecb595f863d4c622f2059d3ccc585e  content/01-algorithmic-thinking-peak-finding/index.md
+  7d016efdd7e15438e3739c559ff15f6ee7218f42f11774cea6f2ab45b1e41a8d  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-1.svg
+  b8e9621f1746c7f763c5b3ac55e7bdbbecacbfa21ac7de5f11bbcc27f7ea30be  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-2.svg
+  dfd637803988b73530c81323864dd68fc258f139d8b96771e6d2d9b201c3f10d  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-3.svg   （本轮为 D3 改过）
+  50c9ec0d3d399e0feb0478f91bd9c2f44ed208467ce185c62c5353e3720a6872  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-4.svg   （同上）
+  04e034a717f459d4187e650e030cd54140f6968f2762243216f78dd0ecfa28c1  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-5.svg
+  14f5d4061c34009b73106db4c65a345aa53391a1fcaf2cdce9c9df2e9532d6f4  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-6.svg
+  f4d7791a37a01b076484befe27e9aa7ba8e30a6ffb9cfe2b4600f17bddb8790b  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-7.svg   （同上）
+  797f1fe7a35876a0891381946187daed667496811680b780fd2662edc0c508af  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-8.svg
+工具 SHA256（判据本身也是参照，也会变）
+  550d856533345e7b0d51a6bb016d60c35d36dcc51bd95722ee92471108086e8c  scripts/validate.py
+  14536180fc2f661776f29fab82d382603b4603ea0bb8dad7ac96df96edc53df8  scripts/check_style.py
+  333fd1b2f1eabdfa30b8633fa34273ea8b6eaef1a40fff58fc5eff86160050c2  scripts/audit_content.py
+  cb114bdf7ce8f98efde26f502888d4705987d3848a4694a1ebb434f7707d7fa1  scripts/check_figures.py
+  76b5967bda2c03097233be67eec99ad395607e87953372050e9ec4bf0282a868  scripts/check_reviewed.py
+  5d1a21252f7bc873d7b6d43a2edadb9a1d3a62161a70c4ce6c8419a29d5726b9  scripts/direction_scan.py
+```
+
+在这组哈希上：`validate.py` / `check_style.py` / `audit_content.py --strict` / `check_figures.py --strict` /
+`build_site.py` 五条**全部 exit 0，0 error 0 warning**（正文 4357 汉字 / 8 图 = 1.84）。
+工具哈希里 `check_style.py`(14536180…) / `audit_content.py`(333fd1b2…) / `direction_scan.py`(5d1a2125…)
+与平台 `quality-audit.md` 附录七里记的三个前 16 位一致，**说明本次用的是平台当前版本，不是中途那个过渡版本**。
+
+## 8. 配图视觉复核的当下状态（诚实记录）
+
+报告在 `<workspace>/preview/visual-review/mit-6.006__<figure>.md`。**报告里只写判定、不写被看版本的哈希**，
+所以「结论是否对应当前字节」只能靠「报告时间 vs 图片修改时间」推断；而我的生成脚本每次都会重写全部 8 个文件，
+**mtime 对未改动的图并不可靠**。据此逐张记：
+
+| 图 | 判定 | 报告时间 | 图片最后写入 | 对该版本是否有效 |
+| --- | --- | --- | --- | --- |
+| peak-finding-1 | 可用 | 21:35:55 | 21:30:15 | ✅ 有效（报告在后） |
+| peak-finding-2 | **需小修** | 21:39:37 | 21:30:15 | ✅ **有效**，且是 D3 之后的新结论 |
+| peak-finding-3 | 需小修 | 21:25:45 | 21:30:15 | ❌ **过期**（报告早于我为 D3 改这张图） |
+| peak-finding-4 | 需小修 | 21:29:12 | 21:30:15 | ❌ **过期**（同上） |
+| peak-finding-5 | 可用 | 21:31:58 | 21:30:15 | ✅ 有效 |
+| peak-finding-6 | 可用 | 21:33:34 | 21:30:15 | ✅ 有效 |
+| peak-finding-7 | 需小修 | 18:33:36 | 21:30:15 | ❌ **过期**（同上） |
+| peak-finding-8 | 可用 | 18:34:16 | 21:30:15 | ⚠️ 报告很早，但该图自首版未再改动 |
+
+⇒ 当前**不满足 `check_reviewed.py` 的配图条件**（它按报告里的「判定：」字面判），
+所以页面**仍是 `draft`**。**这四张我不自行改动** —— 以免出现「核对着在看、图在变」。
+
+### 我读 `peak-finding-2` 那份「需小修」的结论（尚未动手，先记下来）
+
+它给三条版面意见 + 一条实质意见：
+
+1. 「左右面板宽度不一致（约 710 vs 640px）」与 2.「右面板柱间距不均」—— 复算坐标后**这两条不成立**：
+   两个面板都是 `x=22/388, w=350`，柱位都是面板内偏移 18/103/188/273、柱宽 60、间隙 25，
+   两个面板几何全等。
+3. **实质**：柱高与数量级不符 —— 左组 32/50/68/84（2.6 倍）却标着 10 → 10000（千倍），
+   右组 26/30/34/38（1.5 倍）而真实 log₂ 比值约 4 倍；而且**图里没有一句话说明柱高不是同一比例尺**。
+   这条我认同一半：**手绘必然压缩比例尺**，但缺了那句说明，读者确实可能按「同一比例尺」去读。
+   可行的最小修法是加一句「柱高只为示意增长趋势，两组不是同一比例尺」，而不是把柱子拉成 750 倍
+   （那会同时撞上「同行方块尺寸差 ≤60px」的房规）。
+4. 缺纵轴/刻度/柱高含义 —— 与第 3 条同源，同一句说明可一并解决。
+
+## 9. 结论
 
 - 第二轮 5 条 ❌ 已订正、D1/D2/D3 已改、两条清单缺口已补、两份 audit 文档已同步。
 - 透镜 3：✅ 7 / ⚠️ 1 / ❌ 0 ⇒ **通过**（那 1 个 ⚠️ 已补直述句）。
-- **订正与补句都是作者自改**，故仍**不放行**：页面保持 `status = "draft"`，等只针对 D1/D2 的单点复核。**提 `reviewed` 由维护者执行。**
+- 冻结基线已按附录七写入 §7（内容哈希 + 工具哈希 + 基线 commit）。
+- **仍不放行**：配图复核尚在刷新（§8），且订正与补句都是作者自改。
+  页面保持 `status = "draft"`，**提 `reviewed` 由维护者执行。**
