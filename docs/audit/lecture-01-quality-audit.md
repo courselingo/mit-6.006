@@ -174,7 +174,7 @@ print(diff, oob)   # → 0 422
 > **而两次的内容哈希完全一样**。所以这份记录必须把尺子也钉住。
 
 ```
-核对基线   git rev-parse HEAD = a4bb9d1（本次改动之前的那次提交）
+核对基线   git rev-parse HEAD^ = de2b5cb（本记录所在提交的父提交）
 内容 SHA256（本次改动后、与这份记录落在同一个提交里 —— 以哈希为准，commit 只是包装）
   7d8047318610e09777c69d0501f1feece945c98f0d5f0ffc5af1a8b5868603e9  content/01-algorithmic-thinking-peak-finding/index.md
   7d016efdd7e15438e3739c559ff15f6ee7218f42f11774cea6f2ab45b1e41a8d  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-1.svg
@@ -190,9 +190,18 @@ print(diff, oob)   # → 0 422
   14536180fc2f661776f29fab82d382603b4603ea0bb8dad7ac96df96edc53df8  scripts/check_style.py
   333fd1b2f1eabdfa30b8633fa34273ea8b6eaef1a40fff58fc5eff86160050c2  scripts/audit_content.py
   cb114bdf7ce8f98efde26f502888d4705987d3848a4694a1ebb434f7707d7fa1  scripts/check_figures.py
-  76b5967bda2c03097233be67eec99ad395607e87953372050e9ec4bf0282a868  scripts/check_reviewed.py
-  5d1a21252f7bc873d7b6d43a2edadb9a1d3a62161a70c4ce6c8419a29d5726b9  scripts/direction_scan.py
+  cae465e92edf38cadc57d3da2958500ff0898a61bb321a542a0008829cffd819  scripts/check_reviewed.py
+  8a30c97932fb315c99be4a102f4194d74fd8a4ba095ecfa7374f4dc8edb5877a  scripts/direction_scan.py
 ```
+
+> **附录七在本轮当场应验了两次**，两个工具在我做这一轮的中途被改：
+> `check_reviewed.py` 补了 stdout 编码保护（`76b5967b…` → `cae465e9…`，正是我在报告里提的那个
+> GBK 下 `print("✅…")` 抛 UnicodeEncodeError 的问题），`direction_scan.py` 新增了
+> **「空间指涉」**与**「因果·顺序与先后」**两类（`5d1a2125…` → `8a30c979…`）。
+> **如果我沿用第一版记录里那两个哈希，这份记录就已经失效了** —— 所以这里给的是现算值。
+>
+> 新增的「空间指涉」这一类**正好管我这一轮**：改了图的方向/行列/元素顺序之后，正文里所有
+> 「左/右/上/下」的指涉都会静默失效。我用新脚本重跑并在下面第 9 节记了逐条核对结果。
 
 在这组哈希上：`validate.py` / `check_style.py` / `audit_content.py --strict` / `check_figures.py --strict` /
 `build_site.py` 五条**全部 exit 0，0 error 0 warning**；`check_reviewed.py` 在 `PYTHONIOENCODING=utf-8`
@@ -262,12 +271,30 @@ print(diff, oob)   # → 0 422
 - 术语歧义：`左边界更大 / 右边界更大` 改为 **`左边相邻列更大 / 右边相邻列更大`** ——
   比较对象是中列最大值的左右相邻列元素，不是搜索区间的端点，原文容易与「区间边界」混淆。
 
-## 9. 结论
+## 9. 空间指涉核对（新增扫描类，**只对改过图的这一轮有效**）
+
+`direction_scan.py` 新增的「空间指涉」类在本页报出 13 处，逐条回源确认后**全部是算法正文的
+左/右半边**（`a[l..m-1]`、`a[m+1..r]`、二维左半边、模块 2 下面的讲次），**没有一句是在指涉图片版面的**，
+所以本轮改图（fig2 加说明、fig3 改箭头与框宽、fig4 加标签、fig7 加箭头）不会让它们失效。
+
+页面里**真正指涉图面位置**的只有两句，我已对着改后的图逐句复核：
+
+| 正文 | 指涉 | 改图后是否仍成立 |
+| --- | --- | --- |
+| L44「左边四根蓝条形随输入线性变高，右边四根绿条形只涨了几个像素」 | fig2 左右面板 | ✅ 仍是左蓝、右绿，面板顺序未动 |
+| L190「左边两格是本讲结论成立的场景，右边两格是它管不了的情形」 | fig8 左右各两格 | ✅ fig8 本轮未改动 |
+
+fig3 的左右语义也没变（左子框仍在左、右子框仍在右），只是父框改为全宽、箭头落点移到子框中心；
+fig7 的左面板（候选列）仍在左、右面板（下一步）仍在右，且新箭头方向是**从左指向右**。
+
+## 10. 结论
 
 - 第二轮 5 条 ❌ 已订正；D1/D2/D3 已改；两条清单缺口已补；本轮再补 L66「两侧只会留下一侧」、
   溯源里「源说 half、我们按精确计算写成一半以上」那一行，并按复核意见改了 `fig2/3/4/7` 四张图。
 - 透镜 3：✅ 7 / ⚠️ 1 / ❌ 0 ⇒ **通过**（那 1 个 ⚠️ 已补直述句）。
-- 冻结基线已按附录七写入 §7（内容哈希 + 工具哈希 + 基线 commit）；守卫那条改成**可审计的穷举数字**
+- 冻结基线已按附录七写入 §7（内容哈希 + 工具哈希 + 父提交）；守卫那条改成**可审计的穷举数字**
   （46,233 个排列 / 422 / 0，附可粘贴的复现脚本）。
-- **仍不放行**：`fig2/3/4/7` 的报告都早于本轮改动（§8），需维护者**一次性重跑**这 8 张；
-  且以上改动都是作者自改。页面保持 `status = "draft"`，**提 `reviewed` 由维护者执行。**
+- 反例自测：临时把 `status` 改成 `reviewed` 跑 `check_reviewed.py`，**记录层面的两条问题
+  （缺透镜 3、缺 SHA256）已消失**，只剩「配图有未处理的复核结论」那一条 —— 那是因为
+  `fig2/3/4/7` 的报告写在我这一轮改动之前，**等维护者一次性重跑这 8 张**。随后已还原为 `draft`。
+- **仍不放行**：页面保持 `status = "draft"`，**提 `reviewed` 由维护者执行。**
