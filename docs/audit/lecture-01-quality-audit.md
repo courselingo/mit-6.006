@@ -176,21 +176,21 @@ print(diff, oob)   # → 0 422
 ```
 核对基线   git rev-parse HEAD^ = de2b5cb（本记录所在提交的父提交）
 内容 SHA256（本次改动后、与这份记录落在同一个提交里 —— 以哈希为准，commit 只是包装）
-  d3cb99b5ee3830f6403a7d1dfaeb073d2c8129a272e4dd5b25ad69be7bec5b13  content/01-algorithmic-thinking-peak-finding/index.md
-  7d016efdd7e15438e3739c559ff15f6ee7218f42f11774cea6f2ab45b1e41a8d  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-1.svg
-  bcccb6521566ff6d23aa0e391cefb69b484b28fd67929e42dde39ebc7afd810e  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-2.svg   （本轮右组柱高改 26/29/31/33、注记改「横轴与柱高均为对数刻度」）
-  801b485e32cbe0456efa2a11aa5c4a1d80093b916bd6573cdbff624d32624de7  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-3.svg   （本轮标题改「至多两次比较」；箭头保持右侧通道，两条改动路线被房规否掉）
-  a400b2bfd874e8782e3a8f43b4842acdc3cdb8ab70b426b4476c59d919fc89d7  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-4.svg   （本轮三轮版式统一：条内只写当前区间、三轮说明统一放下方三行）
-  ebbe452564b07bd70eb1534e1838cf06117d2117353de49d7c559865450696ab  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-5.svg   （本轮等号锁在同一条竖线：左半 end-anchor + 右半 start-anchor）
-  a5892d6c580eaba4d2d45a869ff58669167a4f247f248f7b3e2e6b4ee917e80f  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-6.svg   （本轮把右框四行改为左对齐、收紧标题与首句间距）
-  21b6338dea9b2ef2fd5396d27a2bb7e353d1cc9af5d5fb68480f696c71931fca  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-7.svg   （本轮列方块上移到 92..128、灰字落到基线 168，使其在剩余空白里居中）
-  797f1fe7a35876a0891381946187daed667496811680b780fd2662edc0c508af  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-8.svg
+  409B089098748EA2250BC4D2B536C9F8242992AF987C94B75C13862E6ECDC29C  content/01-algorithmic-thinking-peak-finding/index.md
+  4ADB2DF9FF520C8E6E1D904BF3CAEED2592EAA876A148765FF70E769385EC680  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-1.svg
+  96F27ADCA2090F6C19A2F4F03FDBD42FF8F65F26DC953B3966A53BFF74FB978E  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-2.svg   （本轮右组柱高改 26/29/31/33、注记改「横轴与柱高均为对数刻度」）
+  ADF8FE86DA7EDFB1359D7AA97486CB01BA14A5751D48F5B46836086B244BAFCD  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-3.svg   （本轮标题改「至多两次比较」；箭头保持右侧通道，两条改动路线被房规否掉）
+  CE4FE54F68DF0BDDC52AEDF71ECCD2735D4E4EC862FCBFD89EF81C138663BF76  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-4.svg   （本轮三轮版式统一：条内只写当前区间、三轮说明统一放下方三行）
+  82F6E4CF508B2D5AFAF793514E034F708E5181165C47829382609B94EC615C1F  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-5.svg   （本轮等号锁在同一条竖线：左半 end-anchor + 右半 start-anchor）
+  DDF0700A261269EE093CB62FED95AE57FA08DCB2129AA41823F984FF07E9A733  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-6.svg   （本轮把右框四行改为左对齐、收紧标题与首句间距）
+  306B4DFC44211A8FCE15E83FC3B9BA36B750DF33EDB2A8AFD6D0E0AFE81ABAED  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-7.svg   （本轮列方块上移到 92..128、灰字落到基线 168，使其在剩余空白里居中）
+  A781E70DA4625C22CEA87F84C52F382469B0E683FF77031A2A7B2E546AE4DFA6  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-8.svg
 工具 SHA256（判据本身也是参照，也会变；本次用 `Get-FileHash` 现算，未抄任何转述值）
   550d856533345e7b0d51a6bb016d60c35d36dcc51bd95722ee92471108086e8c  scripts/validate.py
   14536180fc2f661776f29fab82d382603b4603ea0bb8dad7ac96df96edc53df8  scripts/check_style.py
-  333fd1b2f1eabdfa30b8633fa34273ea8b6eaef1a40fff58fc5eff86160050c2  scripts/audit_content.py
+  6BCE279D6A99A7AB1F6B8E644E77268131C72239C9F6A60C32CACF3F86C59909  scripts/audit_content.py
   cb114bdf7ce8f98efde26f502888d4705987d3848a4694a1ebb434f7707d7fa1  scripts/check_figures.py
-  cae465e92edf38cadc57d3da2958500ff0898a61bb321a542a0008829cffd819  scripts/check_reviewed.py
+  F67AD82E60BF3947D8B3023661B84310188EAAD11F02AC6585602AFFCD8CA2D9  scripts/check_reviewed.py
   8a30c97932fb315c99be4a102f4194d74fd8a4ba095ecfa7374f4dc8edb5877a  scripts/direction_scan.py
 ```
 
