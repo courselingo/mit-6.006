@@ -1,0 +1,80 @@
+# CourseLingo 课程元数据
+
+[course]
+id = "mit-6.006"
+title = "Introduction to Algorithms"
+title_zh = "算法导论"
+institution = "MIT"
+course_number = "6.006"
+homepage = "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/"
+source_language = "en"
+target_language = "zh"
+
+# ★ 授权闸门。逐页复核的完整记录见本仓库 docs/audit/license-ocw-6.006.md。
+[license]
+verified = true
+terms = "CC BY-NC-SA 4.0"
+evidence_url = "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/pages/lecture-notes/"
+checked_at = "2026-09-28"
+allows_commercial = false         # NC：本站产出不得用于商业用途
+allows_derivatives = true         # 允许衍生；翻译属于衍生作品，所以可以出译文
+allows_translation = true         # 与 allows_derivatives 同源，单列出来供读者一眼看到
+share_alike = true                # SA：我们的中文改编须以同一协议发布
+redistribution = "allowed"
+notes = '''
+2026-09-28 逐页实测复核。方法沿用 docs/course-catalog.md：抓**原始 HTML**（不过滤标签后
+再搜文本），走 socks5h://127.0.0.1:7892，失败重试；000 一律重试，从不当成 404。
+
+★ 为什么必须逐页看：OCW 的许可是**逐页复制**的，课程页有徽章推不出子页面也有
+（6.824 就是反例：徽章只在主页，讲义子页面 0 命中）。所以 4 个页面各自取证：
+
+  1) 课程页     https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/
+  2) 讲义页     .../pages/lecture-notes/          ← 本项 evidence_url
+  3) 大纲页     .../pages/syllabus/
+  4) 第 1 讲资源页 .../resources/lecture-1-algorithmic-thinking-peak-finding/
+
+逐字证据（4/4 页一致；每页各 1 次 JSON-LD + 1 次可见页脚，共 2 次 by-nc-sa 命中）：
+  JSON-LD:  "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  可见页脚: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons License</a>
+  同页可见版权行: © 2001–2026 Massachusetts Institute of Technology
+同 4 页反查（防假阴性）：
+  「All rights reserved」0 处；「excluded from」0 处 —— 6.006 未见 6.828 页面上那种
+  「本内容被排除在 CC 许可之外」的第三方标注。这不等于永久没有，所以配图一律自绘、不复刻。
+
+判定：A 级（允许衍生）。义务三条缺一不可 —— 署名（BY）、非商用（NC）、
+以相同协议发布衍生作品（SA）。推论：本站产出不得用于商业用途；我们的中文讲解若构成对
+上游材料的改编，须以 CC BY-NC-SA 4.0 发布（本项目「一课程一仓库」的隔离正是为此）。
+
+永久排除项（与授权无关，不开任何口子）：作业与考试的题面及参考答案 ——
+著作权与学术诚信双重风险，与 6.824 / 6.1810 同一处理。
+'''
+
+# 按材料类型逐项核实。「笔记已授权」不等于「视频也已授权」。
+# 一旦存在本表，授权闸门就只认它，不再看上面的 verified（见 docs/pipeline-spec.md §2）。
+[license.materials]
+notes = true                      # 讲义：讲义页带 CC BY-NC-SA 4.0，已逐字取证
+slides = false                    # 幻灯片 PDF 本体未逐个打开核实 —— 保守记为未核实
+video = false                     # 视频叠加平台条款（archive.org / YouTube），且本项目不做字幕翻译
+textbook = false                  # 指定教材 CLRS 是商业出版物（Pearson），与 OCW 许可无关
+other = false
+
+[output]
+default_mode = "explanation"
+
+# ── 站点（GitHub Pages）──────────────────────────────────────────────
+# build_site.py 用这两项生成 MkDocs 的 repo_url / site_url。
+[site]
+repo = "courselingo/mit-6.006"
+url = "https://courselingo.github.io/mit-6.006/"
+
+# ── 本课程的点名对象（audit_content.py 的 [audit]，见该脚本第 57–88 行）──────
+# 通用脚本的默认名单偏分布式系统，算法课合法出现不了几个；这里补上本课程真正的
+# 具体对象：教材、实现语言与库、课程自身的 motivating problems、经典算法名。
+[audit]
+named_systems = [
+    "CLRS", "Python", "NumPy", "SciPy", "bisect",
+    "RSA", "genome comparison", "event simulation", "image compression",
+    "rubiks cube", "Dijkstra", "Bellman-Ford", "BFS", "DFS",
+    "Quicksort", "Merge Sort", "Kruskal", "Karatsuba",
+]
+named_systems_min = 5

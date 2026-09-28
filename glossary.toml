@@ -1,0 +1,476 @@
+# CourseLingo 术语表 —— 本项目的核心资产
+#
+# 规则（见 docs/pipeline-spec.md §3）：
+#   key 默认由 en 推导：小写、空格与下划线转连字符、去掉其他字符。
+#   例如 en = "binary search" -> 正文中写 [[term:binary-search]]
+#   带撇号或连字符的 en 会得到难拼的 key，这类条目显式写 key（如 Dijkstra's algorithm）。
+# 同一概念全课程同译；改术语必须走评审，不要静默修改。
+#
+# ★ 算法课的术语与系统课重叠很少：这里的重心是渐近记号、递推、范式、
+#   数据结构、排序、图与最短路。第 1 讲只用得到前 55 条，其余为后续讲次冻结。
+
+# ── 渐近记号与复杂度分析 ─────────────────────────────────────────────
+[[term]]
+en = "asymptotic notation"
+zh = "渐近记号"
+notes = "描述输入规模趋于无穷时的增长快慢；忽略常数因子与低阶项"
+
+[[term]]
+en = "big O notation"
+zh = "大 O 记号"
+notes = "只给上界，不保证紧确"
+
+[[term]]
+en = "big Theta notation"
+zh = "大 Θ 记号"
+notes = "上下界同阶，是最常用来描述算法代价的记号"
+
+[[term]]
+en = "big Omega notation"
+zh = "大 Ω 记号"
+notes = "只给下界"
+
+[[term]]
+en = "upper bound"
+zh = "上界"
+
+[[term]]
+en = "lower bound"
+zh = "下界"
+
+[[term]]
+en = "worst case"
+zh = "最坏情况"
+
+[[term]]
+en = "best case"
+zh = "最好情况"
+
+[[term]]
+en = "average case"
+zh = "平均情况"
+
+[[term]]
+en = "time complexity"
+zh = "时间复杂度"
+
+[[term]]
+en = "space complexity"
+zh = "空间复杂度"
+
+[[term]]
+en = "input size"
+zh = "输入规模"
+
+[[term]]
+en = "constant factor"
+zh = "常数因子"
+notes = "渐近记号故意忽略的量；两种写法只差常数时，渐近意义下算同阶"
+
+[[term]]
+en = "scalability"
+zh = "可扩展性"
+
+# ── 递推式与证明 ─────────────────────────────────────────────────────
+[[term]]
+en = "recurrence"
+zh = "递推式"
+notes = "把规模 n 的代价写成规模更小的同一问题的代价，例如 T(n) = T(n/2) + Θ(1)"
+
+[[term]]
+en = "recursion tree"
+zh = "递归树"
+notes = "把递推式逐层展开画成树，每层代价相加得到总代价"
+
+[[term]]
+en = "master theorem"
+zh = "主定理"
+notes = "三类标准递推式的现成解，套用前要先确认属于哪一类"
+
+[[term]]
+en = "amortized analysis"
+zh = "摊还分析"
+notes = "单次操作可能很贵，但一串连续操作的平均代价有更紧的上界"
+
+[[term]]
+en = "accounting method"
+zh = "记账法"
+notes = "摊还分析的一种：给便宜操作多记一点代价，攒起来付贵操作"
+
+[[term]]
+en = "brute force"
+zh = "暴力枚举"
+notes = "把所有可能都试一遍；正确但往往慢"
+
+[[term]]
+en = "pseudocode"
+zh = "伪代码"
+
+[[term]]
+en = "correctness proof"
+zh = "正确性证明"
+
+[[term]]
+en = "loop invariant"
+zh = "循环不变式"
+notes = "循环每一轮开始与结束时都成立的性质；用它证明循环结束后的结论"
+
+[[term]]
+en = "proof by induction"
+zh = "归纳证明"
+
+[[term]]
+en = "counterexample"
+zh = "反例"
+
+# ── 算法范式与工程取舍 ───────────────────────────────────────────────
+[[term]]
+en = "divide and conquer"
+zh = "分治法"
+notes = "把问题拆成同类小问题，分别求解后合并；本讲的二分峰值查找属于这一类"
+
+[[term]]
+en = "greedy algorithm"
+zh = "贪心算法"
+notes = "每一步都选当下看起来最好的一步，不回头"
+
+[[term]]
+en = "dynamic programming"
+zh = "动态规划"
+notes = "有重叠子问题时，把子问题的解存下来复用"
+
+[[term]]
+en = "memoization"
+zh = "记忆化"
+notes = "递归写法加缓存，等价于自顶向下的动态规划"
+
+[[term]]
+en = "randomized algorithm"
+zh = "随机化算法"
+
+[[term]]
+en = "data structure"
+zh = "数据结构"
+
+[[term]]
+en = "preprocessing"
+zh = "预处理"
+notes = "先花一次代价整理数据，让后续每次查询更便宜"
+
+[[term]]
+en = "query"
+zh = "查询"
+
+[[term]]
+en = "trade-off"
+zh = "取舍"
+
+# ── 峰值查找与数组（第 1 讲）─────────────────────────────────────────
+[[term]]
+en = "peak"
+zh = "峰"
+notes = "一维里指不小于左右邻居的元素；端点只有一个邻居，只需不小于它"
+
+[[term]]
+en = "peak finding"
+zh = "峰值查找"
+notes = "在数组或矩阵里找出任意一个峰的位置"
+
+[[term]]
+en = "one-dimensional"
+zh = "一维"
+
+[[term]]
+en = "two-dimensional"
+zh = "二维"
+
+[[term]]
+en = "array"
+zh = "数组"
+notes = "一段连续存放、可用下标随机访问的元素序列"
+
+[[term]]
+en = "index"
+zh = "下标"
+
+[[term]]
+en = "neighbor"
+zh = "相邻元素"
+notes = "一维是左右各一个；二维是上下左右共四个"
+
+[[term]]
+en = "global maximum"
+zh = "全局最大值"
+notes = "整个范围内最大的元素；它一定是峰，这一点保证了峰一定存在"
+
+[[term]]
+en = "linear scan"
+zh = "线性扫描"
+notes = "从头看到尾，代价与元素个数成正比"
+
+[[term]]
+en = "binary search"
+zh = "二分查找"
+notes = "每次用一次比较丢掉一半候选，代价与元素个数的对数成正比"
+
+[[term]]
+en = "matrix"
+zh = "矩阵"
+
+[[term]]
+en = "row"
+zh = "行"
+
+[[term]]
+en = "column"
+zh = "列"
+
+[[term]]
+en = "greedy ascent"
+zh = "贪心上升"
+notes = "二维里从任意格子出发，只要邻居更大就移过去；一定停在峰上，但可能走很多步"
+
+[[term]]
+en = "base case"
+zh = "递归基"
+notes = "递归停止的最小规模；本讲里是只剩一个元素"
+
+[[term]]
+en = "recursion"
+zh = "递归"
+
+[[term]]
+en = "iteration"
+zh = "迭代"
+
+[[term]]
+en = "subproblem"
+zh = "子问题"
+
+# ── 数据结构（后续讲次）──────────────────────────────────────────────
+[[term]]
+en = "linked list"
+zh = "链表"
+notes = "元素分散存放、靠指针相连；按下标访问要一步步走"
+
+[[term]]
+en = "array list"
+zh = "动态数组"
+notes = "长度可变的数组；扩容的均摊代价是常数"
+
+[[term]]
+en = "stack"
+zh = "栈"
+notes = "后进先出"
+
+[[term]]
+en = "queue"
+zh = "队列"
+notes = "先进先出"
+
+[[term]]
+en = "heap"
+zh = "堆"
+notes = "一种能快速取出最值的树形结构"
+
+[[term]]
+en = "priority queue"
+zh = "优先队列"
+notes = "按优先级取元素；堆是常见实现"
+
+[[term]]
+en = "binary search tree"
+zh = "二叉搜索树"
+
+[[term]]
+en = "balanced tree"
+zh = "平衡树"
+notes = "能保证树高与元素个数的对数同阶，避免退化成链表"
+
+[[term]]
+en = "hash table"
+zh = "哈希表"
+
+[[term]]
+en = "hash function"
+zh = "哈希函数"
+notes = "把键映射成桶下标的函数"
+
+[[term]]
+en = "hash collision"
+zh = "哈希冲突"
+notes = "两个不同的键落到同一个桶；用链地址法或开放寻址解决"
+
+[[term]]
+en = "direct addressing"
+zh = "直接寻址"
+
+# ── 排序（后续讲次）──────────────────────────────────────────────────
+[[term]]
+en = "sorting"
+zh = "排序"
+
+[[term]]
+en = "comparison sort"
+zh = "比较排序"
+notes = "只靠两两比较决定次序；这类算法有 Ω(n log n) 的下界"
+
+[[term]]
+en = "merge sort"
+zh = "归并排序"
+
+[[term]]
+en = "insertion sort"
+zh = "插入排序"
+
+[[term]]
+en = "heap sort"
+zh = "堆排序"
+
+[[term]]
+en = "quicksort"
+zh = "快速排序"
+
+[[term]]
+en = "counting sort"
+zh = "计数排序"
+notes = "按键值范围计数，不做比较，代价与键的取值范围有关"
+
+[[term]]
+en = "radix sort"
+zh = "基数排序"
+
+[[term]]
+en = "stable sort"
+zh = "稳定排序"
+notes = "键相同的元素保持原来的相对次序"
+
+[[term]]
+en = "in-place sort"
+zh = "原地排序"
+notes = "只使用常数级别的额外空间"
+
+# ── 图与最短路（后续讲次）────────────────────────────────────────────
+[[term]]
+en = "graph"
+zh = "图"
+notes = "由顶点与边组成的结构；这里指数学意义上的图，不是图表"
+
+[[term]]
+en = "vertex"
+zh = "顶点"
+
+[[term]]
+en = "edge"
+zh = "边"
+
+[[term]]
+en = "directed graph"
+zh = "有向图"
+
+[[term]]
+en = "undirected graph"
+zh = "无向图"
+
+[[term]]
+en = "adjacency list"
+zh = "邻接表"
+
+[[term]]
+en = "breadth-first search"
+zh = "广度优先搜索"
+notes = "按层扩展；无权图里它给出的就是最短路"
+
+[[term]]
+en = "depth-first search"
+zh = "深度优先搜索"
+
+[[term]]
+en = "topological sort"
+zh = "拓扑排序"
+
+[[term]]
+en = "shortest path"
+zh = "最短路"
+
+[[term]]
+en = "weighted graph"
+zh = "带权图"
+
+[[term]]
+en = "negative cycle"
+zh = "负环"
+notes = "总权为负的环；有它在，最短路可能不存在"
+
+[[term]]
+en = "minimum spanning tree"
+zh = "最小生成树"
+
+[[term]]
+en = "Dijkstra's algorithm"
+key = "dijkstra"
+zh = "戴克斯特拉算法"
+notes = "有非负权边时的单源最短路"
+
+[[term]]
+en = "Bellman-Ford algorithm"
+key = "bellman-ford"
+zh = "贝尔曼-福特算法"
+notes = "允许负权边，还能检测负环"
+
+[[term]]
+en = "Kruskal's algorithm"
+key = "kruskal"
+zh = "克鲁斯卡尔算法"
+notes = "按边权从小到大加边，避开成环，得到最小生成树"
+
+# ── 数值与其他模块（后续讲次）────────────────────────────────────────
+[[term]]
+en = "RSA"
+zh = "RSA 加密"
+notes = "课程第四个模块的引子问题；安全性依赖大整数分解的困难"
+
+[[term]]
+en = "modular exponentiation"
+zh = "模幂运算"
+notes = "计算 a 的 b 次方对 m 取模；反复平方可以把代价降到与指数位数成正比"
+
+[[term]]
+en = "Euclidean algorithm"
+zh = "欧几里得算法"
+notes = "辗转相除求最大公约数"
+
+[[term]]
+en = "event simulation"
+zh = "事件模拟"
+notes = "课程第二个模块的引子问题；按时间顺序处理事件"
+
+[[term]]
+en = "genome comparison"
+zh = "基因组比对"
+notes = "课程第三个模块的引子问题；典型任务是找两段长序列的公共子串"
+
+[[term]]
+en = "image compression"
+zh = "图像压缩"
+notes = "课程第七个模块的引子问题；用动态规划做有损压缩"
+
+[[term]]
+en = "Rubik's cube"
+key = "rubiks-cube"
+zh = "魔方"
+notes = "课程第五个模块的引子问题；把状态空间当图来搜"
+
+[[term]]
+en = "polynomial time"
+zh = "多项式时间"
+
+[[term]]
+en = "reduction"
+zh = "归约"
+notes = "把问题 A 转换成问题 B，从而用 B 的算法或难度结论说明 A"
+
+[[term]]
+en = "NP-complete"
+zh = "NP 完全"
+notes = "NP 中最难的一类；目前没有已知的多项式时间算法"

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 280" width="760" height="280"
+     role="img" aria-labelledby="fig-peak-finding-3-title fig-peak-finding-3-desc">
+  <title id="fig-peak-finding-3-title">一次比较的分叉：只保留可能含峰的那一半</title>
+  <desc id="fig-peak-finding-3-desc">中点与左右邻居比较后走向两条分支：左邻居更大就只去左半边，右邻居更大就只去右半边；两个都不大时中点是峰。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#a855f7"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="280" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">一次比较的分叉：只保留可能含峰的那一半</text>
+  <rect x="250" y="64" width="260" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="86" font-size="12" fill="#b45309" text-anchor="middle">取中点 m</text>
+  <text x="380" y="104" font-size="12" fill="#b45309" text-anchor="middle">比较 a[m] 与左右邻居</text>
+  <rect x="22" y="143" width="344" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="194" y="165" font-size="12" fill="#166534" text-anchor="middle">a[m] &lt; a[m-1]</text>
+  <text x="194" y="183" font-size="12" fill="#166534" text-anchor="middle">左半边一定有峰，只去左边</text>
+  <rect x="391" y="143" width="347" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="564.5" y="165" font-size="12" fill="#166534" text-anchor="middle">a[m] &lt; a[m+1]</text>
+  <text x="564.5" y="183" font-size="12" fill="#166534" text-anchor="middle">右半边一定有峰，只去右边</text>
+  <rect x="22" y="222" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="244" font-size="12" fill="#1e40af" text-anchor="middle">两个方向都不成立：a[m] 不小于左右邻居，它自己就是峰</text>
+  <path d="M300,123 L 300,132" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M460,123 L 460,132" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+</svg>
