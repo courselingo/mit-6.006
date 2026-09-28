@@ -179,10 +179,10 @@ print(diff, oob)   # → 0 422
   0c28235875cb4489b1413e5700b5a3b9abc9ec8778c8ed3fc39fbacb219617fc  content/01-algorithmic-thinking-peak-finding/index.md
   7d016efdd7e15438e3739c559ff15f6ee7218f42f11774cea6f2ab45b1e41a8d  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-1.svg
   dca3ac59360e07c3aa7101aa30b5beab3ffa536e35267bab5838b4733c1a5b13  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-2.svg   （本轮补「同一比例尺」说明）
-  80177e48102a35b1a7581164cb4bd55421ebb8dda9612b848fdbad467e2b455b  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-3.svg   （本轮改箭头落点 + 补第三分支连线）
-  9e71fda6de2273e803ffd4ced18fbfd1a2fb8ee2ff6a64b5fda00ce9c691f45f  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-4.svg   （本轮补框内标签 + 丢弃范围 + 结论）
+  720ad56a9c093fec5fbb1d32e4221c88cbb346352240e082c510c04c71cec6eb  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-3.svg   （本轮改箭头落点 + 补第三分支连线；复审后给底部横条加「否则」连接词）
+  9e71fda6de2273e803ffd4ced18fbfd1a2fb8ee2ff6a64b5fda00ce9c691f45f  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-4.svg   （本轮补框内标签 + 丢弃范围 + 结论；复审四项经墨迹测量均不成立，未改动）
   04e034a717f459d4187e650e030cd54140f6968f2762243216f78dd0ecfa28c1  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-5.svg
-  14f5d4061c34009b73106db4c65a345aa53391a1fcaf2cdce9c9df2e9532d6f4  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-6.svg
+  a5892d6c580eaba4d2d45a869ff58669167a4f247f248f7b3e2e6b4ee917e80f  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-6.svg   （本轮把右框四行改为左对齐、收紧标题与首句间距）
   6ead55bd0ece660a554834e3a3ff72e399d8ce494346ac5aae7bda4dd2ba2b57  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-7.svg   （本轮补面板间流向箭头 + 改「边界」为「相邻列」；复审后把「中点是峰」改成「中列最大值那一点就是峰」）
   797f1fe7a35876a0891381946187daed667496811680b780fd2662edc0c508af  content/01-algorithmic-thinking-peak-finding/figures/peak-finding-8.svg
 工具 SHA256（判据本身也是参照，也会变；本次用 `Get-FileHash` 现算，未抄任何转述值）
@@ -284,7 +284,32 @@ print(diff, oob)   # → 0 422
 页面 `alt` 里的「左右邻居」也改成「**左右相邻列**」，与图内措辞统一。
 页面正文里另外两处「中点」都在**一维**语境（fig3 的 alt、走查里「换一种取中点的方式」），指的是真正的中点，**保持不动**。
 
-## 9. 空间指涉核对（新增扫描类，**只对改过图的这一轮有效**）
+**`peak-finding-4` 的复审：四条都用「栅格化量墨迹」核过，全部不成立（或上轮已解决）**
+（把 SVG 渲染成 760×258 的 PNG，再按颜色扫像素；不靠读属性，也不靠目测）
+
+| 复核者给的数字 | 实测墨迹 | 属性值 | 裁定 |
+| --- | --- | --- | --- |
+| 编号横向等间距约 **215px** | **92.1px**（8 组中心 57 / 149.5 / 242 / 333.5 / 425.5 / 517.5 / 609.5 / 701.5） | 步距 92、中心 58/150/…/702 | ❌ 不成立 |
+| 编号 1 偏左约 30px、编号 8 偏右约 35px | 编号 1 中心 **57**（应 58）⇒ 偏 **1px**；编号 8 中心 **701.5**（应 702）⇒ 偏 **0.5px** | 同上 | ❌ 不成立 |
+| 第 2 轮绿条右缘约 **x=675** | **x=275**（条 24..275） | 24.5..275.5 | ❌ 不成立 |
+| 第 3 轮橙条右缘约 **x=210** | **x=91**（条 24..91） | 24.5..91.5 | ❌ 不成立 |
+| 绿条与右侧文字间距**不足 10px** | **17px**（绿条右缘 275 → 文字墨迹左缘 292）；第 3 轮同类间距 **16px** | 15px | ❌ 不成立 |
+| 第 1 轮文字在条内、2/3 轮在条外 ⇒ 阅读位置不统一 | 三条**条内都有标签**（x=380 / 150 / 58，均 `text-anchor="middle"`，左留白 204 / 71 / 大概对称）；只有**细节行**在 2/3 轮放到条外，因为 67px 宽的条装不下 20 个字 | —— | ⚠️ 部分成立，上轮已改为「每条都有条内标签」 |
+
+墨迹还有一处可用于交叉验证：第 1 轮条内文字墨迹 228..530，条是 24..735 ⇒ 左留白 204、右留白 205，
+**居中误差 1px**；第 2 轮条内文字 95..204，条 24..275 ⇒ 左 71、右 71，**误差 0px**。
+
+**`peak-finding-6` 的两条排版（维护者判成立、已改，并用墨迹复核）**
+- 「同一框内混用两种对齐」：右框的四行原本水平居中，与小标题的左对齐冲突 ⇒ 四行改为与标签**同一左边界**（`x=440`）。
+  栅格化复核：小标题与四行的**墨迹左缘全部落在 x=440**。
+- 「小标题与第 1 句间距约为句距的两倍，上半部空旷」：四行基线由 140/170/200/226 改为 **118/148/178/208**（间距 30），
+  标题基线 86 ⇒ 标题到第 1 句 **32px** ≈ 一个行距。
+
+**`peak-finding-3` 的第三分支（维护者判成立、但给我留了选择）—— 我不重构版面，只加一个连接词**
+蓝条文字改为 **`否则（两个方向都不成立）：a[m] 不小于左右邻居，它自己就是峰`**。
+理由是：上一轮补的那条箭头（从父框底边 `x=700` 直落到底部横条）已经把它**连回同一个决策点**，
+再加「否则」，它的身份就是「同一次比较的第三种结果」。
+若改成三个等宽方块并排，会把「两条递归下去 / 一条当场结束」的区别抹平 —— 而那正是这张图最该让初学者看见的对比。
 
 `direction_scan.py` 新增的「空间指涉」类在本页报出 13 处，逐条回源确认后**全部是算法正文的
 左/右半边**（`a[l..m-1]`、`a[m+1..r]`、二维左半边、模块 2 下面的讲次），**没有一句是在指涉图片版面的**，

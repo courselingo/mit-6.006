@@ -41,8 +41,8 @@
   <path d="M137,158 L 146,158" fill="none" stroke="#a855f7" marker-end="url(#arrow-purple)"/>
   <rect x="430" y="70" width="308" height="176" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="6,4"/>
   <text x="440" y="86" font-size="11" fill="#64748b">贪心上升的三句话</text>
-  <text x="584" y="140" font-size="12" fill="#1e293b" text-anchor="middle">每步只移向更大的邻居</text>
-  <text x="584" y="170" font-size="12" fill="#1e293b" text-anchor="middle">数值有限，所以一定会停</text>
-  <text x="584" y="200" font-size="12" fill="#1e293b" text-anchor="middle">停下来就是二维峰</text>
-  <text x="584" y="226" font-size="10" fill="#64748b" text-anchor="middle">紫 = 起点，绿 = 停下的峰</text>
+  <text x="440" y="118" font-size="12" fill="#1e293b" text-anchor="start">每步只移向更大的邻居</text>
+  <text x="440" y="148" font-size="12" fill="#1e293b" text-anchor="start">数值有限，所以一定会停</text>
+  <text x="440" y="178" font-size="12" fill="#1e293b" text-anchor="start">停下来就是二维峰</text>
+  <text x="440" y="208" font-size="10" fill="#64748b" text-anchor="start">紫 = 起点，绿 = 停下的峰</text>
 </svg>
