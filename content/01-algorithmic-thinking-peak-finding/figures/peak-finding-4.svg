@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 258" width="760" height="258"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 318" width="760" height="318"
      role="img" aria-labelledby="fig-peak-finding-4-title fig-peak-finding-4-desc">
   <title id="fig-peak-finding-4-title">区间收缩：8 个元素 → 3 个 → 1 个</title>
-  <desc id="fig-peak-finding-4-desc">第一轮丢掉位置 4 到 8 只留位置 1 到 3，第二轮丢掉位置 2 到 3 只留位置 1，第三轮面对 a[1] = 6，它作为左端点只需不小于右邻居 4（6 ≥ 4），就是答案；前两轮候选范围至少减半。</desc>
+  <desc id="fig-peak-finding-4-desc">候选区间每轮至少减半：位置 1 到 8 → 位置 1 到 3 → 位置 1。第 1 轮丢掉位置 4 到 8，第 2 轮丢掉位置 2 到 3，第 3 轮只剩 a[1] = 6，它作为左端点只需不小于右邻居 4（6 ≥ 4），就是答案。</desc>
 
   <defs>
     <style>
@@ -17,7 +17,7 @@
     </marker>
   </defs>
 
-  <rect x="0" y="0" width="760" height="258" fill="#ffffff"/>
+  <rect x="0" y="0" width="760" height="318" fill="#ffffff"/>
   <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">区间收缩：8 个元素 → 3 个 → 1 个</text>
   <text x="58" y="66" font-size="10" fill="#64748b" text-anchor="middle">1</text>
   <text x="150" y="66" font-size="10" fill="#64748b" text-anchor="middle">2</text>
@@ -28,11 +28,12 @@
   <text x="610" y="66" font-size="10" fill="#64748b" text-anchor="middle">7</text>
   <text x="702" y="66" font-size="10" fill="#64748b" text-anchor="middle">8</text>
   <rect x="24.5" y="78" width="711" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="380" y="100" font-size="12" fill="#1e40af" text-anchor="middle">第 1 轮：中点 a[4] = 2，左邻居 7 更大，丢掉位置 4 到 8</text>
+  <text x="380" y="100" font-size="12" fill="#1e40af" text-anchor="middle">位置 1 到 8</text>
   <rect x="24.5" y="139" width="251" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
-  <text x="150" y="161" font-size="12" fill="#166534" text-anchor="middle">第 2 轮：位置 1 到 3</text>
-  <text x="290.5" y="161" font-size="10" fill="#64748b" text-anchor="start">中点 a[2] = 4，左邻居 6 更大，丢掉位置 2 到 3</text>
+  <text x="150" y="161" font-size="12" fill="#166534" text-anchor="middle">位置 1 到 3</text>
   <rect x="24.5" y="200" width="67" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
   <text x="58" y="222" font-size="12" fill="#b45309" text-anchor="middle">位置 1</text>
-  <text x="106.5" y="222" font-size="10" fill="#64748b" text-anchor="start">第 3 轮：只剩 a[1] = 6，端点只需 6 ≥ 4，它就是答案</text>
+  <text x="24.5" y="262" font-size="10" fill="#64748b" text-anchor="start">第 1 轮：中点 a[4] = 2，左邻居 7 更大，丢掉位置 4 到 8</text>
+  <text x="24.5" y="278" font-size="10" fill="#64748b" text-anchor="start">第 2 轮：中点 a[2] = 4，左邻居 6 更大，丢掉位置 2 到 3</text>
+  <text x="24.5" y="294" font-size="10" fill="#64748b" text-anchor="start">第 3 轮：只剩 a[1] = 6，端点只需 6 ≥ 4，它就是答案</text>
 </svg>
