@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450"
+     role="img" aria-labelledby="fig-b6-folding-title fig-b6-folding-desc">
+  <title id="fig-b6-folding-title">折纸算法：设计一条线（缩放因子仍是开放问题）、可折性一条线（一般情形 NP 完全）</title>
+  <desc id="fig-b6-folding-desc">折纸算法有两条线：设计是用一张正方形纸折出任意多面体表面，其中缩放因子的优化仍是开放问题（n×n 棋盘折法最近从约 n/2 改进到约 n/4）；可折性是给定折痕图问能否折平，一般情形 NP 完全，带山折与谷折的 m×n 地图仍是开放问题，而 2×n 刚刚解决。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="450" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">折纸算法：设计一条线（缩放因子仍是开放问题）、可折性一条线（一般情形 NP 完全）</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">折纸算法分两条线：设计，以及可折性</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="147" font-size="12" fill="#1e40af" text-anchor="middle">设计：用一张正方形纸折出任意多面体表面</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="208" font-size="12" fill="#9d174d" text-anchor="middle">开放问题：如何把「缩放因子」优化到最好（n×n 棋盘折法最近从约 n/2 改进到约 n/4）</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="269" font-size="12" fill="#b45309" text-anchor="middle">可折性：给定折痕图，能否折平 —— 一般情形是 NP 完全的</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="330" font-size="12" fill="#9d174d" text-anchor="middle">开放问题：带山折与谷折的 m×n 地图；2×n 的情形刚刚解决</text>
+  <rect x="22" y="369" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="391" font-size="12" fill="#6b21a8" text-anchor="middle">另一个反直觉结论：包豪斯时期设计的双曲抛物面，在折纸意义下不存在</text>
+  <text x="380" y="427" font-size="10" fill="#64748b" text-anchor="middle">图上标「开放问题」的地方，正是这条研究线还没答案的地方</text>
+</svg>

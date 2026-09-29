@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-b6-migration-title fig-b6-migration-desc">
+  <title id="fig-b6-migration-title">执行迁移：远程访问要一次往返，而迁移上下文只要单程，但上下文本身可能更大</title>
+  <desc id="fig-b6-migration-desc">多核架构里每个处理器有自己的缓存：远程访问需要一次往返，而执行迁移把程序的上下文搬到远程处理器上就地执行，只需单程。代价上访问是两倍距离，迁移是距离加上取决于上下文大小的载入延迟；上下文（程序计数器、寄存器等）可能比要访问的数据还大。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">执行迁移：远程访问要一次往返，而迁移上下文只要单程，但上下文本身可能更大</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">程序大部分时间访问本地缓存；偶尔要访问远程缓存的数据</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="147" font-size="12" fill="#9d174d" text-anchor="middle">远程访问要一次往返：发出地址请求，再等数据回来</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="208" font-size="12" fill="#166534" text-anchor="middle">执行迁移：把「上下文」搬到那台处理器上就地执行，数据访问变成单程</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="269" font-size="12" fill="#b45309" text-anchor="middle">代价对比：访问是两倍距离；迁移是距离加上载入延迟，而延迟取决于上下文大小</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="330" font-size="12" fill="#9d174d" text-anchor="middle">上下文包括程序计数器与寄存器等，可能比要取的数据还大（约几 K 比特）</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">与其把数据搬过来，不如把自己搬过去；但上下文本身可能比数据更大</text>
+</svg>

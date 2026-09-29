@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-b6-beyond-courses-title fig-b6-beyond-courses-desc">
+  <title id="fig-b6-beyond-courses-title">走出这门课：算法与理论两个方向的后续课程清单</title>
+  <desc id="fig-b6-beyond-courses-desc">讲义最后给了两份课程清单：算法方向包括进阶算法、计算生物学、高级算法、几何计算、折纸算法、高级数据结构、分布式算法、算法博弈论、网络优化、随机算法与网络及计算机安全；理论方向包括自动机与可计算性与复杂度、计算理论、高级复杂度理论、随机性与计算、量子复杂度理论、编码理论与信息论。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">走出这门课：算法与理论两个方向的后续课程清单</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">算法方向：进阶算法、计算生物学、高级算法、几何计算、折纸算法</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="147" font-size="12" fill="#1e40af" text-anchor="middle">算法方向：高级数据结构、分布式算法、算法博弈论、网络优化、随机算法</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="208" font-size="12" fill="#b45309" text-anchor="middle">算法方向：网络与计算机安全（密码学）</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="269" font-size="12" fill="#6b21a8" text-anchor="middle">理论方向：自动机与可计算性与复杂度、计算理论、高级复杂度理论</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="330" font-size="12" fill="#6b21a8" text-anchor="middle">理论方向：随机性与计算、量子复杂度理论、编码理论、信息论</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">这些课几乎每一个都能在这门课的目录里找到对应的一讲</text>
+</svg>

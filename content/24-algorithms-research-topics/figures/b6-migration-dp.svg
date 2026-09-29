@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-b6-migration-dp-title fig-b6-migration-dp-desc">
+  <title id="fig-b6-migration-dp-title">迁移问题的动态规划：子问题是「处理完前 k 次访问且停在第 i 台处理器」，总时间是 O(NQ²)</title>
+  <desc id="fig-b6-migration-dp-desc">迁移决策用动态规划：子问题 DP(k, p_i) 表示处理完前 k 次访问且停在第 i 台处理器上的最小代价；递推在本地访问与从别处迁移之间取最小，总时间是 O(NQ²)；研究组用这套分析给 128 处理器的机器做迁移预测。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">迁移问题的动态规划：子问题是「处理完前 k 次访问且停在第 i 台处理器」，总时间是 O(NQ²)</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">问题：给定访问序列与每个地址所在的处理器，决定何时迁移使总代价最小</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="147" font-size="12" fill="#b45309" text-anchor="middle">子问题 DP(k, p_i)：处理完前 k 次访问、并且当前停在第 i 台处理器上的最小代价</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="208" font-size="12" fill="#b45309" text-anchor="middle">递推：下一步若在本地就付访问代价，否则在「从哪台迁移过来」之间取最小</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="269" font-size="12" fill="#166534" text-anchor="middle">复杂度：子问题数 N·Q，每子问题枚举 Q 种来源 ⇒ O(NQ²)</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="330" font-size="12" fill="#6b21a8" text-anchor="middle">去向：研究组正在造一台 128 处理器的执行迁移机器，用这套分析做迁移预测</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">课堂上的 DP 骨架在这里接上了一台正在造的真机器</text>
+</svg>

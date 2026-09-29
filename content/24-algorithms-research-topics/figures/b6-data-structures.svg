@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-b6-data-structures-title fig-b6-data-structures-desc">
+  <title id="fig-b6-data-structures-title">数据结构两大类：整数数据结构把单次操作压到亚对数，缓存友好的结构改数传输次数</title>
+  <desc id="fig-b6-data-structures-desc">数据结构分两类：整数数据结构存 n 个整数并支持插入、删除、前驱、后继，哈希做到 O(1)、AVL 树做到 O(lg n)、van Emde Boas 与 fusion trees 压到亚对数；缓存友好的结构则改数内存传输次数，查找 Θ(log_B N) 次、排序 Θ((N/B)·log_{C/B}(N/B)) 次，且不需要知道块大小与缓存大小。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">数据结构两大类：整数数据结构把单次操作压到亚对数，缓存友好的结构改数传输次数</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">数据结构分两大类：整数数据结构，以及缓存友好的数据结构</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="147" font-size="12" fill="#1e40af" text-anchor="middle">整数数据结构：存 n 个整数，支持插入、删除、前驱、后继（字 RAM 模型）</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="208" font-size="12" fill="#b45309" text-anchor="middle">哈希 O(1) 精确查找；AVL 树 O(lg n)；van Emde Boas 与 fusion trees 压到亚对数一档</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="269" font-size="12" fill="#166534" text-anchor="middle">缓存友好结构：内存按块传输，于是「快」要数内存传输次数</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="330" font-size="12" fill="#166534" text-anchor="middle">查找 Θ(log_B N) 次传输；排序 Θ((N/B)·log_{C/B}(N/B)) 次；甚至不需要知道块与缓存大小</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">「快」有两种含义：一种数操作次数，一种数传输次数，后者才是真实机器的瓶颈</text>
+</svg>

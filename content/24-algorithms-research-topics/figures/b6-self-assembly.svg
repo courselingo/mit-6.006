@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-b6-self-assembly-title fig-b6-self-assembly-desc">
+  <title id="fig-b6-self-assembly-title">自组装：胶强度达到温度就粘住，而砖数与阶段数可以压到很小</title>
+  <desc id="fig-b6-self-assembly-desc">自组装是一个几何计算模型：方砖边上有胶、胶强度达到温度以上就靠布朗运动粘住；用 O(lg n / lg lg n) 块砖能拼出 n×n 方块，或者用 O(1) 块砖加 O(lg n) 个阶段；还能用 O(1) 块砖与 O(1) 个阶段复制任意未知形状的无穷多份。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">自组装：胶强度达到温度就粘住，而砖数与阶段数可以压到很小</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">自组装是一个几何计算模型：方砖的每条边上有「胶」，每对胶有强度</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="147" font-size="12" fill="#1e40af" text-anchor="middle">布朗运动让方砖彼此碰撞，胶强度达到温度以上就粘住</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="208" font-size="12" fill="#b45309" text-anchor="middle">用 O(lg n / lg lg n) 块砖可以拼出 n×n 方块</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="269" font-size="12" fill="#b45309" text-anchor="middle">或者用 O(1) 块砖加上 O(lg n) 个「阶段」（由生物工程师操作的算法步骤）</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="330" font-size="12" fill="#166534" text-anchor="middle">还能用 O(1) 块砖与 O(1) 个阶段，复制任意未知形状的无穷多份</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">砖数与阶段数就是这条研究线的进度表</text>
+</svg>

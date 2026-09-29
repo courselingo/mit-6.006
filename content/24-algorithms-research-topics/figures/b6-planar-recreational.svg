@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-b6-planar-recreational-title fig-b6-planar-recreational-desc">
+  <title id="fig-b6-planar-recreational-title">平面图与娱乐算法：几条精确的复杂度结论</title>
+  <desc id="fig-b6-planar-recreational-desc">平面图上 Dijkstra 可做到 O(n)、Bellman-Ford 可做到 O(n lg²n / lg lg n)；很多问题即使平面图也 NP 难，但 Baker 的做法（BFS 分层、每 k 层删一层、剩余连通块用 DP 解）能给出 1+ε 近似。娱乐算法方面，n×n×n 魔方直径是 Θ(n²/lg n)，而俄罗斯方块是 NP 完全的。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">平面图与娱乐算法：几条精确的复杂度结论</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="86" font-size="12" fill="#166534" text-anchor="middle">平面图上：Dijkstra 可以做到 O(n)，Bellman-Ford 可以做到 O(n lg²n / lg lg n)</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="147" font-size="12" fill="#9d174d" text-anchor="middle">平面图上仍有很多 NP 难的问题，但可以拿到 1+ε 近似</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="208" font-size="12" fill="#b45309" text-anchor="middle">Baker 的做法：做一次 BFS，每 k 层删掉一层，剩下的连通块层数小于 k，再用 DP 解</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="269" font-size="12" fill="#1e40af" text-anchor="middle">娱乐算法：n×n×n 魔方的直径是 Θ(n² / lg n)</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="330" font-size="12" fill="#6b21a8" text-anchor="middle">俄罗斯方块是 NP 完全的 —— 也就是第 22 讲那个游戏、第 23 讲那个例子</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">同一个术语（复杂度、NP 完全）在论文里接着往下长</text>
+</svg>
