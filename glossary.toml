@@ -656,3 +656,25 @@ notes = "h(k) = [(a·k) mod 2^w] ≫ (w − r)，其中 m = 2^r；a 取随机奇
 en = "universal hashing"
 zh = "全域哈希"
 notes = "h(k) = [(ak + b) mod p] mod m，a 与 b 随机、p 是大于 |U| 的大质数；任两个不同的键碰撞概率恰为 1/m"
+
+# ── 第 7 讲（计数排序、基数排序与下界）新增 ────────────────────────────────
+
+[[term]]
+en = "comparison model"
+zh = "比较模型"
+notes = "输入元素当黑盒（ADT），只允许比较，代价记作比较次数；两条下界都只在这个模型里成立"
+
+[[term]]
+en = "decision tree"
+zh = "判定树"
+notes = "把某个 n 下所有比较结果与对应输出画成的二叉树：内部节点一次比较、叶子一个输出、树高是最坏情况的运行时间"
+
+[[term]]
+en = "least significant digit"
+zh = "最低位数字"
+notes = "基数排序的起点：先按它排一遍，再往高位走；取某一位是 O(1) 的随机访问"
+
+[[term]]
+en = "most significant digit"
+zh = "最高位数字"
+notes = "基数排序的终点；走到它，整个序列才真正有序"

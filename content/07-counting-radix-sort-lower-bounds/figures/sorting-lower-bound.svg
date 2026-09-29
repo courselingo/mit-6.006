@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 434 364" width="434" height="364"
      role="img" aria-labelledby="fig-sorting-lower-bound-title fig-sorting-lower-bound-desc">
   <title id="fig-sorting-lower-bound-title">排序的下界：n! 片叶子，一路放缩到 Ω(n lg n)</title>
-  <desc id="fig-sorting-lower-bound-desc">七行推导竖着排下来：树高至少是 lg n!，拆成 lg1 加到 lg n，写成从 1 到 n 的求和，只留从 n/2 到 n 的后一半，每一项都不小于 lg(n/2)，得到 (n/2)lg n 减 n/2，最后是 Ω(n lg n)。每行开头的等号或大于等于号说明这一步是恒等变形还是放缩。</desc>
+  <desc id="fig-sorting-lower-bound-desc">推导一行一行竖着排下来（讲义写成 7 行，这里把最后一行拆成两行）：树高至少是 lg n!，拆成 lg1 加到 lg n，写成从 1 到 n 的求和，只留从 n/2 到 n 的后一半，每一项都不小于 lg(n/2)，得到 (n/2)lg n 减 n/2，最后是 Ω(n lg n)。每行开头的等号或大于等于号说明这一步是恒等变形还是放缩。</desc>
 
   <defs>
     <style>

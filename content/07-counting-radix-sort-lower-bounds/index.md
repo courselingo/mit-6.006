@@ -5,7 +5,7 @@ slug = "counting-radix-sort-lower-bounds"
 status = "draft"
 source_kind = "notes"
 source_url = "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/resources/mit6_006f11_lec07/"
-source_title = "Lecture 7: Counting sort, radix sort, lower bounds for sorting and searching"
+source_title = "Lecture 07: Counting sort, radix sort, lower bounds for sorting and searching"
 output_mode = "explanation"
 +++
 
@@ -47,7 +47,7 @@ output_mode = "explanation"
 
 讲义在同一页给了五条读法，逐条是：内部节点 = 一次二选一的判断；叶子 = 输出（算法结束）；根到叶的路径 = 一次执行；路径长度（深度）= 这次执行的运行时间；[[term:height]] = [[term:worst-case]]下的运行时间。最后一条把树的形状和代价接上了。
 
-还有一句绿色小字值得单独记住：binary decision tree model is more powerful than comparison model, and lower bounds extend to it。意思是判定树模型比比较模型更强（它能表达的东西更多），而下界在它上面照样成立。这句话是后面两条下界的许可证。
+还有一句绿色小字值得单独记住：binary decision tree model is more powerful than comparison model, and lower bounds extend to it。意思是判定树模型比[[term:comparison-model]]更强（它能表达的东西更多），而下界在它上面照样成立。这句话是后面两条下界的许可证。
 
 ![n = 3 的判定树：4 片叶子，每个内部节点一次比较](figures/decision-tree.svg)
 
@@ -83,7 +83,7 @@ output_mode = "explanation"
 
 讲义另外给了一条独立的路：用 Stirling 公式（讲义原文拼作 Sterling's Formula，通行写法是 Stirling）得到 lg n! = n lg n − O(n)。两条路给出的是同一个 n lg n。
 
-![排序下界的七步放缩，最后落到 Ω(n lg n)](figures/sorting-lower-bound.svg)
+![排序下界的放缩链：从 lg n! 一路到 Ω(n lg n)](figures/sorting-lower-bound.svg)
 
 这张图要连着上一张看：查找用的是「答案有 n 个」，排序用的是「答案有 n! 个」，后面的推理是同一套。
 
@@ -142,7 +142,7 @@ output_mode = "explanation"
 按最高位排     329 355 436 457 657 720 839
 ```
 
-第二栏到第三栏最容易看出稳定的作用：上一轮里 720 排在 329 前面，而它们的中间位都是 2，于是这一轮不动这两个，720 仍在前面。我们按这个规则核对过两轮，次序与讲义的图逐格对得上（核对过程是我们走的，讲义只给了图）。
+第一轮与第二轮之间最容易看出稳定的作用：上一轮里 720 排在 329 前面，而它们的中间位都是 2，于是这一轮不动这两个，720 仍在前面。我们按这个规则核对过两轮，次序与讲义的图逐格对得上（核对过程是我们走的，讲义只给了图）。
 
 ![基数排序的四栏：按最低位、中间位、最高位各排一次](figures/radix-sort-example.svg)
 
@@ -189,7 +189,7 @@ b 是这里的自由参数，两头拉扯：b 大则位数 d 少，但每一位�
 2. 讲义把 height ≥ lg Θ(n) 写成 = lg n ±Θ(1) 的读法：严格说法是 ⌈lg n⌉，取整与差一层的常数被并进了那个 ±Θ(1)；
 3. 排序下界最后一行 (n/2)·lg n − n/2 的核算：从 i = n/2 到 n 共 n/2 + 1 项，严格算会多出一个 lg n − 1，这是低阶项出入，Ω(n lg n) 不变（照录并就地说明，未改源）；
 4. 基数排序第二栏到第三栏的核对过程，以及「720 仍在 329 前面」这个观察（讲义只给了图）；
-5. 三处工程指涉：Python 的 bisect、Java 的 TreeMap、C++ 的 std::map 是有序结构上查找的例子；Python 的 list 与 CLRS 的计数器实现是计数排序的两种落地；
+5. 工程指涉：Python 的 bisect、Java 的 TreeMap、C++ 的 std::map 是有序结构上查找的例子；Python 的 list 与 CLRS 的计数器实现是计数排序的两种落地；
 6. 计数排序与 direct addressing 的联系，以及「桶数组这 k 格躲不掉」这个空间解读。
 
 另外三处登记：一是 `source_title` 用的是 OCW 资源页的逐字标题，与 `docs/lecture-manifest.md` 第 7 行一致，而讲义 PDF 自己的页眉写的是 Linear-Time Sorting，两者是同一份材料的不同署名；二是讲义第 1 页右侧有一个绿色花边框，内写 theorem、proof 与 [[term:counterexample]] 三个词，本讲没有用到它；三是讲义把 Stirling 公式拼作 Sterling's Formula，本页照录原文并在括号里给出通行拼写。
