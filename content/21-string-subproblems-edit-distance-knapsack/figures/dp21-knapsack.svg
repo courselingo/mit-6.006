@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-dp21-knapsack-title fig-dp21-knapsack-desc">
+  <title id="fig-dp21-knapsack-title">背包：第一次尝试因为「不知道还剩多少空间」而错，加上容量 X 之后变成 O(nS) 个子问题</title>
+  <desc id="fig-dp21-knapsack-desc">背包问题里，第一次尝试把子问题定义成「后缀 i 的最优值」是错的，因为不知道背包还剩多少空间；正确做法是让子问题带上剩余容量 X，于是有 O(nS) 个子问题，递推比较「不装」与「装」两种选择，按 i 递减、X 递增的顺序填表，总时间 O(nS)，答案是 DP[0, S]。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">背包：第一次尝试因为「不知道还剩多少空间」而错，加上容量 X 之后变成 O(nS) 个子问题</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">设定：容量 S，物品 i 有整数体积 si 与实数价值 vi，在总体积 ≤ S 下最大化总价值</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="147" font-size="12" fill="#9d174d" text-anchor="middle">错误的第一次尝试：子问题只取「后缀 i 的最优值」⇒ 不知道还剩多少空间，讲义标 WRONG</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="208" font-size="12" fill="#b45309" text-anchor="middle">正确的做法：子问题取「给定大小为 X 的背包、后缀 i 的最优值」⇒ O(nS) 个子问题</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="269" font-size="12" fill="#b45309" text-anchor="middle">递推 DP[i, X] = max(DP[i+1, X], vi + DP[i+1, X − si])（后项要求 si ≤ X），基例 DP[n, X] = 0</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="330" font-size="12" fill="#166534" text-anchor="middle">顺序 i 从 n 到 0、X 从 0 到 S；总时间 O(nS)；解是 DP[0, S]</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">一个「剩余容量」参数之差，决定了这个问题能不能算；而它实际上枚举了所有子集的效果</text>
+</svg>

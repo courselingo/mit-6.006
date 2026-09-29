@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 328" width="760" height="328"
+     role="img" aria-labelledby="fig-dp21-pseudopolynomial-title fig-dp21-pseudopolynomial-desc">
+  <title id="fig-dp21-pseudopolynomial-title">伪多项式时间：输入里写 S 只要 lg S 位，所以 O(nS) 对输入长度是指数级的</title>
+  <desc id="fig-dp21-pseudopolynomial-desc">多项式时间要求代价是输入长度的多项式；输入里写出容量 S 只需 lg S 位，所以 S 相对输入长度是指数级的，O(nS) 并不是输入长度的多项式。它对问题规模与输入里的数值都是多项式，因此被称为伪多项式时间，也就是「不好不坏」的那一档。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="328" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">伪多项式时间：输入里写 S 只要 lg S 位，所以 O(nS) 对输入长度是指数级的</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">多项式时间 = 关于输入长度的多项式</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="147" font-size="12" fill="#9d174d" text-anchor="middle">输入里写出容量 S 只需要 lg S 位，所以 S 是 lg S 的指数</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="208" font-size="12" fill="#9d174d" text-anchor="middle">于是 O(nS) 换算成输入长度就是指数级：它不是输入长度的多项式</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="269" font-size="12" fill="#6b21a8" text-anchor="middle">伪多项式时间 = 对问题规模与输入里的数值都是多项式；Θ(nS) 属于这一类</text>
+  <text x="380" y="305" font-size="10" fill="#64748b" text-anchor="middle">讲义的评语：polynomial 好、exponential 坏、pseudopoly 不好不坏</text>
+</svg>

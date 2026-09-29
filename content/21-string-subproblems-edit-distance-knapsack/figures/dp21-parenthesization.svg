@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-dp21-parenthesization-title fig-dp21-parenthesization-desc">
+  <title id="fig-dp21-parenthesization-title">括号化：同一批矩阵两种括号方式代价不同，而它的递推有两条依赖，所以不是路径问题</title>
+  <desc id="fig-dp21-parenthesization-desc">括号化要在同一批矩阵上选择加括号的方式：(A·B)·C 是 θ(n²) 而 A·(B·C) 是 θ(n)，所以子问题要取子串 A[i:j]（Θ(n²) 个）、猜测最外层乘法（O(n) 种），按子串长度递增计算，总时间 O(n³)；而这个递推有两条依赖，所以它不是子问题 DAG 上的最短路问题。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">括号化：同一批矩阵两种括号方式代价不同，而它的递推有两条依赖，所以不是路径问题</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="86" font-size="12" fill="#9d174d" text-anchor="middle">同一批矩阵，两种加括号方式：(A·B)·C 要 θ(n²)，而 A·(B·C) 只要 θ(n)</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="147" font-size="12" fill="#1e40af" text-anchor="middle">子问题：不能取前缀或后缀（讲义直接写 NO），要取子串 A[i:j] ⇒ Θ(n²) 个</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="208" font-size="12" fill="#b45309" text-anchor="middle">猜测：最外层那次乘法在哪里 ⇒ O(n) 种；递推对 k 取最小，基例 DP[i, i+1] = 0</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="269" font-size="12" fill="#166534" text-anchor="middle">顺序：按子串长度递增；总时间 O(n³)；解是 DP[0, n]，括号用 parent pointers 还原</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="330" font-size="12" fill="#6b21a8" text-anchor="middle">注意：这个递推有两条依赖，所以它不是「子问题 DAG 上的最短路」</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">两条依赖就不是路径问题，这也是「DP 约等于 DAG 最短路」那句口号的前提</text>
+</svg>

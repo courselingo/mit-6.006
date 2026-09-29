@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-dp21-edit-distance-title fig-dp21-edit-distance-desc">
+  <title id="fig-dp21-edit-distance-title">编辑距离：三种猜测、每子问题 Θ(1)、总时间 Θ(|x|·|y|)，而且只需保留最后两行</title>
+  <desc id="fig-dp21-edit-distance-desc">编辑距离的子问题是 c(i,j) = 把 x[i:] 变成 y[j:] 的最小代价，共 Θ(|x|·|y|) 个；每个子问题猜三种动作（删除、插入、替换）中的一种，耗时 Θ(1)；按二维表自底向上或从右到左计算，只保留最后两行或两列就能把空间压到线性，总时间 Θ(|x|·|y|)，答案是 c(0,0)。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">编辑距离：三种猜测、每子问题 Θ(1)、总时间 Θ(|x|·|y|)，而且只需保留最后两行</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">子问题 c(i, j) = 把 x[i:] 变成 y[j:] 的最小代价 ⇒ Θ(|x|·|y|) 个</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="147" font-size="12" fill="#b45309" text-anchor="middle">猜测三种动作里选哪一种：删掉 x[i]、插入 y[j]、把 x[i] 换成 y[j]</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="208" font-size="12" fill="#b45309" text-anchor="middle">递推：三种动作的代价加上对应的后续子问题；基例 c(|x|, |y|) = 0 ⇒ 每子问题 Θ(1)</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="269" font-size="12" fill="#166534" text-anchor="middle">顺序：二维表自底向上或从右到左；只留最后两行或两列 ⇒ 线性空间</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="330" font-size="12" fill="#166534" text-anchor="middle">总时间 Θ(|x|·|y|)；原问题是 c(0, 0)</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">注意：讲义把这一步写成 maximum，而按上下文应为取最小（已在溯源登记）</text>
+</svg>

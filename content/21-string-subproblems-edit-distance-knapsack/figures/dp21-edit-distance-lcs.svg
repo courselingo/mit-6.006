@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 328" width="760" height="328"
+     role="img" aria-labelledby="fig-dp21-edit-distance-lcs-title fig-dp21-edit-distance-lcs-desc">
+  <title id="fig-dp21-edit-distance-lcs-title">编辑距离与最长公共子序列的等价特例：替换代价为 0 时，对得上的字符可以不同</title>
+  <desc id="fig-dp21-edit-distance-lcs-desc">当插入与删除的代价都是 1、替换的代价是 0 时，最小编辑距离等价于最长公共子序列：子序列保持先后顺序但不要求连续，例如 HIEROGLYPHOLOGY 与 MICHAELANGELO 之间能取出 HELLO。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="328" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">编辑距离与最长公共子序列的等价特例：替换代价为 0 时，对得上的字符可以不同</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">编辑距离：插入一个字符、删除一个字符、把 x[i] 换成 y[j]</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="147" font-size="12" fill="#b45309" text-anchor="middle">把「插入 + 删除」的代价配成 1、替换的代价配成 0</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="208" font-size="12" fill="#166534" text-anchor="middle">于是编辑距离等价于最长公共子序列：两个字符不必相同也能对上</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="269" font-size="12" fill="#6b21a8" text-anchor="middle">子序列有序但不要求连续：HIEROGLYPHOLOGY 与 MICHAELANGELO 能取出 HELLO</text>
+  <text x="380" y="305" font-size="10" fill="#64748b" text-anchor="middle">替换代价为 0，等于允许「对不上的字符也能配对」，这正是最长公共子序列的口径</text>
+</svg>

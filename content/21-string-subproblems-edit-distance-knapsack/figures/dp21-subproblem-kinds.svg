@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 269" width="760" height="269"
+     role="img" aria-labelledby="fig-dp21-subproblem-kinds-title fig-dp21-subproblem-kinds-desc">
+  <title id="fig-dp21-subproblem-kinds-title">序列上的三档子问题：后缀与前缀是 Θ(n)，子串是 Θ(n²)，能用省的就别用贵的</title>
+  <desc id="fig-dp21-subproblem-kinds-desc">序列上的子问题有三档：后缀 x[i:] 与前缀 x[:i] 各只有 |x| 个，而子串 x[i:j] 有 Θ(x²) 个；因为子问题个数直接进入总代价，所以能用后缀或前缀解决时就别用子串。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="269" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">序列上的三档子问题：后缀与前缀是 Θ(n)，子串是 Θ(n²)，能用省的就别用贵的</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="86" font-size="12" fill="#166534" text-anchor="middle">后缀 x[i:]：一共 |x| 个 —— 最省，能用就用</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="147" font-size="12" fill="#166534" text-anchor="middle">前缀 x[:i]：一共 |x| 个 —— 同样便宜</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="208" font-size="12" fill="#9d174d" text-anchor="middle">子串 x[i:j]：一共 Θ(x²) 个 —— 贵，但有时非用不可（例如括号化）</text>
+  <text x="380" y="244" font-size="10" fill="#64748b" text-anchor="middle">子问题个数直接进入总代价的乘法，所以档位选错，量级就上去了</text>
+</svg>
