@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-bst-insert-title fig-bst-insert-desc">
+  <title id="fig-bst-insert-title">二叉搜索树的插入：比根大往右、比根小往左，走到空位就挂上去</title>
+  <desc id="fig-bst-insert-desc">依次插入 49、79、46、41、64：49 成为根，之后每个元素从根开始比较，比当前节点大就往右、小就往左，直到走到空位，接在那里。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">二叉搜索树的插入：比根大往右、比根小往左，走到空位就挂上去</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">插入 49：树是空的，它当根</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="147" font-size="12" fill="#1e40af" text-anchor="middle">插入 79：比 49 大，往右走，成了 49 的右孩子</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="208" font-size="12" fill="#1e40af" text-anchor="middle">插入 46：比 49 小，往左走，成了 49 的左孩子</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="269" font-size="12" fill="#1e40af" text-anchor="middle">插入 41：比 49 小、又比 46 小，继续往左，挂在 46 左边</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="330" font-size="12" fill="#1e40af" text-anchor="middle">插入 64：比 49 大、比 79 小，落在 79 的左孩子位置</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">每一趟只沿一条路径往下走：比当前节点大就右转，小就左转，走到空位就挂上去</text>
+</svg>

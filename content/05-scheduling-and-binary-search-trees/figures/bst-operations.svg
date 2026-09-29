@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 267" width="760" height="267"
+     role="img" aria-labelledby="fig-bst-operations-title fig-bst-operations-desc">
+  <title id="fig-bst-operations-title">树上的三种操作：找最小、删除最小、找下一个更大的元素</title>
+  <desc id="fig-bst-operations-desc">找最小只需一路向左；删除最小是先找到再摘掉；找下一个更大分两种情形：有右子树就取右子树里的最小值，否则沿父亲往上爬，直到自己不是父亲的右孩子。三种操作都沿一条路径走，代价都是 O(h)。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="267" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">树上的三种操作：找最小、删除最小、找下一个更大的元素</text>
+  <rect x="22" y="64" width="716" height="33" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="84" font-size="11" fill="#166534" text-anchor="middle">找最小：一直往左走，走到不能再往左为止</text>
+  <rect x="22" y="125" width="716" height="33" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="145" font-size="11" fill="#166534" text-anchor="middle">删除最小：先找到它，再把它摘掉</text>
+  <rect x="22" y="186" width="716" height="33" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="206" font-size="11" fill="#b45309" text-anchor="middle">找下一个更大：有右子树就取右子树的最小值；否则往上爬，爬到「自己不是父亲的右孩子」为止</text>
+  <text x="380" y="244" font-size="10" fill="#64748b" text-anchor="middle">三种操作的走法其实是同一件事：沿一条从根到叶的路径走，所以代价都写成 O(h)</text>
+</svg>

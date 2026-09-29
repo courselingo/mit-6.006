@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 328" width="760" height="328"
+     role="img" aria-labelledby="fig-rank-augment-title fig-rank-augment-desc">
+  <title id="fig-rank-augment-title">Rank(t) 的增强：多存左子树规模，边走边把更小的节点加起来</title>
+  <desc id="fig-rank-augment-desc">为了回答「不晚于 t 的有几架」，在 BST 的每个节点上多存它左子树的规模；求 Rank(t) 时沿查找路径下降，把路上更小的节点与它们左边的子树规模加起来，总代价仍是 O(h)。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="328" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">Rank(t) 的增强：多存左子树规模，边走边把更小的节点加起来</text>
+  <rect x="22" y="64" width="716" height="33" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="84" font-size="11" fill="#6b21a8" text-anchor="middle">增强：每个节点多存一个数，也就是它左子树里有多少个节点</text>
+  <rect x="22" y="125" width="716" height="33" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="145" font-size="11" fill="#1e40af" text-anchor="middle">第一步：沿查找路径走到时刻 t 该在的位置</text>
+  <rect x="22" y="186" width="716" height="33" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="206" font-size="11" fill="#1e40af" text-anchor="middle">第二步：路上凡是比 t 小的节点都记一笔</text>
+  <rect x="22" y="247" width="716" height="33" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="267" font-size="11" fill="#166534" text-anchor="middle">第三步：把它左边的子树规模也加上，总共 O(h)</text>
+  <text x="380" y="305" font-size="10" fill="#64748b" text-anchor="middle">讲义的例子算出来是 1 + 2 + 1 + 1 = 5：在 79 之前落地的有 5 架</text>
+</svg>
