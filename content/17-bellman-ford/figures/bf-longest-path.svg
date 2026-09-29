@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 269" width="760" height="269"
+     role="img" aria-labelledby="fig-bf-longest-path-title fig-bf-longest-path-desc">
+  <title id="fig-bf-longest-path-title">最长简单路径：把权重取反再跑 Bellman-Ford 不行，因为负环会让算法中止</title>
+  <desc id="fig-bf-longest-path-desc">最长简单路径在非负权图上是 NP-hard。把权重取反再跑 Bellman-Ford 并不等于求最长路径，因为取反后可能出现从源点可达的负环，算法会中止；最短简单路径问题同样是 NP-hard。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="269" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">最长简单路径：把权重取反再跑 Bellman-Ford 不行，因为负环会让算法中止</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="86" font-size="12" fill="#9d174d" text-anchor="middle">在非负权图上求最长简单路径：NP-hard，没有已知的多项式算法</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="147" font-size="12" fill="#9d174d" text-anchor="middle">把每条边的权重取反再跑 Bellman-Ford 也不行：可能出现从源点可达的负环，算法会中止</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="208" font-size="12" fill="#9d174d" text-anchor="middle">带负环时求最长简单路径同样不行，而最短简单路径问题也是 NP-hard</text>
+  <text x="380" y="244" font-size="10" fill="#64748b" text-anchor="middle">Bellman-Ford 处理的是「最短」，把权重取反并不能把它变成「最长」</text>
+</svg>

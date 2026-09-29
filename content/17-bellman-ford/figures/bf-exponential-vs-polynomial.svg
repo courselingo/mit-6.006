@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 328" width="760" height="328"
+     role="img" aria-labelledby="fig-bf-exponential-vs-polynomial-title fig-bf-exponential-vs-polynomial-desc">
+  <title id="fig-bf-exponential-vs-polynomial-title">指数与多项式的分界：问题缩得很慢就危险，缩得快就安全（讲义说这张图要记五年）</title>
+  <desc id="fig-bf-exponential-vs-polynomial-desc">讲义把两种递推式并排：T(n) = C1 + C2·T(n − C3) 只把规模减少一点，C2 &gt; 1 时是指数；T(n) = C1 + C2·T(n / C3) 把规模按比例缩小，只要 C3 &gt; 1 就仍在多项式一侧。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="328" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">指数与多项式的分界：问题缩得很慢就危险，缩得快就安全（讲义说这张图要记五年）</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="86" font-size="12" fill="#9d174d" text-anchor="middle">T(n) = C1 + C2·T(n − C3)：规模只减少一点</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="147" font-size="12" fill="#9d174d" text-anchor="middle">这时 C2 &gt; 1 就麻烦：讲义把它标成 Divide &amp; Explode（指数）</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="208" font-size="12" fill="#1e40af" text-anchor="middle">T(n) = C1 + C2·T(n / C3)：规模按比例缩小</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="269" font-size="12" fill="#166534" text-anchor="middle">这时只要 C3 &gt; 1，即使 C2 &gt; 1 也没关系：Divide &amp; Conquer（多项式）</text>
+  <text x="380" y="305" font-size="10" fill="#64748b" text-anchor="middle">这是讲义标成「5 分钟 6.006」的那张图：讲师说毕业后五年还该记住它</text>
+</svg>
