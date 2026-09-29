@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 252" width="760" height="252"
      role="img" aria-labelledby="fig-docdist-multipliers-title fig-docdist-multipliers-desc">
-  <title id="fig-docdist-multipliers-title">每一步买到了多少倍：动写法与动数据结构</title>
-  <desc id="fig-docdist-multipliers-desc">把讲义的实测表逐行相除：动写法的几步买到 1.4 到 9 倍，动数据结构的两步分别买到 1.6 倍与 6.4 倍；柱子高度按倍数等比画。</desc>
+  <title id="fig-docdist-multipliers-title">每一步买到了多少倍：动写法与换数据结构</title>
+  <desc id="fig-docdist-multipliers-desc">把讲义的实测表逐行相除：只动写法的三步买到 1.4、3.9、9 倍；换了算法或数据结构的四步买到 1.3、1.7、1.6、6.4 倍。柱子高度按倍数等比画，分类与正文第七节的两条 bullet 一致。</desc>
 
   <defs>
     <style>
@@ -14,27 +14,27 @@
   </defs>
 
   <rect x="0" y="0" width="760" height="252" fill="#ffffff"/>
-  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">每一步买到了多少倍：动写法与动数据结构</text>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">每一步买到了多少倍：动写法与换数据结构</text>
   <rect x="22" y="161" width="80.85714285714286" height="9" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
   <text x="62.42857142857143" y="190" font-size="10" fill="#1e293b" text-anchor="middle">+=</text>
   <text x="62.42857142857143" y="205" font-size="10" fill="#64748b" text-anchor="middle">1.4×</text>
-  <rect x="127.85714285714286" y="161" width="80.85714285714286" height="9" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="168.28571428571428" y="190" font-size="10" fill="#1e293b" text-anchor="middle">归并式点积</text>
-  <text x="168.28571428571428" y="205" font-size="10" fill="#64748b" text-anchor="middle">1.3×</text>
-  <rect x="233.71428571428572" y="159" width="80.85714285714286" height="11" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="274.14285714285717" y="190" font-size="10" fill="#1e293b" text-anchor="middle">字典计数</text>
-  <text x="274.14285714285717" y="205" font-size="10" fill="#64748b" text-anchor="middle">1.7×</text>
-  <rect x="339.57142857142856" y="144" width="80.85714285714286" height="26" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="380" y="190" font-size="10" fill="#1e293b" text-anchor="middle">translate</text>
-  <text x="380" y="205" font-size="10" fill="#64748b" text-anchor="middle">3.9×</text>
+  <rect x="127.85714285714286" y="144" width="80.85714285714286" height="26" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="168.28571428571428" y="190" font-size="10" fill="#1e293b" text-anchor="middle">translate</text>
+  <text x="168.28571428571428" y="205" font-size="10" fill="#64748b" text-anchor="middle">3.9×</text>
+  <rect x="233.71428571428572" y="111" width="80.85714285714286" height="59" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="274.14285714285717" y="190" font-size="10" fill="#1e293b" text-anchor="middle">整篇处理</text>
+  <text x="274.14285714285717" y="205" font-size="10" fill="#64748b" text-anchor="middle">9.0×</text>
+  <rect x="339.57142857142856" y="161" width="80.85714285714286" height="9" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="190" font-size="10" fill="#1e293b" text-anchor="middle">归并式点积</text>
+  <text x="380" y="205" font-size="10" fill="#64748b" text-anchor="middle">1.3×</text>
   <rect x="445.42857142857144" y="159" width="80.85714285714286" height="11" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
-  <text x="485.8571428571429" y="190" font-size="10" fill="#1e293b" text-anchor="middle">归并排序</text>
-  <text x="485.8571428571429" y="205" font-size="10" fill="#64748b" text-anchor="middle">1.6×</text>
-  <rect x="551.2857142857143" y="128" width="80.85714285714286" height="42" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
-  <text x="591.7142857142858" y="190" font-size="10" fill="#1e293b" text-anchor="middle">全字典</text>
-  <text x="591.7142857142858" y="205" font-size="10" fill="#64748b" text-anchor="middle">6.4×</text>
-  <rect x="657.1428571428571" y="111" width="80.85714285714286" height="59" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
-  <text x="697.5714285714286" y="190" font-size="10" fill="#1e293b" text-anchor="middle">整篇处理</text>
-  <text x="697.5714285714286" y="205" font-size="10" fill="#64748b" text-anchor="middle">9.0×</text>
-  <text x="380" y="228" font-size="10" fill="#64748b" text-anchor="middle">蓝＝动写法与常数因子，紫＝动数据结构；倍数按讲义那张表逐行相除算出</text>
+  <text x="485.8571428571429" y="190" font-size="10" fill="#1e293b" text-anchor="middle">字典计数</text>
+  <text x="485.8571428571429" y="205" font-size="10" fill="#64748b" text-anchor="middle">1.7×</text>
+  <rect x="551.2857142857143" y="159" width="80.85714285714286" height="11" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="591.7142857142858" y="190" font-size="10" fill="#1e293b" text-anchor="middle">归并排序</text>
+  <text x="591.7142857142858" y="205" font-size="10" fill="#64748b" text-anchor="middle">1.6×</text>
+  <rect x="657.1428571428571" y="128" width="80.85714285714286" height="42" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="697.5714285714286" y="190" font-size="10" fill="#1e293b" text-anchor="middle">全字典</text>
+  <text x="697.5714285714286" y="205" font-size="10" fill="#64748b" text-anchor="middle">6.4×</text>
+  <text x="380" y="228" font-size="10" fill="#64748b" text-anchor="middle">蓝＝只动写法与常数因子（3 步）；紫＝换了算法或数据结构（4 步）；倍数按讲义那张表逐行相除算出</text>
 </svg>
