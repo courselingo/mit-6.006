@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 204" width="760" height="204"
      role="img" aria-labelledby="fig-pointer-machine-title fig-pointer-machine-desc">
   <title id="fig-pointer-machine-title">指针机：动态对象、常数个字段，字段是字或引用</title>
-  <desc id="fig-pointer-machine-desc">指针机里只有动态分配出来的对象，每个对象有常数个字段，字段要么是一个字，要么是指向别的对象的引用。图中右框的 prev 指回左框，所以两条箭头方向相反，各与对应的字段行对齐。</desc>
+  <desc id="fig-pointer-machine-desc">指针机里只有动态分配出来的对象，每个对象有常数个字段，字段要么是一个字，要么是指向别的对象的引用。图中右框的 prev 指回左框，所以两条箭头方向相反：对着 prev 行的那条朝左，对着 next 行的那条朝右。</desc>
 
   <defs>
     <style>
@@ -23,7 +23,7 @@
   <text x="557.5" y="86" font-size="12" fill="#6b21a8" text-anchor="middle">val = -1</text>
   <text x="557.5" y="104" font-size="12" fill="#6b21a8" text-anchor="middle">prev = 引用</text>
   <text x="557.5" y="122" font-size="12" fill="#6b21a8" text-anchor="middle">next = null</text>
-  <path d="M357,131 L 366,131" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
-  <path d="M372,95 L 363,95" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
-  <text x="380" y="179" font-size="10" fill="#64748b" text-anchor="middle">两条箭头各自与字段行对齐：上一条是 next，下一条是 prev</text>
+  <path d="M372,100 L 363,100" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M357,118 L 366,118" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <text x="380" y="179" font-size="10" fill="#64748b" text-anchor="middle">两条箭头与字段行一一对应：对着 prev 行的那条朝左，对着 next 行的那条朝右</text>
 </svg>
