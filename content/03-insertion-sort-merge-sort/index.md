@@ -58,7 +58,7 @@ output_mode = "explanation"
 
 > 原文：Use binary search to find the right position. Binary search will take Θ(log n) time. However, shifting the elements after insertion will still take Θ(n) time. Complexity: Θ(n log n) comparisons, Θ(n²) swaps.
 
-意思是：找位置确实从 Θ(n) 降到了 Θ(log n)，但找到之后把后面那些元素挪开一位，还是要 Θ(n)。于是比较次数降到了 Θ(n log n)，而移动次数仍然是 Θ(n²)，总代价也就还是 Θ(n²)。（Python 里做这件事的工具就是标准库的 bisect，它解决的正是「找位置」那一半。）
+意思是：找位置确实从 Θ(n) 降到了 Θ(log n)，但找到之后把后面那些元素挪开一位，还是要 Θ(n)。于是比较次数降到了 Θ(n log n)，而移动次数仍然是 Θ(n²)，总代价也就还是 Θ(n²)。（Python 里做这件事的工具就是标准库的 bisect，C++ 的 std::lower_bound 与 Java 的 Arrays.binarySearch 是同一件事：它们解决的都只是「找位置」那一半。）
 
 这是这一讲最值钱的一个反面例子：代价由最贵的那一步决定，只把便宜的那一步改快，整体不会变。要真正变快，得换掉「每次只挪一位」这个做法本身，而这正是归并排序要做的事。
 
