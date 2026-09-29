@@ -706,3 +706,141 @@ en = "Karp-Rabin algorithm"
 key = "karp-rabin"
 zh = "卡普-拉宾算法"
 notes = "先比哈希值、只有哈希相等才逐字符核对的字符串匹配算法；用滚动哈希把每个窗口的哈希做到 O(1)"
+
+# ── 第 10 讲（开放寻址与密码学哈希）新增 ────────────────────────────────────
+
+[[term]]
+en = "probing"
+zh = "探测"
+notes = "开放寻址里「按探测序列试下一个槽」这个动作；插入探到空槽为止，查找探到命中或空槽为止"
+
+[[term]]
+en = "probe sequence"
+zh = "探测序列"
+notes = "h(k, 0), h(k, 1), …, h(k, m−1) 这一串槽；它必须是 0 到 m−1 的一个排列，否则会漏掉槽或兜圈子"
+
+[[term]]
+en = "linear probing"
+zh = "线性探测"
+notes = "h(k, i) = (h′(k) + i) mod m：从一个起点开始每次往后挪一格；简单但会产生聚簇，讲义把它比作街边找车位"
+
+[[term]]
+en = "double hashing"
+zh = "双重哈希"
+notes = "h(k, i) = (h1(k) + i·h2(k)) mod m：h1 定起点、h2 定步长；h2(k) 与 m 互质时仍能试遍所有槽，m 取 2 的幂时只要 h2 是奇数"
+
+[[term]]
+en = "clustering"
+zh = "聚簇"
+notes = "一连串被占满的槽；聚簇越长，下一个键落进来、把它再拉长的机会越大，线性探测因此退化"
+
+[[term]]
+en = "uniform hashing assumption"
+zh = "均匀哈希假设"
+notes = "每个键的探测序列在 m! 个排列里等可能；讲义自己写 not really true，但说双重哈希能接近它"
+
+[[term]]
+en = "tombstone"
+zh = "墓碑标记"
+notes = "删除时留在槽里的标记（讲义叫 DeleteMe）：插入把它当空位，查找不把它当空位，否则会把探测链切断"
+
+[[term]]
+en = "cryptographic hash function"
+zh = "密码学哈希函数"
+notes = "任意长度的数据进去、固定长度的比特串出来，数据改一点输出就该变；讲义说它比哈希表里用的那种复杂得多"
+
+[[term]]
+en = "one-way"
+zh = "单向性"
+notes = "OW：给定输出 y 找不出任何 x 使 h(x) = y；存口令只用得到这一条，与抗碰撞性之间没有蕴含关系"
+
+[[term]]
+en = "collision resistance"
+zh = "抗碰撞性"
+notes = "CR：找不出两个不同的输入 x ≠ x′ 使哈希值相等；它蕴含目标抗碰撞性，数字签名要的就是这一条"
+
+[[term]]
+en = "target collision resistance"
+zh = "目标抗碰撞性"
+notes = "TCR：给定一个 x，找不出另一个 x′ 与它撞上；比抗碰撞性弱，查文件有没有被改要的是这一条"
+
+[[term]]
+en = "message digest"
+zh = "消息摘要"
+notes = "密码学哈希输出的别名；输入那段数据叫消息，出来的定长比特串也叫摘要"
+
+[[term]]
+en = "digital signature"
+zh = "数字签名"
+notes = "用私钥对消息签名、别人用公钥验证；消息很长时改成对它的哈希值签名，于是需要抗碰撞性"
+
+# ── 第 11、12 讲：数值计算（无理数、牛顿法、高精度乘法）────────────────
+[[term]]
+en = "irrational number"
+zh = "无理数"
+notes = "不能写成两个整数之比的实数；√2 是最早的例子，讲义从正方形的对角线与边长讲起"
+
+[[term]]
+en = "square root"
+zh = "平方根"
+notes = "满足 x² = a 的那个非负数；这一讲用牛顿法迭代求它，误差每步大约平方"
+
+[[term]]
+en = "Newton's method"
+zh = "牛顿法"
+notes = "解 f(x) = 0 的迭代办法：在当前点画切线，取切线与横轴的交点当作下一站"
+
+[[term]]
+en = "tangent line"
+zh = "切线"
+notes = "曲线在某点处的切线，斜率就是该点的导数；牛顿法的一步就是解它与横轴的交点"
+
+[[term]]
+en = "quadratic convergence"
+zh = "二次收敛"
+notes = "误差每步大约变成原来的平方，于是有效位数每步大约翻倍；牛顿法在根附近有这条性质"
+
+[[term]]
+en = "high-precision arithmetic"
+zh = "高精度运算"
+notes = "位数远超一个机器字时的加减乘除；这一讲做乘法，除法留给第 12 讲"
+
+[[term]]
+en = "radix"
+zh = "进位制基数"
+notes = "记作 r，取 2 就是二进制、取 10 就是十进制；拆半与移位都按 r 的幂来做"
+
+[[term]]
+en = "high half"
+zh = "高半段"
+notes = "n 位数拆成两半后带着 r 的 n/2 次方的那个一半，讲义记作 x_1 与 y_1"
+
+[[term]]
+en = "low half"
+zh = "低半段"
+notes = "n 位数拆成两半后不带 r 的幂的那个一半，讲义记作 x_0 与 y_0"
+
+[[term]]
+en = "Karatsuba multiplication"
+zh = "Karatsuba 乘法"
+notes = "把两个 n 位数相乘的子问题从 4 个减到 3 个，代价从 θ(n²) 降到 n 的 log₂3 次方"
+
+[[term]]
+en = "branching factor"
+zh = "分支因子"
+notes = "递归树上每个节点分出几个子问题；它决定叶子数，也就是代价里的指数"
+
+[[term]]
+en = "balanced parentheses"
+zh = "平衡括号串"
+notes = "左括号与右括号能配对的串；每条非空串唯一地拆成 (α)β，由此得到卡塔兰数的递推式"
+
+[[term]]
+en = "Catalan number"
+zh = "卡塔兰数"
+notes = "恰好 n 对括号的平衡串个数，1, 1, 2, 5, 14, 42 …；第 11 讲的几何题算到几百位时每 24 位出现一个"
+
+[[term]]
+en = "power series"
+zh = "幂级数"
+notes = "形如 c_0 + c_1x + c_2x² + … 的无穷和；讲义用 Q(x) = 1 + xQ(x)² 说明系数为什么是卡塔兰数"

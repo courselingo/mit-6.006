@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 241" width="760" height="241"
+     role="img" aria-labelledby="fig-crypto-properties-title fig-crypto-properties-desc">
+  <title id="fig-crypto-properties-title">三个性质：各自挡哪种攻击</title>
+  <desc id="fig-crypto-properties-desc">单向性管反推：给定输出 y，想找 x 让 h(x) = y，做不到。抗碰撞性管找一对：想找两个不同输入撞上同一个哈希值，做不到。目标抗碰撞性管给定一个再找另一个：先给你 x，你再找 x′ 与它撞上，做不到。抗碰撞性蕴含目标抗碰撞性，箭头只这一条；单向性与另外两条互不蕴含。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="241" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">三个性质：各自挡哪种攻击</text>
+  <rect x="22" y="68" width="222" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="269" y="68" width="222" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <rect x="516" y="68" width="222" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <rect x="22" y="165" width="716" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="133" y="90.2" font-size="12" fill="#1e40af" text-anchor="middle">单向性 OW</text>
+  <text x="133" y="108.2" font-size="12" fill="#1e40af" text-anchor="middle">给定 y，找 x 使 h(x) = y</text>
+  <text x="133" y="126.2" font-size="12" fill="#1e40af" text-anchor="middle">做不到：只能硬猜</text>
+  <text x="380" y="90.2" font-size="12" fill="#b45309" text-anchor="middle">抗碰撞性 CR</text>
+  <text x="380" y="108.2" font-size="12" fill="#b45309" text-anchor="middle">找一对 x ≠ x′ 撞上</text>
+  <text x="380" y="126.2" font-size="12" fill="#b45309" text-anchor="middle">做不到：比给定一个更难</text>
+  <text x="627" y="90.2" font-size="12" fill="#166534" text-anchor="middle">目标抗碰撞性 TCR</text>
+  <text x="627" y="108.2" font-size="12" fill="#166534" text-anchor="middle">给定 x，再找 x′ 撞上</text>
+  <text x="627" y="126.2" font-size="12" fill="#166534" text-anchor="middle">做不到：对手拿到 x 才能动手</text>
+  <text x="380" y="187.2" font-size="12" fill="#1e40af" text-anchor="middle">CR 蕴含 TCR：能抗「随便找一对」，就一定也能抗「给定一个再找」</text>
+  <text x="380" y="205.2" font-size="12" fill="#1e40af" text-anchor="middle">OW 与另外两条没有蕴含关系，谁也不能推出谁</text>
+  <path d="M496,104 L505,104" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+</svg>

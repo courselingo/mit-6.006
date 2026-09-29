@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 343" width="760" height="343"
+     role="img" aria-labelledby="fig-insert-example-title fig-insert-example-desc">
+  <title id="fig-insert-example-title">插入 k = 496：探测序列 4、6、1、5</title>
+  <desc id="fig-insert-example-desc">表有 8 个槽：586 在槽 1、133 在槽 2、204 在槽 4、481 在槽 6。插入 496 时按探测序列试槽 4、6、1，三次都撞上别人（204、481、586），第 4 次落在空槽 5，496 就放进槽 5。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="343" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">插入 k = 496：探测序列 4、6、1、5</text>
+  <rect x="22" y="68" width="716" height="110" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="6,4"/>
+  <rect x="34" y="104" width="62" height="54" rx="6" fill="#ffffff" stroke="#2563eb"/>
+  <rect x="124" y="104" width="62" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <rect x="214" y="104" width="62" height="54" rx="6" fill="#ffffff" stroke="#2563eb"/>
+  <rect x="304" y="104" width="62" height="54" rx="6" fill="#ffffff" stroke="#2563eb"/>
+  <rect x="394" y="104" width="62" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <rect x="484" y="104" width="62" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <rect x="574" y="104" width="62" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <rect x="664" y="104" width="62" height="54" rx="6" fill="#ffffff" stroke="#2563eb"/>
+  <rect x="22" y="206" width="160" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <rect x="207" y="206" width="160" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <rect x="392" y="206" width="160" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <rect x="577" y="206" width="160" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <rect x="22" y="285" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="32" y="84" font-size="12" fill="#64748b" text-anchor="start">表 T：m = 8 个槽，一个槽最多一个元素</text>
+  <text x="65" y="126.2" font-size="12" fill="#1f2937" text-anchor="middle">槽 0</text>
+  <text x="65" y="144.2" font-size="12" fill="#1f2937" text-anchor="middle">空</text>
+  <text x="155" y="126.2" font-size="12" fill="#b45309" text-anchor="middle">槽 1</text>
+  <text x="155" y="144.2" font-size="12" fill="#b45309" text-anchor="middle">586</text>
+  <text x="245" y="126.2" font-size="12" fill="#1f2937" text-anchor="middle">槽 2</text>
+  <text x="245" y="144.2" font-size="12" fill="#1f2937" text-anchor="middle">133</text>
+  <text x="335" y="126.2" font-size="12" fill="#1f2937" text-anchor="middle">槽 3</text>
+  <text x="335" y="144.2" font-size="12" fill="#1f2937" text-anchor="middle">空</text>
+  <text x="425" y="126.2" font-size="12" fill="#b45309" text-anchor="middle">槽 4</text>
+  <text x="425" y="144.2" font-size="12" fill="#b45309" text-anchor="middle">204</text>
+  <text x="515" y="126.2" font-size="12" fill="#166534" text-anchor="middle">槽 5</text>
+  <text x="515" y="144.2" font-size="12" fill="#166534" text-anchor="middle">496</text>
+  <text x="605" y="126.2" font-size="12" fill="#b45309" text-anchor="middle">槽 6</text>
+  <text x="605" y="144.2" font-size="12" fill="#b45309" text-anchor="middle">481</text>
+  <text x="695" y="126.2" font-size="12" fill="#1f2937" text-anchor="middle">槽 7</text>
+  <text x="695" y="144.2" font-size="12" fill="#1f2937" text-anchor="middle">空</text>
+  <text x="102" y="228.2" font-size="12" fill="#b45309" text-anchor="middle">① 试槽 4</text>
+  <text x="102" y="246.2" font-size="12" fill="#b45309" text-anchor="middle">collision：204</text>
+  <text x="287" y="228.2" font-size="12" fill="#b45309" text-anchor="middle">② 试槽 6</text>
+  <text x="287" y="246.2" font-size="12" fill="#b45309" text-anchor="middle">collision：481</text>
+  <text x="472" y="228.2" font-size="12" fill="#b45309" text-anchor="middle">③ 试槽 1</text>
+  <text x="472" y="246.2" font-size="12" fill="#b45309" text-anchor="middle">collision：586</text>
+  <text x="657" y="228.2" font-size="12" fill="#166534" text-anchor="middle">④ 试槽 5</text>
+  <text x="657" y="246.2" font-size="12" fill="#166534" text-anchor="middle">free spot! 放入 496</text>
+  <text x="380" y="307.2" font-size="12" fill="#1e40af" text-anchor="middle">三次撞上的都是别人先占住的位置 ⇒ 哈希再均匀，后来的键也只能往后走</text>
+</svg>

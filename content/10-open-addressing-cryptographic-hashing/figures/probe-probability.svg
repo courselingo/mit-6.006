@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 223" width="760" height="223"
+     role="img" aria-labelledby="fig-probe-probability-title fig-probe-probability-desc">
+  <title id="fig-probe-probability-title">证明：每次探测至少以 p 的概率碰到空槽</title>
+  <desc id="fig-probe-probability-desc">第一次探测分母是 m，第二次是 m−1，第三次是 m−2，分子一直是空槽数 m−n。分母变小、分子不变，所以三个概率一个比一个大，最小的是第一次的 p。每次都不小于 p，期望次数就被 1/p = 1/(1−α) 卡住。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="223" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">证明：每次探测至少以 p 的概率碰到空槽</text>
+  <rect x="22" y="68" width="222" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="269" y="68" width="222" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="516" y="68" width="222" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="22" y="147" width="716" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="133" y="90.2" font-size="12" fill="#1e40af" text-anchor="middle">第 1 次探测</text>
+  <text x="133" y="108.2" font-size="12" fill="#1e40af" text-anchor="middle">(m−n)/m = p</text>
+  <text x="380" y="90.2" font-size="12" fill="#1e40af" text-anchor="middle">第 2 次探测</text>
+  <text x="380" y="108.2" font-size="12" fill="#1e40af" text-anchor="middle">(m−n)/(m−1) ≥ p</text>
+  <text x="627" y="90.2" font-size="12" fill="#1e40af" text-anchor="middle">第 3 次探测</text>
+  <text x="627" y="108.2" font-size="12" fill="#1e40af" text-anchor="middle">(m−n)/(m−2) ≥ p</text>
+  <text x="380" y="169.2" font-size="12" fill="#166534" text-anchor="middle">每次探测碰到空槽的概率都不小于 p ⇒ 期望次数不超过 1/p = 1/(1−α)</text>
+  <text x="380" y="187.2" font-size="12" fill="#166534" text-anchor="middle">剩下没试过的槽少一个，空槽还是 m−n 个，所以分母一路变小</text>
+  <path d="M249,95 L258,95" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M496,95 L505,95" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+</svg>

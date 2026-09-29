@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 312" width="480" height="312"
+     role="img" aria-labelledby="fig-delete-flag-title fig-delete-flag-desc">
+  <title id="fig-delete-flag-title">删除：不能把槽清成空</title>
+  <desc id="fig-delete-flag-desc">三种状态并排：直接挖空槽 1 之后，查找 496 沿探测序列 4、6、1 走到槽 1，看到空槽就停下，误报没找到；换成 DeleteMe 标记之后，查找越过标记继续走，在槽 5 找到 496。同一个标记对两个动作含义相反：Insert 把它当空位用，Search 不把它当空位。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="480" height="312" fill="#ffffff"/>
+  <text x="240" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">删除：不能把槽清成空</text>
+  <rect x="20" y="90" width="130" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <rect x="20" y="169" width="130" height="54" rx="6" fill="#ffffff" stroke="#2563eb"/>
+  <rect x="175" y="90" width="130" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <rect x="175" y="169" width="130" height="54" rx="6" fill="#ffffff" stroke="#2563eb"/>
+  <rect x="330" y="90" width="130" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <rect x="330" y="169" width="130" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="85" y="68" font-size="12" fill="#1e293b" text-anchor="middle">① 直接挖空</text>
+  <text x="240" y="68" font-size="12" fill="#1e293b" text-anchor="middle">② 换成 DeleteMe</text>
+  <text x="395" y="68" font-size="12" fill="#1e293b" text-anchor="middle">③ 标记的两面</text>
+  <text x="85" y="112.2" font-size="12" fill="#9d174d" text-anchor="middle">槽 1</text>
+  <text x="85" y="130.2" font-size="12" fill="#9d174d" text-anchor="middle">空（挖掉）</text>
+  <text x="85" y="191.2" font-size="12" fill="#1f2937" text-anchor="middle">槽 5</text>
+  <text x="85" y="209.2" font-size="12" fill="#1f2937" text-anchor="middle">496</text>
+  <text x="240" y="112.2" font-size="12" fill="#b45309" text-anchor="middle">槽 1</text>
+  <text x="240" y="130.2" font-size="12" fill="#b45309" text-anchor="middle">DeleteMe</text>
+  <text x="240" y="191.2" font-size="12" fill="#1f2937" text-anchor="middle">槽 5</text>
+  <text x="240" y="209.2" font-size="12" fill="#1f2937" text-anchor="middle">496</text>
+  <text x="395" y="112.2" font-size="12" fill="#b45309" text-anchor="middle">Insert</text>
+  <text x="395" y="130.2" font-size="12" fill="#b45309" text-anchor="middle">当空位用</text>
+  <text x="395" y="191.2" font-size="12" fill="#b45309" text-anchor="middle">Search</text>
+  <text x="395" y="209.2" font-size="12" fill="#b45309" text-anchor="middle">不当空位</text>
+  <text x="85" y="251" font-size="12" fill="#64748b" text-anchor="middle">4 → 6 → 1 → 5</text>
+  <text x="85" y="269" font-size="12" fill="#64748b" text-anchor="middle">到槽 1 遇空槽</text>
+  <text x="85" y="287" font-size="12" fill="#64748b" text-anchor="middle">⇒ 找不到 496</text>
+  <text x="240" y="251" font-size="12" fill="#64748b" text-anchor="middle">4 → 6 → 1 → 5</text>
+  <text x="240" y="269" font-size="12" fill="#64748b" text-anchor="middle">越过标记继续</text>
+  <text x="240" y="287" font-size="12" fill="#64748b" text-anchor="middle">⇒ 找到 496</text>
+  <text x="395" y="251" font-size="12" fill="#64748b" text-anchor="middle">两个动作</text>
+  <text x="395" y="269" font-size="12" fill="#64748b" text-anchor="middle">对同一个标记</text>
+  <text x="395" y="287" font-size="12" fill="#64748b" text-anchor="middle">含义相反</text>
+</svg>

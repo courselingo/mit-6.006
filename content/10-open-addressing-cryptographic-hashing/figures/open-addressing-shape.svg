@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 429" width="760" height="429"
+     role="img" aria-labelledby="fig-open-addressing-shape-title fig-open-addressing-shape-desc">
+  <title id="fig-open-addressing-shape-title">两种碰撞处理：链在槽外，元素在槽内</title>
+  <desc id="fig-open-addressing-shape-desc">链地址法（左）在槽里放链的起点：槽 1 后面串着 item2 与 item1，槽 2 后面串着 item3，三个元素都挂在槽外的链上。开放寻址（右）把同样三个元素直接放进槽里：item2、item1、item3 各占一个槽。两者唯一的差别就是槽里装什么，省掉指针的代价是多了一个探测动作。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="429" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两种碰撞处理：链在槽外，元素在槽内</text>
+  <rect x="22" y="68" width="414" height="275" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="6,4"/>
+  <rect x="466" y="68" width="272" height="275" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="6,4"/>
+  <rect x="54" y="104" width="100" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="54" y="165" width="100" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="54" y="226" width="100" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="54" y="287" width="100" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="179" y="165" width="100" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <rect x="304" y="165" width="100" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <rect x="179" y="226" width="100" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <rect x="527" y="104" width="150" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="527" y="165" width="150" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="527" y="226" width="150" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="527" y="287" width="150" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="22" y="371" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="32" y="84" font-size="12" fill="#64748b" text-anchor="start">链地址法 chaining：槽里只放链的起点</text>
+  <text x="476" y="84" font-size="12" fill="#64748b" text-anchor="start">开放寻址 open addressing</text>
+  <text x="104" y="126.2" font-size="12" fill="#1e40af" text-anchor="middle">槽 0：空</text>
+  <text x="104" y="187.2" font-size="12" fill="#1e40af" text-anchor="middle">槽 1：指针</text>
+  <text x="104" y="248.2" font-size="12" fill="#1e40af" text-anchor="middle">槽 2：指针</text>
+  <text x="104" y="309.2" font-size="12" fill="#1e40af" text-anchor="middle">槽 3：空</text>
+  <text x="229" y="187.2" font-size="12" fill="#b45309" text-anchor="middle">item2</text>
+  <text x="354" y="187.2" font-size="12" fill="#b45309" text-anchor="middle">item1</text>
+  <text x="229" y="248.2" font-size="12" fill="#b45309" text-anchor="middle">item3</text>
+  <text x="602" y="126.2" font-size="12" fill="#1e40af" text-anchor="middle">槽 0：空</text>
+  <text x="602" y="187.2" font-size="12" fill="#1e40af" text-anchor="middle">槽 1：item2</text>
+  <text x="602" y="248.2" font-size="12" fill="#1e40af" text-anchor="middle">槽 2：item1</text>
+  <text x="602" y="309.2" font-size="12" fill="#1e40af" text-anchor="middle">槽 3：item3</text>
+  <text x="380" y="393.2" font-size="12" fill="#166534" text-anchor="middle">一个槽最多放一个元素 ⇒ 开放寻址必须 m ≥ n；链地址法靠链，槽数可以远小于键数</text>
+  <path d="M159,183 L168,183" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M284,183 L293,183" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M159,244 L168,244" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 345" width="760" height="345"
+     role="img" aria-labelledby="fig-double-hashing-title fig-double-hashing-desc">
+  <title id="fig-double-hashing-title">双重哈希：起点与步长各管一段</title>
+  <desc id="fig-double-hashing-desc">h1(k) 定起点，h2(k) 定步长，第 i 次试的位置是 h1(k) + i·h2(k) 再对 m 取模。两个键起点都在槽 1，但步长一个是 2、一个是 3，所以后面落到不同的槽里，不再黏在一起。m 取 2 的幂时，只要让 h2(k) 永远是奇数，就能试遍全部槽。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="345" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">双重哈希：起点与步长各管一段</text>
+  <rect x="22" y="68" width="345" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="393" y="68" width="345" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="22" y="129" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="22" y="190" width="80" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <rect x="128" y="190" width="80" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <rect x="234" y="190" width="80" height="36" rx="6" fill="#ffffff" stroke="#2563eb"/>
+  <rect x="340" y="190" width="80" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <rect x="446" y="190" width="80" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <rect x="552" y="190" width="80" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <rect x="658" y="190" width="80" height="36" rx="6" fill="#ffffff" stroke="#2563eb"/>
+  <rect x="22" y="251" width="716" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="194.5" y="90.2" font-size="12" fill="#1e40af" text-anchor="middle">h1(k)：定起点，也就是第一次试的槽</text>
+  <text x="565.5" y="90.2" font-size="12" fill="#1e40af" text-anchor="middle">h2(k)：定步长，必须与 m 互质</text>
+  <text x="380" y="151.2" font-size="12" fill="#1e40af" text-anchor="middle">h(k, i) = (h1(k) + i · h2(k)) mod m：起点加上 i 个步长，再绕回表内</text>
+  <text x="62" y="182" font-size="12" fill="#94a3b8" text-anchor="middle">0</text>
+  <text x="62" y="212.2" font-size="12" fill="#b45309" text-anchor="middle">B2</text>
+  <text x="168" y="182" font-size="12" fill="#94a3b8" text-anchor="middle">1</text>
+  <text x="168" y="212.2" font-size="12" fill="#b45309" text-anchor="middle">A0 B0</text>
+  <text x="274" y="182" font-size="12" fill="#94a3b8" text-anchor="middle">2</text>
+  <text x="274" y="212.2" font-size="12" fill="#1f2937" text-anchor="middle">—</text>
+  <text x="380" y="182" font-size="12" fill="#94a3b8" text-anchor="middle">3</text>
+  <text x="380" y="212.2" font-size="12" fill="#b45309" text-anchor="middle">A1</text>
+  <text x="486" y="182" font-size="12" fill="#94a3b8" text-anchor="middle">4</text>
+  <text x="486" y="212.2" font-size="12" fill="#b45309" text-anchor="middle">B1</text>
+  <text x="592" y="182" font-size="12" fill="#94a3b8" text-anchor="middle">5</text>
+  <text x="592" y="212.2" font-size="12" fill="#b45309" text-anchor="middle">A2</text>
+  <text x="698" y="182" font-size="12" fill="#94a3b8" text-anchor="middle">6</text>
+  <text x="698" y="212.2" font-size="12" fill="#1f2937" text-anchor="middle">—</text>
+  <text x="380" y="273.2" font-size="12" fill="#166534" text-anchor="middle">A：h1 = 1、h2 = 2 ⇒ 路线 1 → 3 → 5 → 0 → 2 → 4 → 6（试遍 7 个槽，不重不漏）</text>
+  <text x="380" y="291.2" font-size="12" fill="#166534" text-anchor="middle">B：h1 = 1、h2 = 3 ⇒ 路线 1 → 4 → 0 → 3 → 6 → 2 → 5</text>
+  <text x="380" y="309.2" font-size="12" fill="#166534" text-anchor="middle">m 取 2 的 r 次幂时，「与 m 互质」等价于「是奇数」，所以让 h2(k) 永远取奇数就行</text>
+</svg>
