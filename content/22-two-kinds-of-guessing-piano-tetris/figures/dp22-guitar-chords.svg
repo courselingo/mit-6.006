@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-dp22-guitar-chords-title fig-dp22-guitar-chords-desc">
+  <title id="fig-dp22-guitar-chords-title">吉他与和弦：状态从 F 扩到 F·S，再到「F 根手指的指派」的 (F+1)^F 种</title>
+  <desc id="fig-dp22-guitar-chords-desc">吉他把同一个音的弹法按弦数 S 展开，于是把手指重定义为「手指加弦」，状态数从 F 变成 F·S；推广到和弦时，输入是长度不超过 F 的音的列表，需要记住的是 F 根手指到不超过 F+1 个位置的指派，共 (F+1)^F 种，于是子问题 n·(F+1)^F 个、总时间 n·(F+1)^{2F}。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">吉他与和弦：状态从 F 扩到 F·S，再到「F 根手指的指派」的 (F+1)^F 种</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">吉他：同一个音最多有 S 种弹法（S 是弦数）</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="147" font-size="12" fill="#b45309" text-anchor="middle">把「手指」重定义为「手指 + 弦」⇒ 状态数从 F 变成 F·S</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="208" font-size="12" fill="#1e40af" text-anchor="middle">和弦：输入变成不超过 F 个音的列表，一根手指只能按一个音</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="269" font-size="12" fill="#9d174d" text-anchor="middle">要记住的「过去」是 F 根手指到不超过 F+1 个位置（含空）的指派 ⇒ (F+1)^F 种</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="330" font-size="12" fill="#166534" text-anchor="middle">于是子问题 n·(F+1)^F 个、选择数 (F+1)^F、总时间 n·(F+1)^{2F}；两手取 F = 10 同理</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">换乐器只是换状态的定义；只要难度函数 d 定义得合适，五步骨架不用动</text>
+</svg>

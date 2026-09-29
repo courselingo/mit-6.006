@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-dp22-mario-config-title fig-dp22-mario-config-desc">
+  <title id="fig-dp22-mario-config-title">超级马里奥：一个配置要装下哪些东西</title>
+  <desc id="fig-dp22-mario-config-desc">超级马里奥把状态定义成「配置」：屏幕位移、玩家位置与速度、屏幕内对象与怪物状态、屏幕外被重置的内容，再加上分数 S 与时间 T；子问题是从配置出发能拿到的最高分，共 n·c^{w·h}·S·T 个，每步猜一个动作，而复杂度对 S 与 T 是伪多项式、对 n 是多项式、对屏幕尺寸 w·h 是指数。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">超级马里奥：一个配置要装下哪些东西</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">状态（配置）要包含：屏幕位移（n 种）与玩家的位置与速度（O(1)）</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="147" font-size="12" fill="#9d174d" text-anchor="middle">还要包含屏幕内的对象与怪物状态，以及屏幕外被重置的东西（都是 c^{w·h} 量级）</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="208" font-size="12" fill="#9d174d" text-anchor="middle">再加上分数（S）与时间（T）—— 一个配置把这几样都装进去</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="269" font-size="12" fill="#b45309" text-anchor="middle">子问题：从配置 C 出发能拿到的最高分 ⇒ n·c^{w·h}·S·T 个子问题</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="330" font-size="12" fill="#166534" text-anchor="middle">猜测下一步动作（O(1) 种）；每子问题 O(1)；顺序按时间递增；解从起始配置出发</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">同一个 DP 对 S 与 T 是伪多项式、对 n 是多项式、对 w·h 是指数</text>
+</svg>

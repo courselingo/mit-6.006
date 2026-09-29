@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-dp22-fingering-title fig-dp22-fingering-desc">
+  <title id="fig-dp22-fingering-title">指法：第一次尝试缺「上一个音用哪根手指」这个信息，把它变成参数后就有 O(nF²) 的 DP</title>
+  <desc id="fig-dp22-fingering-desc">钢琴指法用难度函数 d(f,p,g,q) 描述两根手指之间移动的代价，规则包括走向反向、跨度过大、连奏必须换手指等；第一次尝试只取后缀的最优值，缺少「上一个音用了哪根手指」这个信息；正确做法是把「第一个音用指 f」也变成子问题的一部分，于是有 n·F 个子问题、每个 Θ(F)，总时间 O(nF²)。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">指法：第一次尝试缺「上一个音用哪根手指」这个信息，把它变成参数后就有 O(nF²) 的 DP</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">难度函数 d(f, p, g, q)：从「音 p 用指 f」走到「音 q 用指 g」的难度</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="147" font-size="12" fill="#9d174d" text-anchor="middle">规则举例：手指序号与音的走向反向时别扭；跨度过大别扭；连奏要求换手指（同指记 ∞）</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="208" font-size="12" fill="#9d174d" text-anchor="middle">第一次尝试：子问题只取「后缀 notes[i:] 的最小难度」⇒ 不知道上一个音用了哪根手指，信息不够</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="269" font-size="12" fill="#b45309" text-anchor="middle">正确做法：子问题再带上「第一个音用指 f」⇒ n·F 个子问题；猜测下一个音用哪根手指 g</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="330" font-size="12" fill="#166534" text-anchor="middle">递推 DP[i, f] = min(DP[i+1, g] + d(…))；每子问题 Θ(F)；总时间 O(nF²)；原问题对第一根手指取最小</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">参数一加，缺口就补上了；而难度函数只换了定义域，五步一步都没改</text>
+</svg>
