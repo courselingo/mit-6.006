@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450"
+     role="img" aria-labelledby="fig-cc23-np-complete-list-title fig-cc23-np-complete-list-desc">
+  <title id="fig-cc23-np-complete-list-title">NP 完全问题清单（讲义列的例子）</title>
+  <desc id="fig-cc23-np-complete-list-desc">讲义列的 NP 完全问题包括：背包（伪多项式而非多项式）、3-Partition、旅行商问题及其判定版本、k 个串的最长公共子序列、扫雷与数独及大多数谜题、SAT、三维空间里带障碍物的最短路、三着色给定图、以及求最大团。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="450" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">NP 完全问题清单（讲义列的例子）</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="86" font-size="12" fill="#9d174d" text-anchor="middle">背包（讲义注明：伪多项式，不是多项式）</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="147" font-size="12" fill="#1e40af" text-anchor="middle">3-Partition：给定 n 个整数，能否分成若干个和相等的三元组</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="208" font-size="12" fill="#1e40af" text-anchor="middle">旅行商：访问所有顶点的最短路径；判定版本是「最小权重是否 ≤ x」</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="269" font-size="12" fill="#b45309" text-anchor="middle">k 个串的最长公共子序列；三维空间里带障碍物的最短路</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="330" font-size="12" fill="#b45309" text-anchor="middle">扫雷、数独以及大多数谜题；三着色；最大团</text>
+  <rect x="22" y="369" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="391" font-size="12" fill="#6b21a8" text-anchor="middle">SAT：给定布尔公式（与、或、非），它是否可能为真；出现 x 与非 x 则不可能</text>
+  <text x="380" y="427" font-size="10" fill="#64748b" text-anchor="middle">清单里的老朋友正是前面几讲那些算法在这里碰到的天花板</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-cc23-reductions-title fig-cc23-reductions-desc">
+  <title id="fig-cc23-reductions-title">归约：单次归约把 A 变成 B 再变回来，多次归约允许自由调用 B，NP 完全问题之间互相可归约</title>
+  <desc id="fig-cc23-reductions-desc">归约是把问题转成已经会解的问题：单次归约是 A 变 B、解完 B 再把解变回 A，讲义给的五个例子都归结到最短路；多次归约允许解 A 时自由调用 B，按这个说法每个算法都是把问题归约到某个计算模型。NP 完全问题之间多项式时间互相可归约，所以可以用归约证明 NP 难。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">归约：单次归约把 A 变成 B 再变回来，多次归约允许自由调用 B，NP 完全问题之间互相可归约</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">归约：把你的问题变成已经知道怎么解的问题，而不是从头解</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="147" font-size="12" fill="#b45309" text-anchor="middle">单次归约的五个例子都归结到最短路：无权→带权（设权重 1）、最小乘积路（取对数）</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="208" font-size="12" fill="#b45309" text-anchor="middle">最长路（取负权）、有序巡游（复制 k 份图）、漏罐最便宜路（图上归约）</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="269" font-size="12" fill="#6b21a8" text-anchor="middle">多次归约：解 A 时自由调用 B——按这个说法，每个算法都把问题归约到某个计算模型</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="330" font-size="12" fill="#166534" text-anchor="middle">NP 完全问题之间多项式时间互相可归约 ⇒ 可用归约证明 NP 难（3-Partition 归约到俄罗斯方块）</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">归约既是「把不会的化成会的」，也是反向证明「不可能有快算法」的工具</text>
+</svg>

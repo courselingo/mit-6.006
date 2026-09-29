@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 328" width="760" height="328"
+     role="img" aria-labelledby="fig-cc23-np-lucky-title fig-cc23-np-lucky-desc">
+  <title id="fig-cc23-np-lucky-title">NP 的两种说法：幸运算法可以在多项式时间内猜中，而等价地说，解可以被多项式时间检验</title>
+  <desc id="fig-cc23-np-lucky-desc">NP 是能被「幸运」算法在多项式时间内解决的判定问题：幸运算法做选择时总能选对。等价的说法是解可以被多项式时间检验，也就是答案是「是」时能给出证明并快速验证；俄罗斯方块属于 NP，因为可以猜每一步怎么走，而证明就是列出这串走法。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="328" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">NP 的两种说法：幸运算法可以在多项式时间内猜中，而等价地说，解可以被多项式时间检验</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">说法一：存在一个「幸运」算法，它做选择时总能选对，不需要把所有可能试一遍</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="147" font-size="12" fill="#1e40af" text-anchor="middle">只要这样的算法能在多项式时间内给出答案，这个问题就属于 NP</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="208" font-size="12" fill="#166534" text-anchor="middle">说法二（等价）：答案是「是」时，解可以在多项式时间内被检验</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="269" font-size="12" fill="#b45309" text-anchor="middle">俄罗斯方块属于 NP：幸运算法猜每一步；证明就是那串走法（规则很容易检查）</text>
+  <text x="380" y="305" font-size="10" fill="#64748b" text-anchor="middle">两种说法是一个定义的两个面：一个讲怎么找到，一个讲怎么验证</text>
+</svg>

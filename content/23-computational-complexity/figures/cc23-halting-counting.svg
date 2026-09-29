@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-cc23-halting-counting-title fig-cc23-halting-counting-desc">
+  <title id="fig-cc23-halting-counting-title">计数论证：程序对应自然数，判定问题对应实数，而实数不可数，所以程序远远不够</title>
+  <desc id="fig-cc23-halting-counting-desc">停机问题是不可计算的：不存在任何算法能在有限时间内对所有输入都给出正确答案。而计数论证说明这是常态：程序对应自然数，判定问题对应实数，实数不可数，所以程序的数量远远不够，再加上一个程序只解决一个问题，结论是绝大多数问题都不可解。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">计数论证：程序对应自然数，判定问题对应实数，而实数不可数，所以程序远远不够</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="86" font-size="12" fill="#9d174d" text-anchor="middle">停机问题：给定一段程序，它会不会停下来？答案是不可计算（不属于 R）</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="147" font-size="12" fill="#9d174d" text-anchor="middle">强度：不是很难，而是不存在任何算法能在有限时间内对所有输入都答对</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="208" font-size="12" fill="#1e40af" text-anchor="middle">计数论证一：每个程序都能写成一串二进制，于是对应一个自然数</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="269" font-size="12" fill="#1e40af" text-anchor="middle">计数论证二：每个判定问题是「串到是与否」的函数，也就是一个无限比特序列，对应一个实数</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="330" font-size="12" fill="#166534" text-anchor="middle">自然数可数而实数不可数 ⇒ 程序远远不够多，且一个程序只解决一个问题 ⇒ 绝大多数问题不可解</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">这个论证不需要构造反例，只是把两边的数量对一眼</text>
+</svg>
