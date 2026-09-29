@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 668 368" width="668" height="368"
+     role="img" aria-labelledby="fig-branching-factors-title fig-branching-factors-desc">
+  <title id="fig-branching-factors-title">分支因子从 4 变成 3：叶子数从 n² 掉到 n^{log₂3}</title>
+  <desc id="fig-branching-factors-desc">两棵递归树的高度都是 log₂n 层：左边每个节点分 4 支，叶子数是 4^{log₂n} = n²，n = 1024 时是 1048576；右边每个节点分 3 支，叶子数是 3^{log₂n} = n^{log₂3}，n = 1024 时约 59049。同一个高度下只是分支因子从 4 换成 3，两个叶子数就相差 17.76 倍。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="668" height="368" fill="#ffffff"/>
+  <text x="334" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">分支因子从 4 变成 3：叶子数从 n² 掉到 n^{log₂3}</text>
+
+  <path d="M105.6,115.3 C105.6,141.3 55.4,145.1 55.4,171.1" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M115.5,120.9 C115.5,142.8 101.7,144.9 101.7,166.8" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M130.5,120.9 C130.5,142.8 144.3,144.9 144.3,166.8" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M140.4,115.3 C140.4,141.3 190.6,145.1 190.6,171.1" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <circle cx="123" cy="96" r="26" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="123" y="100.2" font-size="12" fill="#1e40af" text-anchor="middle">n</text>
+  <circle cx="42" cy="186" r="20" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <circle cx="96" cy="186" r="20" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <circle cx="150" cy="186" r="20" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <circle cx="204" cy="186" r="20" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="123" y="232" font-size="14" fill="#64748b" text-anchor="middle">⋮</text>
+  <text x="123" y="258" font-size="12" fill="#1e293b" text-anchor="middle">叶子数 4^{log₂n}</text>
+  <text x="123" y="276" font-size="12" fill="#1e293b" text-anchor="middle">= n²</text>
+  <text x="123" y="292" font-size="10" fill="#64748b" text-anchor="middle">每层分 4 支，一共 log₂n 层</text>
+
+  <path d="M540,116.5 C540,141.3 498.3,145.6 498.3,170.2" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M556,122 L556,166" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M572,116.5 C572,141.3 613.7,145.6 613.7,170.2" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <circle cx="556" cy="96" r="26" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="556" y="100.2" font-size="12" fill="#1e40af" text-anchor="middle">n</text>
+  <circle cx="486" cy="186" r="20" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <circle cx="556" cy="186" r="20" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <circle cx="626" cy="186" r="20" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="556" y="232" font-size="14" fill="#64748b" text-anchor="middle">⋮</text>
+  <text x="556" y="258" font-size="12" fill="#1e293b" text-anchor="middle">叶子数 3^{log₂n}</text>
+  <text x="556" y="276" font-size="12" fill="#1e293b" text-anchor="middle">= n^{log₂3}</text>
+  <text x="556" y="292" font-size="10" fill="#64748b" text-anchor="middle">每层分 3 支，一共 log₂n 层</text>
+
+  <rect x="54" y="310" width="560" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="334" y="332.2" font-size="12" fill="#166534" text-anchor="middle">n = 1024：n² = 1048576，n^{log₂3} ≈ 59049，相差 17.76 倍</text>
+</svg>

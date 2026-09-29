@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 321" width="380" height="321"
+     role="img" aria-labelledby="fig-chord-geometry-title fig-chord-geometry-desc">
+  <title id="fig-chord-geometry-title">几何题：BD 垂直于直径，AD 是极小的一段</title>
+  <desc id="fig-chord-geometry-desc">圆里 C 是圆心，AC 是半径；那条横线上的 1000,000,000,000 压在整个直径下方，标的是整条直径，所以半径 AC 是 500,000,000,000。B 在圆上，BD = 1 并且垂直于直径，D 落在半径 AC 上。AD = AC − CD = 500,000,000,000 − √(500,000,000,000² − 1)，它虽然极小，却是个正数。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="380" height="321" fill="#ffffff"/>
+  <text x="190" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">几何题：BD 垂直于直径，AD 是极小的一段</text>
+
+  <circle cx="190" cy="170" r="105" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <path d="M85,170 L295,170" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M140,77.7 L140,170" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
+  <circle cx="85" cy="170" r="3.5" fill="#1e293b"/>
+  <circle cx="140" cy="77.7" r="3.5" fill="#1e293b"/>
+  <circle cx="190" cy="170" r="3.5" fill="#1e293b"/>
+  <circle cx="140" cy="170" r="3.5" fill="#1e293b"/>
+
+  <text x="67" y="170" font-size="12" fill="#1e293b" text-anchor="middle">A</text>
+  <text x="140" y="60" font-size="12" fill="#1e293b" text-anchor="middle">B</text>
+  <text x="190" y="192" font-size="12" fill="#1e293b" text-anchor="middle">C</text>
+  <text x="140" y="192" font-size="12" fill="#1e293b" text-anchor="middle">D</text>
+  <text x="152" y="125" font-size="10" fill="#b45309">BD = 1</text>
+  <text x="190" y="210" font-size="11" fill="#64748b" text-anchor="middle">1000,000,000,000</text>
+  <text x="190" y="296" font-size="11" fill="#1e293b" text-anchor="middle">AD = AC − CD = 500,000,000,000 − √(500,000,000,000² − 1)</text>
+</svg>

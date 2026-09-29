@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 696 167" width="696" height="167"
+     role="img" aria-labelledby="fig-catalan-parens-title fig-catalan-parens-desc">
+  <title id="fig-catalan-parens-title">平衡括号串拆成 (α)β，递推式数出卡塔兰数</title>
+  <desc id="fig-catalan-parens-desc">左边 (())()() 唯一地拆成 (α)β：α 取第一个 ()，β 取后面的 ()()；中间是递推式 C_{n+1} = Σ C_k · C_{n−k}，k 从 0 加到 n；右边是它的前六项 1、1、2、5、14、42，也就是 C_0 到 C_5。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="696" height="167" fill="#ffffff"/>
+  <text x="348" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">平衡括号串拆成 (α)β，递推式数出卡塔兰数</text>
+
+  <rect x="22" y="70" width="200" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="122" y="92.2" font-size="12" fill="#b45309" text-anchor="middle">(())()() = (α)β</text>
+  <text x="122" y="109.2" font-size="10" fill="#b45309" text-anchor="middle">α = ()，β = ()()</text>
+
+  <rect x="248" y="70" width="200" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="348" y="92.2" font-size="12" fill="#1e40af" text-anchor="middle">C_{n+1} = Σ C_k · C_{n−k}</text>
+  <text x="348" y="109.2" font-size="10" fill="#1e40af" text-anchor="middle">k 从 0 加到 n</text>
+
+  <rect x="474" y="70" width="200" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="574" y="92.2" font-size="12" fill="#166534" text-anchor="middle">1, 1, 2, 5, 14, 42</text>
+  <text x="574" y="109.2" font-size="10" fill="#166534" text-anchor="middle">C_0 到 C_5 的前六项</text>
+
+  <text x="348" y="142" font-size="10" fill="#64748b" text-anchor="middle">每一条非空串唯一地拆成 (α)β，于是同一个式子也数出了右边那一列</text>
+</svg>

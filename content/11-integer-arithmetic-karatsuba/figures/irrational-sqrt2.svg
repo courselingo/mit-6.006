@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 438 232" width="438" height="232"
+     role="img" aria-labelledby="fig-irrational-sqrt2-title fig-irrational-sqrt2-desc">
+  <title id="fig-irrational-sqrt2-title">正方形的对角线是 √2，讲义印的是它前 45 位小数</title>
+  <desc id="fig-irrational-sqrt2-desc">左边是边长 1 的正方形，它的对角线长 √2，比值 √2 写不成两个整数之比；右边是讲义印的三行小数，每行 15 位，接起来就是 √2 小数点后的 45 位。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="438" height="232" fill="#ffffff"/>
+  <text x="219" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">正方形的对角线是 √2，讲义印的是它前 45 位小数</text>
+
+  <path d="M22,70 L142,70 L142,190 L22,190 Z" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <path d="M22,190 C62,150 102,110 142,70" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="40" y="120" font-size="10" fill="#1e40af">√2</text>
+  <text x="82" y="208" font-size="10" fill="#1e40af" text-anchor="middle">边长 1</text>
+
+  <rect x="176" y="94" width="240" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="296" y="116.2" font-size="12" fill="#1e40af" text-anchor="middle">√2 = 1. 414 213 562 373 095</text>
+  <text x="296" y="134.2" font-size="12" fill="#1e40af" text-anchor="middle">048 801 688 724 209</text>
+  <text x="296" y="152.2" font-size="12" fill="#1e40af" text-anchor="middle">698 078 569 671 875</text>
+  <text x="296" y="190" font-size="10" fill="#64748b" text-anchor="middle">三行接起来是小数点后 45 位</text>
+</svg>

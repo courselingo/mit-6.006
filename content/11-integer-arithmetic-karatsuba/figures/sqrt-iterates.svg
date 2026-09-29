@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 463 433" width="463" height="433"
+     role="img" aria-labelledby="fig-sqrt-iterates-title fig-sqrt-iterates-desc">
+  <title id="fig-sqrt-iterates-title">牛顿法算 √2 的五步：对齐的位数是 0、0、2、5、11</title>
+  <desc id="fig-sqrt-iterates-desc">每一行是一个 χ 值：1、1.5、1.416666666、1.414215686、1.414213562；右边那根柱子是它与 √2 从头对齐的小数位数，依次是 0、0、2、5、11，位数每步大约翻倍。最下面一行说这一讲先做乘法，除法留给第 12 讲。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="463" height="433" fill="#ffffff"/>
+  <text x="231.5" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">牛顿法算 √2 的五步：对齐的位数是 0、0、2、5、11</text>
+
+  <rect x="170" y="70" width="4" height="36" fill="#94a3b8"/>
+  <rect x="170" y="131" width="4" height="36" fill="#94a3b8"/>
+  <rect x="170" y="192" width="44" height="36" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="170" y="253" width="110" height="36" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="170" y="314" width="242" height="36" fill="#d1fae5" stroke="#22c55e"/>
+
+  <text x="22" y="92.2" font-size="12" fill="#1e293b">χ_0 = 1.000000000</text>
+  <text x="22" y="153.2" font-size="12" fill="#1e293b">χ_1 = 1.500000000</text>
+  <text x="22" y="214.2" font-size="12" fill="#1e293b">χ_2 = 1.416666666</text>
+  <text x="22" y="275.2" font-size="12" fill="#1e293b">χ_3 = 1.414215686</text>
+  <text x="22" y="336.2" font-size="12" fill="#1e293b">χ_4 = 1.414213562</text>
+
+  <text x="188" y="92.2" font-size="11" fill="#64748b">0</text>
+  <text x="188" y="153.2" font-size="11" fill="#64748b">0</text>
+  <text x="228" y="214.2" font-size="11" fill="#166534">2</text>
+  <text x="294" y="275.2" font-size="11" fill="#166534">5</text>
+  <text x="426" y="336.2" font-size="11" fill="#166534">11</text>
+
+  <rect x="22" y="375" width="419" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="231.5" y="397.2" font-size="12" fill="#b45309" text-anchor="middle">这一讲先做乘法；除法留给第 12 讲</text>
+</svg>

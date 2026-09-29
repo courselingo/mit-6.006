@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 814 207" width="814" height="207"
+     role="img" aria-labelledby="fig-schoolbook-multiply-title fig-schoolbook-multiply-desc">
+  <title id="fig-schoolbook-multiply-title">拆成两半的朴素乘法：四项相乘，4 次半规模乘法，代价是 θ(n²)</title>
+  <desc id="fig-schoolbook-multiply-desc">左边把两个 n 位数各拆成高低两半：x1 与 y1 是高半段，x0 与 y0 是低半段；右边是乘开的三项与括号里的四项，数一遍乘号是 x1y1、x0y1、x1y0、x0y0 共 4 次半规模乘法；右下角是它的结论 T(n) = 4T(n/2) + θ(n)，解出来是 θ(n²)。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="814" height="207" fill="#ffffff"/>
+  <text x="407" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">拆成两半的朴素乘法：四项相乘，4 次半规模乘法，代价是 θ(n²)</text>
+
+  <rect x="22" y="70" width="344" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="92.2" font-size="12" fill="#1e40af" text-anchor="middle">x = x1·r^(n/2) + x0</text>
+  <text x="194" y="110.2" font-size="12" fill="#1e40af" text-anchor="middle">y = y1·r^(n/2) + y0</text>
+
+  <rect x="392" y="70" width="400" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="592" y="92.2" font-size="12" fill="#b45309" text-anchor="middle">x1y1·r^n + (x0y1 + x1y0)·r^(n/2) + x0y0</text>
+  <text x="592" y="109.2" font-size="10" fill="#b45309" text-anchor="middle">四项：x1y1、x0y1、x1y0、x0y0</text>
+
+  <text x="194" y="146" font-size="10" fill="#1e40af" text-anchor="middle">x1 与 y1 是高半段，x0 与 y0 是低半段</text>
+
+  <rect x="392" y="149" width="400" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="592" y="171.2" font-size="12" fill="#166534" text-anchor="middle">T(n) = 4T(n/2) + θ(n)，解出来是 θ(n²)</text>
+</svg>

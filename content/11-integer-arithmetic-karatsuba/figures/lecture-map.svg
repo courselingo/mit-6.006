@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 744 190" width="744" height="190"
+     role="img" aria-labelledby="fig-lecture-map-title fig-lecture-map-desc">
+  <title id="fig-lecture-map-title">这一讲的路线：前两条是铺垫，重心落在高精度乘法</title>
+  <desc id="fig-lecture-map-desc">讲义首页的三条目录并排：① Irrationals、② Newton's Method（√a 与 1/b）、③ High precision multiply。一个红色箭头从下面那一行指上来，落在第三条上，说明前两条是铺垫；下面那一行写的是这一讲真正要走的路：先解决一个大整数怎么乘得更快。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#ef4444"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="744" height="190" fill="#ffffff"/>
+  <text x="372" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">这一讲的路线：前两条是铺垫，重心落在高精度乘法</text>
+
+  <rect x="22" y="70" width="216" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="130" y="92.2" font-size="12" fill="#b45309" text-anchor="middle">① Irrationals</text>
+  <rect x="264" y="70" width="216" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="372" y="92.2" font-size="12" fill="#b45309" text-anchor="middle">② Newton's Method (√a, 1/b)</text>
+  <rect x="506" y="70" width="216" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="614" y="92.2" font-size="12" fill="#1e40af" text-anchor="middle">③ High precision multiply</text>
+
+  <path d="M614,127 L614,117" fill="none" stroke="#ef4444" stroke-width="1.5" marker-end="url(#arrow-red)"/>
+
+  <rect x="22" y="132" width="700" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="372" y="154.2" font-size="12" fill="#166534" text-anchor="middle">重心落在第三条：这一讲真正要走的路，是先解决一个大整数怎么乘得更快</text>
+</svg>
