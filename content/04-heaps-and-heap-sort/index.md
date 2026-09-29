@@ -5,7 +5,7 @@ slug = "heaps-and-heap-sort"
 status = "draft"
 source_kind = "slides"
 source_url = "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/resources/mit6_006f11_lec04/"
-source_title = "Lecture 4: Heaps and Heap Sort"
+source_title = "Lecture 04: Heaps and heap sort"
 output_mode = "explanation"
 +++
 

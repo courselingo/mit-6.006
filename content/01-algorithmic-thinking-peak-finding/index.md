@@ -5,7 +5,7 @@ slug = "algorithmic-thinking-peak-finding"
 status = "reviewed"
 source_kind = "notes"
 source_url = "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/resources/mit6_006f11_lec01/"
-source_title = "Lecture 1: Algorithmic Thinking, Peak Finding"
+source_title = "Lecture 01: Algorithmic Thinking, Peak Finding"
 output_mode = "explanation"
 +++
 

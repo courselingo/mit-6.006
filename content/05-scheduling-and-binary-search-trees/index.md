@@ -5,7 +5,7 @@ slug = "scheduling-and-binary-search-trees"
 status = "draft"
 source_kind = "notes"
 source_url = "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/resources/mit6_006f11_lec05/"
-source_title = "Lecture 5: Scheduling and Binary Search Trees"
+source_title = "Lecture 05: Binary search trees, BST sort"
 output_mode = "explanation"
 +++
 

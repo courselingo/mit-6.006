@@ -5,7 +5,7 @@ slug = "insertion-sort-merge-sort"
 status = "draft"
 source_kind = "slides"
 source_url = "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/resources/mit6_006f11_lec03/"
-source_title = "Lecture 3: Insertion Sort, Merge Sort"
+source_title = "Lecture 03: Insertion Sort, Merge Sort"
 output_mode = "explanation"
 +++
 
