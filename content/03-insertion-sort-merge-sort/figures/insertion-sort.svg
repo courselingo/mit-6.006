@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220" width="760" height="220"
+     role="img" aria-labelledby="fig-insertion-sort-title fig-insertion-sort-desc">
+  <title id="fig-insertion-sort-title">插入排序的一步：把 key 一路往左换到它该在的位置</title>
+  <desc id="fig-insertion-sort-desc">插入排序的第 j 轮：左边 A[1..j-1] 已经排好，把 A[j] 当 key 一路往左交换，直到左边不再有比它大的元素。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="220" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">插入排序的一步：把 key 一路往左换到它该在的位置</text>
+  <rect x="22" y="90" width="123.2" height="42" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="83.6" y="116" font-size="14" fill="#166534" text-anchor="middle">2</text>
+  <rect x="170.2" y="90" width="123.2" height="42" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="231.79999999999998" y="116" font-size="14" fill="#166534" text-anchor="middle">7</text>
+  <rect x="318.4" y="90" width="123.2" height="42" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="116" font-size="14" fill="#9d174d" text-anchor="middle">5</text>
+  <rect x="466.59999999999997" y="90" width="123.2" height="42" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="528.1999999999999" y="116" font-size="14" fill="#1e40af" text-anchor="middle">5</text>
+  <rect x="614.8" y="90" width="123.2" height="42" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="676.4" y="116" font-size="14" fill="#1e40af" text-anchor="middle">9.6</text>
+  <text x="380" y="70" font-size="10" fill="#64748b" text-anchor="middle">已排好的前缀（绿）与这一轮的 key（粉）</text>
+  <text x="380" y="170" font-size="10" fill="#64748b" text-anchor="middle">key = 5 比左边的 7 小，就交换一格；再和 2 比，不小于，停</text>
+  <text x="380" y="196" font-size="10" fill="#64748b" text-anchor="middle">每一轮都在同时做两件事：找位置，以及把元素往后挪</text>
+</svg>

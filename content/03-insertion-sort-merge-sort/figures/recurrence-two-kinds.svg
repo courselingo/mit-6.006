@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 251" width="760" height="251"
+     role="img" aria-labelledby="fig-recurrence-two-kinds-title fig-recurrence-two-kinds-desc">
+  <title id="fig-recurrence-two-kinds-title">两种递推的递归树：看层数，还是看根</title>
+  <desc id="fig-recurrence-two-kinds-desc">T(n) = 2T(n/2) + cn 的每一层合计都是 cn，所以总代价是「每层代价 × 层数」= Θ(n log n)；T(n) = 2T(n/2) + cn² 的每层合计逐层减半，总和被根主导，是 Θ(n²)。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="251" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两种递推的递归树：看层数，还是看根</text>
+  <rect x="22" y="64" width="345.5" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194.75" y="86" font-size="12" fill="#1e40af" text-anchor="middle">每层合计 cn</text>
+  <text x="194.75" y="104" font-size="12" fill="#1e40af" text-anchor="middle">每层一样多</text>
+  <rect x="392.5" y="64" width="345.5" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="565.25" y="86" font-size="12" fill="#6b21a8" text-anchor="middle">每层合计 cn²/2^k</text>
+  <text x="565.25" y="104" font-size="12" fill="#6b21a8" text-anchor="middle">逐层减半</text>
+  <path d="M194.75,123 L 194.75,132" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M565.25,123 L 565.25,132" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <rect x="22" y="143" width="345.5" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="194.75" y="165" font-size="12" fill="#166534" text-anchor="middle">看层数 ⇒ Θ(n log n)</text>
+  <rect x="392.5" y="143" width="345.5" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="565.25" y="165" font-size="12" fill="#166534" text-anchor="middle">看根 ⇒ Θ(n²)</text>
+  <text x="380" y="201" font-size="10" fill="#64748b" text-anchor="middle">同一棵树、两种结局：每层一样贵就去看层数，逐层递减就去看根</text>
+  <text x="380" y="227" font-size="10" fill="#64748b" text-anchor="middle">前者是归并排序，后者是 T(n) = 2T(n/2) + cn² 那个对照例子</text>
+</svg>

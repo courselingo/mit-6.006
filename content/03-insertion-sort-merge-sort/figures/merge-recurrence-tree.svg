@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 337" width="760" height="337"
+     role="img" aria-labelledby="fig-merge-recurrence-tree-title fig-merge-recurrence-tree-desc">
+  <title id="fig-merge-recurrence-tree-title">递归树：每层合并的总量都是 cn，一共 lg n + 1 层</title>
+  <desc id="fig-merge-recurrence-tree-desc">把 T(n) = 2T(n/2) + cn 展开成树：第 0 层是 cn，第 1 层两个 cn/2 合计 cn，第 2 层四个 cn/4 合计仍是 cn；层数为 lg n + 1，所以总代价是 Θ(n log n)。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="337" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">递归树：每层合并的总量都是 cn，一共 lg n + 1 层</text>
+  <rect x="22" y="60" width="716" height="33" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="80" font-size="11" fill="#1e40af" text-anchor="middle">cn</text>
+  <rect x="22" y="118" width="345.5" height="33" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194.75" y="138" font-size="11" fill="#1e40af" text-anchor="middle">cn/2</text>
+  <rect x="392.5" y="118" width="345.5" height="33" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="565.25" y="138" font-size="11" fill="#1e40af" text-anchor="middle">cn/2</text>
+  <rect x="22" y="176" width="160.25" height="33" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="102.125" y="196" font-size="11" fill="#b45309" text-anchor="middle">cn/4</text>
+  <rect x="207.25" y="176" width="160.25" height="33" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="287.375" y="196" font-size="11" fill="#b45309" text-anchor="middle">cn/4</text>
+  <rect x="392.5" y="176" width="160.25" height="33" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="472.625" y="196" font-size="11" fill="#b45309" text-anchor="middle">cn/4</text>
+  <rect x="577.75" y="176" width="160.25" height="33" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="657.875" y="196" font-size="11" fill="#b45309" text-anchor="middle">cn/4</text>
+  <rect x="22" y="234" width="67.625" height="33" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="55.8125" y="254" font-size="11" fill="#9d174d" text-anchor="middle">Θ(1)</text>
+  <rect x="114.625" y="234" width="67.625" height="33" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="148.4375" y="254" font-size="11" fill="#9d174d" text-anchor="middle">Θ(1)</text>
+  <rect x="207.25" y="234" width="67.625" height="33" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="241.0625" y="254" font-size="11" fill="#9d174d" text-anchor="middle">Θ(1)</text>
+  <rect x="299.875" y="234" width="67.625" height="33" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="333.6875" y="254" font-size="11" fill="#9d174d" text-anchor="middle">Θ(1)</text>
+  <rect x="392.5" y="234" width="67.625" height="33" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="426.3125" y="254" font-size="11" fill="#9d174d" text-anchor="middle">Θ(1)</text>
+  <rect x="485.125" y="234" width="67.625" height="33" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="518.9375" y="254" font-size="11" fill="#9d174d" text-anchor="middle">Θ(1)</text>
+  <rect x="577.75" y="234" width="67.625" height="33" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="611.5625" y="254" font-size="11" fill="#9d174d" text-anchor="middle">Θ(1)</text>
+  <rect x="670.375" y="234" width="67.625" height="33" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="704.1875" y="254" font-size="11" fill="#9d174d" text-anchor="middle">Θ(1)</text>
+  <text x="380" y="289" font-size="10" fill="#64748b" text-anchor="middle">每一层横向加起来都是 cn；层数是 lg n + 1 ⇒ 总代价 cn(lg n + 1) = Θ(n log n)</text>
+  <text x="380" y="313" font-size="10" fill="#64748b" text-anchor="middle">关键不是「每块多小」，而是「每层一共多少」</text>
+</svg>

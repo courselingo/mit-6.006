@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 268" width="760" height="268"
+     role="img" aria-labelledby="fig-binary-insertion-title fig-binary-insertion-desc">
+  <title id="fig-binary-insertion-title">二分插入排序：只把「找位置」改快，整体代价没变</title>
+  <desc id="fig-binary-insertion-desc">二分查找把找位置的成本从 Θ(n) 降到 Θ(log n)，但插入后挪动元素仍是 Θ(n)，所以比较次数是 Θ(n log n)、移动次数仍是 Θ(n²)，总代价仍由最贵的那一步决定。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="268" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">二分插入排序：只把「找位置」改快，整体代价没变</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="86" font-size="12" fill="#166534" text-anchor="middle">二分找位置：Θ(log n)</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="147" font-size="12" fill="#b45309" text-anchor="middle">把后面的元素挪开一位：Θ(n)</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="208" font-size="12" fill="#9d174d" text-anchor="middle">总代价还是 Θ(n²)：最贵的那一步没动</text>
+  <text x="380" y="244" font-size="10" fill="#64748b" text-anchor="middle">比较次数降到 Θ(n log n)，移动次数仍是 Θ(n²)</text>
+</svg>
