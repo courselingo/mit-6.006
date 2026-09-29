@@ -71,7 +71,7 @@ output_mode = "explanation"
 
 > 原文：Complexity: All operations are O(h) where h is height of the BST.
 
-**不是 O(lg n)，而是 O(h)**：h 是这棵树的[[term:height]]（高度）。查找、插入、找最小、找下一个更大，都是沿着一条路径走，所以代价都是树高的倍数。**记住这个「h」，第六节会回来找它算账。**
+**不是 O(lg n)，而是 O(h)**：h 是这棵树的[[term:height]]。查找、插入、找最小、找下一个更大，都是沿着一条路径走，所以代价都是树高的倍数。**记住这个「h」，第六节会回来找它算账。**
 
 ![树上的三种操作：找最小一路往左、删除最小值、找下一个更大的元素](figures/bst-operations.svg)
 

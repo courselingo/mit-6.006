@@ -19,7 +19,7 @@ output_mode = "explanation"
 
 > 原文：A data structure implementing a set S of elements, each associated with a key, supporting the following operations: insert(S, x); max(S); extract_max(S); increase_key(S, x, k).
 
-翻译过来：有一个集合 S，每个元素带一个 key（键），这个结构要支持四件事：插入一个元素；看当前最大的 key 是谁；把最大 key 的元素取出来（并删掉）；把某个元素的 key 调大。讲义给这四件事起的名字合起来就是这个结构的名字：[[term:priority-queue]]（优先队列）。它是一种 [[term:queue]]：元素按优先级排队，先出去的往往不是最早进来的那个，而是最要紧的那个。
+翻译过来：有一个集合 S，每个元素带一个 key（键），这个结构要支持四件事：插入一个元素；看当前最大的 key 是谁；把最大 key 的元素取出来（并删掉）；把某个元素的 key 调大。讲义给这四件事起的名字合起来就是这个结构的名字：[[term:priority-queue]]。它是一种 [[term:queue]]：元素按优先级排队，先出去的往往不是最早进来的那个，而是最要紧的那个。
 
 优先队列和普通数组的区别在于关心什么：数组关心「第 i 个是谁」，优先队列只关心「最大的那个是谁」。要的东西一变，实现方式就跟着变，这一讲的后半段都在做这件事。顺带记一句课外的话：Python 的 `heapq`、C++ 的 `priority_queue`、Java 的 `PriorityQueue` 都是它的实现。
 
@@ -29,7 +29,7 @@ output_mode = "explanation"
 
 ## 二、堆：用数组表示一棵近似完全的二叉树
 
-[[term:heap]]（堆）是优先队列的一种实现。讲义对它的描述是两层：
+[[term:heap]]是优先队列的一种实现。讲义对它的描述是两层：
 
 > 原文：Implementation of a priority queue. An array, visualized as a nearly complete binary tree. Max Heap Property: The key of a node is ≥ than the keys of its children.
 

@@ -9,29 +9,29 @@ source_title = "Lecture 09: Table doubling, Karp-Rabin"
 output_mode = "explanation"
 +++
 
-第 8 讲用[[term:hashing]]（哈希）把字典的代价压到期望 O(1)，但它留了一个前提没有解决：[[term:load-factor]]（装填因子）α = n/m 必须一直是常数。这一讲要解决的第一件事就是这个前提，因为表在创建的时候并不知道以后会收到多少个键。
+第 8 讲用[[term:hashing]]把字典的代价压到期望 O(1)，但它留了一个前提没有解决：[[term:load-factor]]α = n/m 必须一直是常数。这一讲要解决的第一件事就是这个前提，因为表在创建的时候并不知道以后会收到多少个键。
 
-后半讲换到另一个问题上：[[term:string-matching]]（字符串匹配），也就是在一段长文本里找一段短文本。它借的还是哈希，只是这一次要把哈希值在滑动中续着算下去。
+后半讲换到另一个问题上：[[term:string-matching]]，也就是在一段长文本里找一段短文本。它借的还是哈希，只是这一次要把哈希值在滑动中续着算下去。
 
 ## 一、先把第 8 讲留下的账翻出来
 
-讲义第一页是 Recall。它把[[term:chaining]]（链地址法）那张图又画了一遍（Figure 1）：左边是键域 U 与真正存进集合的 n 个键，中间是哈希函数 h，右边是一张 m 个槽的表，落进同一个槽的键串成一条链。图下面跟的是上一讲最要紧的那句结论：
+讲义第一页是 Recall。它把[[term:chaining]]那张图又画了一遍（Figure 1）：左边是键域 U 与真正存进集合的 n 个键，中间是哈希函数 h，右边是一张 m 个槽的表，落进同一个槽的键串成一条链。图下面跟的是上一讲最要紧的那句结论：
 
 > 原文：Expected cost (insert/delete/search): Θ(1 + α), assuming simple uniform hashing OR universal hashing & hash function h takes O(1) time.
 
-插入、删除、查找这三个操作的期望代价都是 Θ(1 + α)。α 是每条链的期望长度，所以只要 α 是常数，三个操作就都是 O(1)。这里的假设有两条路可选：[[term:simple-uniform-hashing]]（简单均匀哈希），或者 [[term:universal-hashing]]（全域哈希），两条路都要求[[term:hash-function]]本身花 O(1)。
+插入、删除、查找这三个操作的期望代价都是 Θ(1 + α)。α 是每条链的期望长度，所以只要 α 是常数，三个操作就都是 O(1)。这里的假设有两条路可选：[[term:simple-uniform-hashing]]，或者 [[term:universal-hashing]]，两条路都要求[[term:hash-function]]本身花 O(1)。
 
 讲义紧接着把两个哈希函数抄了一遍，因为这一讲要动它们里面的参数：
 
 > 原文：Division Method: h(k) = k mod m
 > 原文：where m is ideally prime
 
-[[term:division-method]]（除法法）就是取余，m 最好是质数。另一个是：
+[[term:division-method]]就是取余，m 最好是质数。另一个是：
 
 > 原文：h(k) = [(a · k) mod 2^w] ≫ (w − r)
 > 原文：where a is a random odd integer between 2^(w−1) and 2^w, k is given by w bits, and m = table size = 2^r.
 
-[[term:multiplication-method]]（乘法法）把 m 固定成 2 的 r 次方，a 取 2 的 (w−1) 次方到 2 的 w 次方之间的随机奇数，k 占 w 位。两个式子里都带着表的大小：除法法是 mod m，乘法法是 m = 2 的 r 次方。这句话是这一讲前半段的引线，尺寸一改，哈希函数就得跟着改。
+[[term:multiplication-method]]把 m 固定成 2 的 r 次方，a 取 2 的 (w−1) 次方到 2 的 w 次方之间的随机奇数，k 占 w 位。两个式子里都带着表的大小：除法法是 mod m，乘法法是 m = 2 的 r 次方。这句话是这一讲前半段的引线，尺寸一改，哈希函数就得跟着改。
 
 讲义的自述目录一共四条：Table Resizing、Amortization、String Matching and Karp-Rabin、Rolling Hash。数一遍是：表怎么改大小、摊还分析、字符串匹配与 Karp-Rabin、滚动哈希。
 
@@ -59,7 +59,7 @@ output_mode = "explanation"
 
 ## 三、重哈希：尺寸一变，整张表要重建
 
-改 m 就必须换哈希函数，这件事在这门课里叫[[term:rehashing]]（重哈希）。讲义把原因和做法写在一起：
+改 m 就必须换哈希函数，这件事在这门课里叫[[term:rehashing]]。讲义把原因和做法写在一起：
 
 > 原文：Rehashing: To grow or shrink table hash function must change (m, r) =⇒ must rebuild hash table from scratch
 
@@ -86,7 +86,7 @@ output_mode = "explanation"
 
 每次只加一格（m += 1）等于每一步都要重建：第 i 次插入要搬 i 个元素，n 次插入合起来要搬 1+2+⋯+n 个。把这笔账算出来，1+2+⋯+n 等于 n 乘 n+1 再除以 2，是 Θ(n²)。
 
-翻倍（m *= 2）只在第 2 的 i 次方那些插入上重建，也就是第 1、2、4、8、…… 次，总的搬运量是 1+2+4+8+⋯+n，这里的 n 取到下一个 2 的幂。这笔账也算一遍：等比数列求和等于 2n 减 1，是 Θ(n)。讲义把「满了就翻倍」这一条写进了讲次标题，本页叫它[[term:table-doubling]]（表倍增）。
+翻倍（m *= 2）只在第 2 的 i 次方那些插入上重建，也就是第 1、2、4、8、…… 次，总的搬运量是 1+2+4+8+⋯+n，这里的 n 取到下一个 2 的幂。这笔账也算一遍：等比数列求和等于 2n 减 1，是 Θ(n)。讲义把「满了就翻倍」这一条写进了讲次标题，本页叫它[[term:table-doubling]]。
 
 讲义对翻倍的评价是最后那一句：
 
@@ -97,7 +97,7 @@ output_mode = "explanation"
 > 原文：Amortized Analysis: This is a common technique in data structures — like paying rent: $1500/month ≈ $50/day
 > 原文：• operation has amortized cost T(n) if k operations cost ≤ k · T(n)
 
-房租每月 1500 美元，换算成每天 50 美元，按 30 天一个月算正好对得上。这个换算的好处是不用管某一天是不是交房租的日子。[[term:amortized-analysis]]（摊还分析）的定义就在下面那行：如果 k 次操作的总代价不超过 k 乘 T(n)，就说单次操作的摊还代价是 T(n)。[[term:hash-table]]（哈希表）的插入是这种例子：
+房租每月 1500 美元，换算成每天 50 美元，按 30 天一个月算正好对得上。这个换算的好处是不用管某一天是不是交房租的日子。[[term:amortized-analysis]]的定义就在下面那行：如果 k 次操作的总代价不超过 k 乘 T(n)，就说单次操作的摊还代价是 T(n)。[[term:hash-table]]的插入是这种例子：
 
 > 原文：• e.g. inserting into a hash table takes O(1) amortized time.
 
@@ -136,7 +136,7 @@ n 掉到 m 的四分之一时，把表缩到一半。缩完 m 减半，α 大约
 > 原文：Resizable Arrays: • same trick solves Python “list” (array)
 > 原文：• =⇒ list.append and list.pop in O(1) amortized
 
-Python 的 list 是一种[[term:array-list]]（动态数组），底层是一段连续的[[term:array]]（数组）。长度不够时它换一段更大的、把旧元素搬过去，所以 list.append 与 list.pop 都是摊还 O(1)。讲义总是把结论落到具体实现上，第 8 讲说「Python 里的字典就是 dict」也是同一个写法。
+Python 的 list 是一种[[term:array-list]]，底层是一段连续的[[term:array]]。长度不够时它换一段更大的、把旧元素搬过去，所以 list.append 与 list.pop 都是摊还 O(1)。讲义总是把结论落到具体实现上，第 8 讲说「Python 里的字典就是 dict」也是同一个写法。
 
 讲义为这件事画了 Figure 2：一行 8 个格子，下标从 0 到 7，前面 6 个格子标着 list（已经用掉），后面 2 个格子标着 unused（留着）。这些数字的含义是「数组的容量可以大于实际元素个数」，多出来的那几格就是下次 append 的余量。
 
@@ -175,7 +175,7 @@ s 取 '6.006'，t 取你的整个收件箱。这说的就是 grep 干的事，Li
 
 ## 八、Karp-Rabin：先比哈希，比中了再核对
 
-[[term:karp-rabin]]（卡普-拉宾算法）换了一个比较的对象。它不比字符串，先比哈希值：
+[[term:karp-rabin]]换了一个比较的对象。它不比字符串，先比哈希值：
 
 > 原文：Karp-Rabin Algorithm: • Compare h(s) == h(t[i : i + len(s)]) / • If hash values match, likely so do strings
 
@@ -206,7 +206,7 @@ s 取 '6.006'，t 取你的整个收件箱。这说的就是 grep 干的事，Li
 > 原文：• r.append(c): add letter c to end of string x
 > 原文：• r.skip(c): remove front letter from string x, assuming it is c
 
-[[term:rolling-hash]]（滚动哈希）维护一段字符串 x，对外有三个操作：r() 给出它的哈希值，r.append(c) 在末尾加一个字符，r.skip(c) 从前面去掉一个字符（调用者保证去掉的正是 c）。配到字符串匹配上的用法是这样的：
+[[term:rolling-hash]]维护一段字符串 x，对外有三个操作：r() 给出它的哈希值，r.append(c) 在末尾加一个字符，r.skip(c) 从前面去掉一个字符（调用者保证去掉的正是 c）。配到字符串匹配上的用法是这样的：
 
 > 原文：for c in s: rs.append(c) / for c in t[:len(s)]: rt.append(c) / if rs() == rt(): ...
 > 原文：This first block of code is O(|s|)
@@ -218,7 +218,7 @@ s 取 '6.006'，t 取你的整个收件箱。这说的就是 grep 干的事，Li
 
 第二段沿着 t 往右滑，每次去掉最左边那个字符、加进新来的字符，再比一次，这一段是 O(|t|)。至于后面跟着的核对代价，讲义写的是 O(# matches − |s|)，这一项按读法应当相乘：核对一条候选要花 O(|s|)。同一讲的手写原稿在这里也写成减号，所以这不是抽取造成的，我们照录并标出它按原样讲不通。
 
-讲义在这一节里讲的是[[term:data-structure]]（数据结构）层面的做法，也就是两个操作怎么做到常数时间：
+讲义在这一节里讲的是[[term:data-structure]]层面的做法，也就是两个操作怎么做到常数时间：
 
 > 原文：Data Structure: Treat string x as a multidigit number u in base a where a denotes the alphabet size, e.g., 256
 
@@ -226,7 +226,7 @@ s 取 '6.006'，t 取你的整个收件箱。这说的就是 grep 干的事，Li
 
 > 原文：• r() = u mod p for (ideally random) prime p ≈ |s| or |t| (division method) / • r stores u mod p and |x| (really a^(|x|)), not u
 
-p 是一个随机取的质数，量级在 |s| 或 |t| 上下，用的还是上面那个除法法。r 只存 u mod p 与 |x|（真正要留的是 a 的 |x| 次方这个幂），不存整个 u，所以 u mod p 能放进一个[[term:machine-word]]（机器字）。两个动作的式子写在下面：
+p 是一个随机取的质数，量级在 |s| 或 |t| 上下，用的还是上面那个除法法。r 只存 u mod p 与 |x|（真正要留的是 a 的 |x| 次方这个幂），不存整个 u，所以 u mod p 能放进一个[[term:machine-word]]。两个动作的式子写在下面：
 
 > 原文：• r.append(c): (u · a + ord(c)) mod p = [(u mod p) · a + ord(c)] mod p
 > 原文：• r.skip(c): [u − ord(c) · (a^(|u|−1) mod p)] mod p = [(u mod p) − ord(c) · (a^(|x−1|) mod p)] mod p
@@ -254,7 +254,7 @@ append 就是在 a 进制数后面补一位：旧的 u 乘 a 再加新字符的�
 
 这一讲把第 8 讲的结论补成了完整的一句。第 8 讲说字典的期望代价是 Θ(1 + α)，这一讲给出维持 α 的办法：表用翻倍长大、用减半缩小，两次调整之间 α 在 1/4 与 1 之间游走，于是那个 Θ(1 + α) 里的 α 一直是常数。
 
-代价的形状值得记一下。单次操作是常数，每过一段却要付一次线性代价；[[term:amortized-analysis]]（摊还分析）就是把这两笔账合起来算的工具。它是这一讲唯一的新方法，后面讲别的数据结构时还会再用到，第 6 讲里 AVL 树名单上标着 (A) 的那几条也是同一件事。第 8 讲那个「哈希需要一个假设」的缺口，在这里没有变大也没有变小。
+代价的形状值得记一下。单次操作是常数，每过一段却要付一次线性代价；[[term:amortized-analysis]]就是把这两笔账合起来算的工具。它是这一讲唯一的新方法，后面讲别的数据结构时还会再用到，第 6 讲里 AVL 树名单上标着 (A) 的那几条也是同一件事。第 8 讲那个「哈希需要一个假设」的缺口，在这里没有变大也没有变小。
 
 后半讲换了目标：不再问「往集合里插一个键要多久」，而是问「在一段文本里找一段模式要多久」。它把哈希从「定位一个键」改成「比较一个窗口」，滚动哈希让窗口滑一步只要常数时间。第 8 讲的除法法在这里又出现了一次，连 p 的取法都还是那一套。
 

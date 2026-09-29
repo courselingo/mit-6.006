@@ -11,7 +11,7 @@ output_mode = "explanation"
 
 第 5 讲把几种能做字典的结构摆在一起比过，结论都落在 O(lg n)：堆和二叉搜索树都能按 key 存取，但都要沿着一条路径走。这一讲换了一个目标，每次操作要 O(1)。
 
-要解决的问题是[[term:dictionary]]（字典）问题：维护一组元素，每项带一个 key，支持插入、删除、按 key 查找。讲义把它定义成一个[[term:abstract-data-type]]（抽象数据类型），只规定有几项操作、各自什么语义，不说怎么实现。所以这一讲可以先不管结构长什么样，只看那几项操作能有多快。讲义自己给的自述目录一共七条：字典与 Python、动机、预哈希、哈希、链地址法、简单均匀哈希、以及「好」的哈希函数。
+要解决的问题是[[term:dictionary]]问题：维护一组元素，每项带一个 key，支持插入、删除、按 key 查找。讲义把它定义成一个[[term:abstract-data-type]]，只规定有几项操作、各自什么语义，不说怎么实现。所以这一讲可以先不管结构长什么样，只看那几项操作能有多快。讲义自己给的自述目录一共七条：字典与 Python、动机、预哈希、哈希、链地址法、简单均匀哈希、以及「好」的哈希函数。
 
 ## 一、字典问题：三个操作，目标是 O(1)
 
@@ -91,7 +91,7 @@ set 就是只有 key、没有 value 的 dict。这一句把字典的地位说得
 
 ## 四、直接访问表：一个键一个格子
 
-想解决字典问题，最直接的办法是开一个数组，用 key 当下标，讲义管它叫[[term:direct-access-table]]（直接访问表）。它的原话是：
+想解决字典问题，最直接的办法是开一个数组，用 key 当下标，讲义管它叫[[term:direct-access-table]]。它的原话是：
 
 > 原文：Simple Approach: Direct Access Table — This means items would need to be stored in an array, indexed by key (random access)
 
@@ -121,7 +121,7 @@ set 就是只有 key、没有 value 的 dict。这一句把字典的地位说得
 
 > 原文：Solution to 1 : "prehash" keys to integers.
 
-[[term:prehashing]]（预哈希）要做的就是把任意类型的键变成整数。讲义在这一节列了六条，前两条讲为什么可行、Python 里用什么工具：
+[[term:prehashing]]要做的就是把任意类型的键变成整数。讲义在这一节列了六条，前两条讲为什么可行、Python 里用什么工具：
 
 > 原文：In theory, possible because keys are finite =⇒ set of keys is countable / In Python: hash(object) (actually hash is misnomer should be "prehash")
 
@@ -151,7 +151,7 @@ set 就是只有 key、没有 value 的 dict。这一句把字典的地位说得
 
 > 原文：Solution to 2 : hashing — Reduce universe U of all keys (say, integers) down to reasonable size m for table / idea: m ≈ n = # keys stored in dictionary / hash function h: U → {0, 1, . . . , m − 1}
 
-第二条解法是[[term:hashing]]（哈希），把整个键域 U 压到一个合理的规模。这里的关键是中间那条 idea：m 取在 n 的量级上，n 是字典里真正存的键的个数。于是[[term:hash-function]]（哈希函数）成了一个从 U 到 {0, 1, …, m − 1} 的映射。
+第二条解法是[[term:hashing]]，把整个键域 U 压到一个合理的规模。这里的关键是中间那条 idea：m 取在 n 的量级上，n 是字典里真正存的键的个数。于是[[term:hash-function]]成了一个从 U 到 {0, 1, …, m − 1} 的映射。
 
 压到一个更小的范围，必然有键挤到一起。讲义在 Figure 2 下面给了定义：
 
@@ -163,7 +163,7 @@ set 就是只有 key、没有 value 的 dict。这一句把字典的地位说得
 
 > 原文：How do we deal with collisions? We will see two ways 1. Chaining: TODAY 2. Open addressing: L10
 
-对付碰撞一共两条路。[[term:chaining]]（链地址法）是这一讲的内容，[[term:open-addressing]]（开放寻址）留给第 10 讲。这份七页的讲义只讲第一条。
+对付碰撞一共两条路。[[term:chaining]]是这一讲的内容，[[term:open-addressing]]留给第 10 讲。这份七页的讲义只讲第一条。
 
 ![哈希：哈希函数 h 把整个键域 U 映射到 0 到 m − 1 这 m 个槽，不同的键落到同一个槽就是碰撞](figures/hashing-universe.svg)
 
@@ -191,13 +191,13 @@ set 就是只有 key、没有 value 的 dict。这一句把字典的地位说得
 
 > 原文：An assumption (cheating): Each key is equally likely to be hashed to any slot of table, independent of where other keys are hashed.
 
-[[term:simple-uniform-hashing]]（简单均匀哈希）说的是每一个键落到哪个槽都等可能，而且和其他键落在哪里无关。括号里那个 cheating 是讲义自己加的，它知道这个假设不一定成立，但先靠它把账算出来。
+[[term:simple-uniform-hashing]]说的是每一个键落到哪个槽都等可能，而且和其他键落在哪里无关。括号里那个 cheating 是讲义自己加的，它知道这个假设不一定成立，但先靠它把账算出来。
 
 在这个假设下，两个量就够了：
 
 > 原文：let n = # keys stored in table / m = # slots in table / load factor α = n/m = expected # keys per slot = expected length of a chain
 
-n 是表里键的个数，m 是槽的个数。[[term:load-factor]]（装填因子）α 等于 n 除以 m，它同时是每个槽的期望键数，也是每条链的期望长度。
+n 是表里键的个数，m 是槽的个数。[[term:load-factor]]α 等于 n 除以 m，它同时是每个槽的期望键数，也是每条链的期望长度。
 
 然后是这个假设买来的结论：
 
@@ -219,11 +219,11 @@ n 是表里键的个数，m 是槽的个数。[[term:load-factor]]（装填因�
 
 > 原文：Division Method: h(k) = k mod m — This is practical when m is prime but not too close to power of 2 or 10 (then just depending on low bits/digits). But it is inconvenient to find a prime number, and division is slow.
 
-[[term:division-method]]（除法法）就是取余，h(k) = k mod m。它有两个讲究：m 取质数，而且别太靠近 2 的幂或 10 的幂。讲义给了理由，m 贴着 2 的幂时结果只取决于 k 的低位，贴着 10 的幂时只取决于低位的那几个十进制数字。它同时说了两条坏话：找一个质数不方便，除法本身也慢。
+[[term:division-method]]就是取余，h(k) = k mod m。它有两个讲究：m 取质数，而且别太靠近 2 的幂或 10 的幂。讲义给了理由，m 贴着 2 的幂时结果只取决于 k 的低位，贴着 10 的幂时只取决于低位的那几个十进制数字。它同时说了两条坏话：找一个质数不方便，除法本身也慢。
 
 > 原文：Multiplication Method: h(k) = [(a · k) mod 2^w] ≫ (w − r) — where a is random, k is w bits, and m = 2^r. This is practical when a is odd & 2^{w−1} < a < 2^w & a not too close to 2^{w−1} or 2^w. Multiplication and bit extraction are faster than division.
 
-[[term:multiplication-method]]（乘法法）把除法整个换掉了。k 是一个 w 位的数，a 是一个随机的 w 位数，先算 a 乘 k、对 2^w 取模，再右移 w − r 位，取出来的就是中间那 r 位。m 不是随便取的，它固定成 2^r，所以取出来的 r 位正好就是一个下标。讲义对 a 也有讲究：取奇数、落在 2^{w−1} 和 2^w 之间，而且别贴着这两头。
+[[term:multiplication-method]]把除法整个换掉了。k 是一个 w 位的数，a 是一个随机的 w 位数，先算 a 乘 k、对 2^w 取模，再右移 w − r 位，取出来的就是中间那 r 位。m 不是随便取的，它固定成 2^r，所以取出来的 r 位正好就是一个下标。讲义对 a 也有讲究：取奇数、落在 2^{w−1} 和 2^w 之间，而且别贴着这两头。
 
 ![三种哈希函数：除法法取余、乘法法取乘积中间那几位、全域哈希把选择权交给两组随机数](figures/hash-functions.svg)
 
@@ -249,7 +249,7 @@ n 是表里键的个数，m 是槽的个数。[[term:load-factor]]（装填因�
 
 > 原文：Universal Hashing [6.046; CLRS 11.3.3] — For example: h(k) = [(ak + b) mod p] mod m where a and b are random ∈ {0, 1, . . . p − 1}, and p is a large prime (> |U|).
 
-[[term:universal-hashing]]（全域哈希）先算 (ak + b) mod p，再对 m 取余，其中 a 和 b 是 0 到 p − 1 之间的随机数，p 是一个比整个键域还大的质数。标题下面挂着两个出处：6.046 这门课，以及 CLRS 的 11.3.3 节。
+[[term:universal-hashing]]先算 (ak + b) mod p，再对 m 取余，其中 a 和 b 是 0 到 p − 1 之间的随机数，p 是一个比整个键域还大的质数。标题下面挂着两个出处：6.046 这门课，以及 CLRS 的 11.3.3 节。
 
 随机数买来的是一条很干净的性质：
 

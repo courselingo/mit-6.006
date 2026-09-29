@@ -31,7 +31,7 @@ MIT 6.006 的第一讲就叫算法思维，副标题正是峰值查找。这门�
 
 图里位置 1、3、5、7 都是峰。位置 1 的 6 之所以算峰，靠的正是端点规则：它只和右边的 4 比。要的只是其中一个，这个自由度后面会派上用场。
 
-这套「每次砍掉一半以上」的做法有个正式名字：[[term:divide-and-conquer]]（分治）；而第五节要把它的代价写成式子，靠的是 [[term:recursion]]（递归）。Python 里做同类事的是 NumPy 的 `argmax`。
+这套「每次砍掉一半以上」的做法有个正式名字：[[term:divide-and-conquer]]（分治）；而第五节要把它的代价写成式子，靠的是 [[term:recursion]]。Python 里做同类事的是 NumPy 的 `argmax`。
 
 ## 二、从左边一路扫过去：直觉做法为什么不够
 
@@ -240,4 +240,4 @@ def find_peak(a, lo, hi):
 
 授权：本页是原创中文讲解，不是逐字翻译，也不含原文段落。上游材料为 CC BY-NC-SA 4.0，义务是署名、非商用、以相同协议发布衍生内容。逐页证据见本仓库 `course.toml` 的 `[license]` 与 `docs/audit/license-ocw-6.006.md`。
 
-补充登记（后来补的三处术语指向，不影响上面的事实与归属）：本讲反复用的「砍掉一半」属于 [[term:divide-and-conquer]]（分治），第五节的递推式要靠 [[term:recursion]]（递归）来读；Python 里做同类事的是 NumPy 的 `argmax`。
+补充登记（后来补的三处术语指向，不影响上面的事实与归属）：本讲反复用的「砍掉一半」属于 [[term:divide-and-conquer]]（分治），第五节的递推式要靠 [[term:recursion]]来读；Python 里做同类事的是 NumPy 的 `argmax`。
