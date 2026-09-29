@@ -474,3 +474,50 @@ notes = "把问题 A 转换成问题 B，从而用 B 的算法或难度结论说
 en = "NP-complete"
 zh = "NP 完全"
 notes = "NP 中最难的一类；目前没有已知的多项式时间算法"
+
+# ── 第 2 讲（计算模型与文档距离）新增 ──────────────────────────────────────
+
+[[term]]
+en = "model of computation"
+zh = "计算模型"
+notes = "规定算法允许做哪些操作、每个操作花多少代价；算法代价 = 用到的操作代价之和"
+
+[[term]]
+en = "random access machine"
+zh = "随机存取机"
+notes = "RAM：内存视为大数组，常数个寄存器；装载／运算／存回三条操作各 Θ(1)"
+
+[[term]]
+en = "pointer machine"
+zh = "指针机"
+notes = "只有动态对象与引用，字段为字或指针；比 RAM 弱，可在 RAM 上实现"
+
+[[term]]
+en = "machine word"
+zh = "机器字"
+notes = "内存的一格；位数 w ≥ lg(内存大小)，约定基本对象能放进一个字"
+
+[[term]]
+en = "document distance"
+zh = "文档距离"
+notes = "把两篇文档的相似度写成两个词向量之间的夹角，0 度全同、90 度无共同词"
+
+[[term]]
+en = "document vector"
+zh = "文档向量"
+notes = "每维是一个出现过的词，坐标是该词在文档里的出现次数"
+
+[[term]]
+en = "dot product"
+zh = "点积"
+notes = "两向量对应分量相乘再求和；除以两个向量的长度后得到归一化点积"
+
+[[term]]
+en = "scale invariant"
+zh = "尺度无关"
+notes = "文档长度变化时相似度不该被长度带偏；点积不满足，需按词数归一化"
+
+[[term]]
+en = "dictionary"
+zh = "字典"
+notes = "键到值的映射；查找与插入在期望意义下 Θ(1)，最坏情况会退化（哈希冲突）"

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 235" width="760" height="235"
+     role="img" aria-labelledby="fig-document-distance-vectors-title fig-document-distance-vectors-desc">
+  <title id="fig-document-distance-vectors-title">文档距离：把文档变成词向量，用夹角表示距离</title>
+  <desc id="fig-document-distance-vectors-desc">两篇文档先变成词向量，每一维是一个出现过的词，坐标是出现次数；点积除以两个向量的长度再做反余弦，得到两个向量的夹角：0 度说明完全相同，90 度说明没有共同词。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="235" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">文档距离：把文档变成词向量，用夹角表示距离</text>
+  <rect x="22" y="64" width="353" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="198.5" y="86" font-size="12" fill="#1e40af" text-anchor="middle">D1：the cat</text>
+  <rect x="400" y="64" width="338" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="569" y="86" font-size="12" fill="#166534" text-anchor="middle">D2：the dog</text>
+  <rect x="22" y="125" width="222" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="133" y="147" font-size="12" fill="#b45309" text-anchor="middle">the</text>
+  <rect x="269" y="125" width="222" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="147" font-size="12" fill="#b45309" text-anchor="middle">cat</text>
+  <rect x="516" y="125" width="222" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="627" y="147" font-size="12" fill="#b45309" text-anchor="middle">dog</text>
+  <text x="133" y="182" font-size="10" fill="#64748b" text-anchor="middle">D1 是 1，D2 是 1</text>
+  <text x="380" y="182" font-size="10" fill="#64748b" text-anchor="middle">D1 是 1，D2 是 0</text>
+  <text x="627" y="182" font-size="10" fill="#64748b" text-anchor="middle">D1 是 0，D2 是 1</text>
+  <text x="380" y="210" font-size="10" fill="#64748b" text-anchor="middle">两个向量除以各自长度后取反余弦：夹角 0 度全同，90 度没有共同词</text>
+</svg>

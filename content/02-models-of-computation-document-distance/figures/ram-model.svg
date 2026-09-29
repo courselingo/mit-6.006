@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 231" width="760" height="231"
+     role="img" aria-labelledby="fig-ram-model-title fig-ram-model-desc">
+  <title id="fig-ram-model-title">随机存取机：大数组内存、常数个寄存器、三条 Θ(1) 操作</title>
+  <desc id="fig-ram-model-desc">内存是一个很大的数组，每个格子一个字；机器另有常数个寄存器。允许的操作只有装载、运算、存回三条，每条都在 Θ(1) 时间内完成，所以字长必须不小于 lg(内存大小)。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="231" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">随机存取机：大数组内存、常数个寄存器、三条 Θ(1) 操作</text>
+  <rect x="22" y="64" width="353" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="198.5" y="86" font-size="12" fill="#1e40af" text-anchor="middle">内存：一个很大的数组</text>
+  <text x="198.5" y="104" font-size="12" fill="#1e40af" text-anchor="middle">每格一个字，有下标 0, 1, 2, …</text>
+  <rect x="400" y="64" width="338" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="569" y="86" font-size="12" fill="#b45309" text-anchor="middle">寄存器：常数个</text>
+  <text x="569" y="104" font-size="12" fill="#b45309" text-anchor="middle">每个也是一字大小</text>
+  <rect x="22" y="143" width="222" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="133" y="165" font-size="12" fill="#166534" text-anchor="middle">装载：内存 → 寄存器</text>
+  <rect x="269" y="143" width="222" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="165" font-size="12" fill="#166534" text-anchor="middle">运算：+ − × ÷</text>
+  <rect x="516" y="143" width="222" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="627" y="165" font-size="12" fill="#166534" text-anchor="middle">存回：寄存器 → 内存</text>
+  <text x="380" y="204" font-size="10" fill="#64748b" text-anchor="middle">三条操作都在 Θ(1) 时间内完成；字长 w ≥ lg(内存大小)</text>
+</svg>

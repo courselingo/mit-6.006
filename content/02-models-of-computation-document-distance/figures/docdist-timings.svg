@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 458" width="760" height="458"
+     role="img" aria-labelledby="fig-docdist-timings-title fig-docdist-timings-desc">
+  <title id="fig-docdist-timings-title">八个版本的耗时：从 228 秒到 0.2 秒</title>
+  <desc id="fig-docdist-timings-desc">同一份文档距离任务用八个版本实现，耗时从 228.1 秒一路降到 0.2 秒；横条按对数刻度画，每一次跳跃对应一次数据结构或常数因子上的改动。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="458" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">八个版本的耗时：从 228 秒到 0.2 秒</text>
+  <rect x="105" y="60" width="550" height="20" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="22" y="73.5" font-size="10" fill="#1e293b" text-anchor="start">docdist1</text>
+  <text x="738" y="73.5" font-size="10" fill="#64748b" text-anchor="end">228.1 s</text>
+  <rect x="105" y="107" width="524.5551185064148" height="20" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="22" y="120.5" font-size="10" fill="#1e293b" text-anchor="start">docdist2</text>
+  <text x="738" y="120.5" font-size="10" fill="#64748b" text-anchor="end">164.7 s</text>
+  <rect x="105" y="154" width="501.80818265936387" height="20" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="22" y="167.5" font-size="10" fill="#1e293b" text-anchor="start">docdist3</text>
+  <text x="738" y="167.5" font-size="10" fill="#64748b" text-anchor="end">123.1 s</text>
+  <rect x="105" y="201" width="459.5764622633367" height="20" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="22" y="214.5" font-size="10" fill="#1e293b" text-anchor="start">docdist4</text>
+  <text x="738" y="214.5" font-size="10" fill="#64748b" text-anchor="end">71.7 s</text>
+  <rect x="105" y="248" width="352.877977144516" height="20" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="22" y="261.5" font-size="10" fill="#1e293b" text-anchor="start">docdist5</text>
+  <text x="738" y="261.5" font-size="10" fill="#64748b" text-anchor="end">18.3 s</text>
+  <rect x="105" y="295" width="316.580682933805" height="20" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="22" y="308.5" font-size="10" fill="#1e293b" text-anchor="start">docdist6</text>
+  <text x="738" y="308.5" font-size="10" fill="#64748b" text-anchor="end">11.5 s</text>
+  <rect x="105" y="342" width="171.67714136189872" height="20" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="22" y="355.5" font-size="10" fill="#1e293b" text-anchor="start">docdist7</text>
+  <text x="738" y="355.5" font-size="10" fill="#64748b" text-anchor="end">1.8 s</text>
+  <rect x="105" y="389" width="20" height="20" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="22" y="402.5" font-size="10" fill="#1e293b" text-anchor="start">docdist8</text>
+  <text x="738" y="402.5" font-size="10" fill="#64748b" text-anchor="end">0.2 s</text>
+  <text x="380" y="433" font-size="10" fill="#64748b" text-anchor="middle">横条按对数刻度画：越往下的改动，越接近「换掉一整个数据结构」</text>
+</svg>
