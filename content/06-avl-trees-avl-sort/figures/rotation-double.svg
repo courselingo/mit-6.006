@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 761 476" width="761" height="476"
+     role="img" aria-labelledby="fig-rotation-double-title fig-rotation-double-desc">
+  <title id="fig-rotation-double-title">双旋：x 的右孩子左重，先转孩子再转 x</title>
+  <desc id="fig-rotation-double-desc">左图里 x 右重，但它的右孩子 z 左重（z 的左孩子 y 更高）；先绕 z 做一次右旋把 y 提上来，再绕 x 做一次左旋，y 成为新的根，x 与 z 各分到两棵子树。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="761" height="476" fill="#ffffff"/>
+  <text x="380.5" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">双旋：x 的右孩子左重，先转孩子再转 x</text>
+  <g transform="translate(-22.0,-48.0)">
+  <path d="M133.8,140.3 C 114.1,148.9 90.3,178.6 86.2,199.7" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M168.4,138.4 C 191.3,147.1 222.9,178.7 231.6,201.6" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M238.4,243.3 C 222.7,252.2 209.4,278.9 211.6,296.7" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M266.2,240.3 C 285.9,248.9 309.7,278.6 313.8,299.7" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M191.4,344.5 C 177.5,354.0 168.6,379.4 173.6,395.5" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M211.6,343.3 C 227.3,352.2 240.6,378.9 238.4,396.7" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <circle cx="150" cy="120" r="26" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="150" y="124.2" font-size="12" fill="#1e40af" text-anchor="middle">x</text>
+  <circle cx="70" cy="220" r="26" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="70" y="224.2" font-size="12" fill="#1e40af" text-anchor="middle">A</text>
+  <circle cx="250" cy="220" r="26" fill="#fce7f3" stroke="#ec4899" stroke-width="1.5"/>
+  <text x="250" y="224.2" font-size="12" fill="#9d174d" text-anchor="middle">z</text>
+  <circle cx="200" cy="320" r="26" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="200" y="324.2" font-size="12" fill="#b45309" text-anchor="middle">y</text>
+  <circle cx="330" cy="320" r="26" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="330" y="324.2" font-size="12" fill="#1e40af" text-anchor="middle">D</text>
+  <circle cx="165" cy="420" r="26" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="165" y="424.2" font-size="12" fill="#1e40af" text-anchor="middle">B</text>
+  <circle cx="250" cy="420" r="26" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="250" y="424.2" font-size="12" fill="#1e40af" text-anchor="middle">C</text>
+  <path d="M604.4,140.8 C 585.5,149.4 563.5,178.6 560.6,199.2" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M636.2,140.3 C 655.9,148.9 679.7,178.6 683.8,199.7" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M534.3,243.7 C 519.3,252.8 507.5,279.0 510.7,296.3" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M552.5,244.9 C 565.8,254.6 573.3,279.7 567.5,295.1" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M689.3,243.7 C 674.3,252.8 662.5,279.0 665.7,296.3" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M708.6,244.5 C 722.5,254.0 731.4,279.4 726.4,295.5" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <circle cx="620" cy="120" r="26" fill="#d1fae5" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="620" y="124.2" font-size="12" fill="#166534" text-anchor="middle">y</text>
+  <circle cx="545" cy="220" r="26" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="545" y="224.2" font-size="12" fill="#1e40af" text-anchor="middle">x</text>
+  <circle cx="700" cy="220" r="26" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="700" y="224.2" font-size="12" fill="#1e40af" text-anchor="middle">z</text>
+  <circle cx="500" cy="320" r="26" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="500" y="324.2" font-size="12" fill="#1e40af" text-anchor="middle">A</text>
+  <circle cx="575" cy="320" r="26" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="575" y="324.2" font-size="12" fill="#1e40af" text-anchor="middle">B</text>
+  <circle cx="655" cy="320" r="26" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="655" y="324.2" font-size="12" fill="#1e40af" text-anchor="middle">C</text>
+  <circle cx="735" cy="320" r="26" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="735" y="324.2" font-size="12" fill="#1e40af" text-anchor="middle">D</text>
+  <path d="M362,220 L462,220" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <text x="440" y="196" font-size="11" fill="#1f2937" text-anchor="middle">先右旋 z，再左旋 x</text>
+  <text x="402" y="500" font-size="10" fill="#64748b" text-anchor="middle">两棵树用的是同一批子树 A–D，只是挂的位置换了：这就是「双旋」的全部内容</text>
+  </g>
+</svg>

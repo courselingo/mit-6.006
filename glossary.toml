@@ -562,3 +562,97 @@ notes = "统计不超过某个值的元素有多少个；在 BST 上用子树规
 en = "subtree size"
 zh = "子树规模"
 notes = "某节点左子树里的节点个数；增强 BST 时在插入与删除中顺手维护"
+
+# ── 第 6 讲（平衡二叉搜索树与 AVL）新增 ────────────────────────────────────
+
+[[term]]
+en = "AVL tree"
+zh = "AVL 树"
+notes = "Adel'son-Vel'skii 与 Landis 1962 年提出：每个节点的左右子树高度差不超过 1"
+
+[[term]]
+en = "AVL sort"
+zh = "AVL 排序"
+notes = "把元素逐个插进 AVL 树，再中序遍历读出；两步合计 Θ(n lg n)"
+
+[[term]]
+en = "rotation"
+zh = "旋转"
+notes = "AVL 修复高度的基本动作；一次旋转只改动常数个指针，单旋或双旋"
+
+[[term]]
+en = "right-heavy"
+zh = "右重"
+notes = "右子树比左子树高；讲义里只说 x 右重的情形，左重的按左右镜像处理"
+
+[[term]]
+en = "in-order traversal"
+zh = "中序遍历"
+notes = "先左子树、再根、后右子树；在二叉搜索树上读出的就是排好序的序列"
+
+[[term]]
+en = "abstract data type"
+zh = "抽象数据类型"
+notes = "ADT：只规定有哪些操作、各自什么语义，不规定怎么实现"
+
+[[term]]
+en = "Fibonacci number"
+zh = "斐波那契数"
+notes = "最瘦的 AVL 树节点数按它增长，通项里带黄金比例"
+
+[[term]]
+en = "golden ratio"
+zh = "黄金比例"
+notes = "φ = (1+√5)/2 ≈ 1.618；AVL 树的最大高度约为 logφ n ≈ 1.440 lg n"
+
+# ── 第 8 讲（哈希与链地址法）新增 ──────────────────────────────────────────
+
+[[term]]
+en = "hashing"
+zh = "哈希"
+notes = "把整个键域 U 压到 m 个槽里；键域大而表小，所以必然有键挤到一起"
+
+[[term]]
+en = "prehashing"
+zh = "预哈希"
+notes = "对付「键必须是非负整数」：把任意对象编码成整数，Python 的 hash( ) 干的就是这件事"
+
+[[term]]
+en = "direct access table"
+zh = "直接访问表"
+notes = "用键直接当数组下标：一步取到，但要求键是非负整数，而且键域不能大"
+
+[[term]]
+en = "chaining"
+zh = "链地址法"
+notes = "每个槽挂一条链表，串起所有哈希到该槽的元素；本讲只讲这一条路"
+
+[[term]]
+en = "open addressing"
+zh = "开放寻址"
+notes = "对付碰撞的第二条路；讲义把它留给第 10 讲，本讲不展开"
+
+[[term]]
+en = "simple uniform hashing"
+zh = "简单均匀哈希"
+notes = "一个假设：每个键落到任何槽都等可能，且与其他键落在哪里无关；讲义自己把它标成 cheating"
+
+[[term]]
+en = "load factor"
+zh = "装填因子"
+notes = "α = n/m，既是每个槽的期望键数，也是每条链的期望长度；查找的期望代价是 Θ(1 + α)"
+
+[[term]]
+en = "division method"
+zh = "除法法"
+notes = "h(k) = k mod m；m 取质数且别贴着 2 或 10 的幂，但找质数不方便、除法也慢"
+
+[[term]]
+en = "multiplication method"
+zh = "乘法法"
+notes = "h(k) = [(a·k) mod 2^w] ≫ (w − r)，其中 m = 2^r；a 取随机奇数，乘法与取位比除法快"
+
+[[term]]
+en = "universal hashing"
+zh = "全域哈希"
+notes = "h(k) = [(ak + b) mod p] mod m，a 与 b 随机、p 是大于 |U| 的大质数；任两个不同的键碰撞概率恰为 1/m"

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 336" width="760" height="336"
+     role="img" aria-labelledby="fig-avl-insert-fix-title fig-avl-insert-fix-desc">
+  <title id="fig-avl-insert-fix-title">AVL 插入：先照普通二叉搜索树插进去，再从下往上修</title>
+  <desc id="fig-avl-insert-fix-desc">插入分两步：先按第 5 讲的二叉搜索树插入把新节点接成叶子，再沿路径往上走，一边更新高度一边恢复 AVL 性质；每一处只有单旋和双旋两种修法。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="336" fill="#ffffff"/>
+  <text x="380.0" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">AVL 插入：先照普通二叉搜索树插进去，再从下往上修</text>
+  <g transform="translate(0.0,-18.0)">
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86.2" font-size="12" fill="#1e40af" text-anchor="middle">① 先照普通二叉搜索树插入：一路比较，把新节点接成叶子</text>
+  <rect x="22" y="128" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="150.2" font-size="12" fill="#1e40af" text-anchor="middle">② 从插入点往上走：一边更新高度，一边恢复 AVL 性质</text>
+  <rect x="22" y="192" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="214.2" font-size="12" fill="#1e40af" text-anchor="middle">每一处只看 x —— 当前最低的那个违反 AVL 的节点（假设它右重，左边情形对称）</text>
+  <rect x="22" y="256" width="345" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="194.5" y="278.2" font-size="12" fill="#166534" text-anchor="middle">右孩子右重或平衡 ⇒ 单旋 Left-Rotate(x)</text>
+  <rect x="393" y="256" width="345" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="565.5" y="278.2" font-size="12" fill="#166534" text-anchor="middle">右孩子左重 ⇒ 双旋 Right-Rotate(z)、Left-Rotate(x)</text>
+  <path d="M380,105 L380,117" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M380,169 L380,181" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M194,233 L194,245" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M565,233 L565,245" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <text x="380" y="330" font-size="10" fill="#64748b" text-anchor="middle">修完一处还要继续往上走，直到没有节点违规；一次插入可能要转好几次</text>
+  </g>
+</svg>
