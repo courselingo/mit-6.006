@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 369 322" width="369" height="322"
+     role="img" aria-labelledby="fig-direct-access-table-title fig-direct-access-table-desc">
+  <title id="fig-direct-access-table-title">直接访问表：键就是数组下标</title>
+  <desc id="fig-direct-access-table-desc">把键直接当数组下标：key = 0、key = 1、key = 2 各对应一个 item，取用是一次随机访问。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="369" height="322" fill="#ffffff"/>
+  <text x="184.5" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">直接访问表：键就是数组下标</text>
+  <g transform="translate(22.0,46.0)">
+  <rect x="0" y="0" width="150" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="75" y="22.2" font-size="12" fill="#1e40af" text-anchor="middle">key = 0</text>
+  <rect x="175" y="0" width="150" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="250" y="22.2" font-size="12" fill="#b45309" text-anchor="middle">item</text>
+  <path d="M155,18 L164,18" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="0" y="61" width="150" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="75" y="83.2" font-size="12" fill="#1e40af" text-anchor="middle">key = 1</text>
+  <rect x="175" y="61" width="150" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="250" y="83.2" font-size="12" fill="#b45309" text-anchor="middle">item</text>
+  <path d="M155,79 L164,79" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="0" y="122" width="150" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="75" y="144.2" font-size="12" fill="#1e40af" text-anchor="middle">key = 2</text>
+  <rect x="175" y="122" width="150" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="250" y="144.2" font-size="12" fill="#b45309" text-anchor="middle">item</text>
+  <path d="M155,140 L164,140" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="0" y="183" width="325" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="162.5" y="205.2" font-size="12" fill="#166534" text-anchor="middle">按下标随机访问：T[key] 一步取到 item</text>
+  <text x="162.5" y="251" font-size="10" fill="#64748b" text-anchor="middle">直接访问表不用算任何函数：键直接当数组下标，所以取用是常数时间。</text>
+  </g>
+</svg>

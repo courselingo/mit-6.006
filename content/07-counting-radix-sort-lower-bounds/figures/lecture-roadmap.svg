@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 160" width="760" height="160"
+     role="img" aria-labelledby="fig-lecture-roadmap-title fig-lecture-roadmap-desc">
+  <title id="fig-lecture-roadmap-title">这一讲的路线：先立限制，再证两条下界，最后跳出限制</title>
+  <desc id="fig-lecture-roadmap-desc">讲义第 1 页的目录只有三段：比较模型；两条下界 Ω(lg n) 与 Ω(n lg n)；对小整数的 O(n) 排序算法，即计数排序与基数排序。图中三个方块按这个次序排成一条链。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="160" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">这一讲的路线：先立限制，再证两条下界，最后跳出限制</text>
+
+  <rect x="20" y="64" width="220" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="130" y="86" font-size="12" fill="#1e40af" text-anchor="middle">比较模型：只允许比较</text>
+  <rect x="270" y="64" width="220" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="86" font-size="12" fill="#b45309" text-anchor="middle">两条下界 Ω(lg n)、Ω(n lg n)</text>
+  <rect x="520" y="64" width="220" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="630" y="86" font-size="12" fill="#166534" text-anchor="middle">计数排序、基数排序</text>
+
+  <path d="M245,82 L259,82" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M495,82 L509,82" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <text x="380" y="136" font-size="10" fill="#64748b" text-anchor="middle">三段的次序就是这一讲的结构：先规定算法只能做什么，再算清它的天花板</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 434 364" width="434" height="364"
+     role="img" aria-labelledby="fig-sorting-lower-bound-title fig-sorting-lower-bound-desc">
+  <title id="fig-sorting-lower-bound-title">排序的下界：n! 片叶子，一路放缩到 Ω(n lg n)</title>
+  <desc id="fig-sorting-lower-bound-desc">七行推导竖着排下来：树高至少是 lg n!，拆成 lg1 加到 lg n，写成从 1 到 n 的求和，只留从 n/2 到 n 的后一半，每一项都不小于 lg(n/2)，得到 (n/2)lg n 减 n/2，最后是 Ω(n lg n)。每行开头的等号或大于等于号说明这一步是恒等变形还是放缩。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="434" height="364" fill="#ffffff"/>
+  <text x="217" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">排序的下界：n! 片叶子，一路放缩到 Ω(n lg n)</text>
+
+  <text x="217" y="70" font-size="12" fill="#1e293b" text-anchor="middle">height ≥ lg n!</text>
+  <text x="217" y="100" font-size="12" fill="#1e293b" text-anchor="middle">= lg(1 · 2 ⋯ (n−1) · n)</text>
+  <text x="217" y="130" font-size="12" fill="#1e293b" text-anchor="middle">= lg 1 + lg 2 + ⋯ + lg(n−1) + lg n</text>
+  <text x="217" y="160" font-size="12" fill="#1e293b" text-anchor="middle">= Σ（i 从 1 到 n）lg i</text>
+  <text x="217" y="190" font-size="12" fill="#64748b" text-anchor="middle">≥ 只留后一半：Σ（i 从 n/2 到 n）lg i</text>
+  <text x="217" y="220" font-size="12" fill="#64748b" text-anchor="middle">≥ Σ（i 从 n/2 到 n）lg(n/2)，每项都不小于 lg(n/2)</text>
+  <text x="217" y="250" font-size="12" fill="#1e293b" text-anchor="middle">= (n/2)·lg n − n/2</text>
+  <text x="217" y="280" font-size="12" fill="#166534" text-anchor="middle">= Ω(n lg n)</text>
+
+  <text x="217" y="316" font-size="10" fill="#64748b" text-anchor="middle">第 5 行只留后一半、第 6 行把每项换成 lg(n/2) = lg n − 1，损失都只是常数因子</text>
+  <text x="217" y="340" font-size="10" fill="#64748b" text-anchor="middle">另一条路是 Stirling 公式：lg n! = n lg n − O(n)</text>
+</svg>

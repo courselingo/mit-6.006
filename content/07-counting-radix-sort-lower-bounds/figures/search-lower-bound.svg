@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 296" width="760" height="296"
+     role="img" aria-labelledby="fig-search-lower-bound-title fig-search-lower-bound-desc">
+  <title id="fig-search-lower-bound-title">查找的下界：叶子数至少 n，树是二叉，所以高度至少 lg n</title>
+  <desc id="fig-search-lower-bound-desc">三步推理：可能的答案至少 n 个，每片叶子至少承担一个答案，所以叶子数不少于 n；树高为 h 的二叉树最多有 2 的 h 次方片叶子；两式合起来得到 h 至少是 lg n。最下面写讲义把它记作 height 大于等于 lg Θ(n) 等于 lg n 加减 Θ(1)。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="296" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">查找的下界：叶子数至少 n，树是二叉，所以高度至少 lg n</text>
+
+  <rect x="20" y="64" width="720" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">答案至少 n 个：x 可能落在 A0 到 A[n−1] 之间的任意一段</text>
+
+  <rect x="20" y="130" width="720" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="152" font-size="12" fill="#b45309" text-anchor="middle">每片叶子至少承担一个答案 ⇒ 叶子数 ≥ n</text>
+
+  <rect x="20" y="196" width="720" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="218" font-size="12" fill="#6b21a8" text-anchor="middle">树高 h 的二叉树最多 2 的 h 次方片叶子 ⇒ 2 的 h 次方 ≥ n ⇒ h ≥ lg n</text>
+
+  <text x="380" y="270" font-size="10" fill="#64748b" text-anchor="middle">讲义把它记作 height ≥ lg Θ(n) = lg n ±Θ(1)：取整与常数差别都并进了那个 ±Θ(1)</text>
+</svg>

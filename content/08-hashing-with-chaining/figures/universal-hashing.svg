@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 404 260" width="404" height="260"
+     role="img" aria-labelledby="fig-universal-hashing-title fig-universal-hashing-desc">
+  <title id="fig-universal-hashing-title">全域哈希：把均匀性交给随机数</title>
+  <desc id="fig-universal-hashing-desc">全域哈希下任一两个不同的键碰撞概率是 1/m；把 n 个键的概率加起来得到 n/m，也就是装填因子 α，期望代价和均匀假设下一样好。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="404" height="260" fill="#ffffff"/>
+  <text x="202.0" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">全域哈希：把均匀性交给随机数</text>
+  <g transform="translate(22.0,46.0)">
+  <rect x="0" y="0" width="360" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="180" y="22.2" font-size="12" fill="#1e40af" text-anchor="middle">任一不同的键对：碰撞概率 = 1/m</text>
+  <rect x="0" y="61" width="360" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="180" y="83.2" font-size="12" fill="#b45309" text-anchor="middle">把 n 个键的碰撞概率加起来：n/m</text>
+  <rect x="0" y="122" width="360" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="180" y="144.2" font-size="12" fill="#166534" text-anchor="middle">结果 n/m 就是装填因子 α</text>
+  <path d="M180,41 L180,50" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M180,102 L180,111" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="180" y="190" font-size="10" fill="#64748b" text-anchor="middle">把 1/m 按 n 个键加起来就是 n/m；全域哈希买到的是和均匀假设同一个代价。</text>
+  </g>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 244" width="760" height="244"
+     role="img" aria-labelledby="fig-radix-sort-cost-title fig-radix-sort-cost-desc">
+  <title id="fig-radix-sort-cost-title">每一位 Θ(n+b)、一共 d 位：为什么最佳进制是 b = n</title>
+  <desc id="fig-radix-sort-cost-desc">上头三个方块连成一条链：每一位用计数排序要 Θ(n+b)，一共 d 等于 log 以 b 为底 k 位，合起来是 Θ((n+b)·log_b k)。下面两个方块给出结论：b 取 n 时这个式子最小，得到 Θ(n·log_n k)；而当 k 不超过 n 的 c 次方时，它就是 O(n·c)，也就是 O(n)。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="244" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">每一位 Θ(n+b)、一共 d 位：为什么最佳进制是 b = n</text>
+
+  <path d="M245,82 L259,82" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M495,82 L509,82" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="20" y="64" width="220" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="130" y="86" font-size="12" fill="#b45309" text-anchor="middle">每一位 Θ(n + b)</text>
+  <rect x="270" y="64" width="220" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="86" font-size="12" fill="#b45309" text-anchor="middle">一共 d = log_b k 位</text>
+  <rect x="520" y="64" width="220" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="630" y="86" font-size="12" fill="#b45309" text-anchor="middle">合计 Θ((n + b)·log_b k)</text>
+
+  <rect x="20" y="130" width="355" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="197.5" y="152" font-size="12" fill="#166534" text-anchor="middle">b = n 时最小 ⇒ Θ(n·log_n k)</text>
+  <rect x="405" y="130" width="335" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="572.5" y="152" font-size="12" fill="#6b21a8" text-anchor="middle">k ≤ n^c ⇒ O(n·c) = O(n)</text>
+
+  <text x="380" y="196" font-size="10" fill="#64748b" text-anchor="middle">b 是自由参数：b 大则位数少，但每一位要建的桶多，抵消点在 b = n</text>
+  <text x="380" y="220" font-size="10" fill="#64748b" text-anchor="middle">最后一行讲义写作 O(nc)：c 是常数，所以它就是 O(n)</text>
+</svg>

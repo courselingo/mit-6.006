@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 584 260" width="584" height="260"
+     role="img" aria-labelledby="fig-prehash-title fig-prehash-desc">
+  <title id="fig-prehash-title">预哈希：把任意键变成非负整数</title>
+  <desc id="fig-prehash-desc">数字、字符串、元组等对象经 hash(object) 变成非负整数；理论上 x = y ⇔ hash(x) = hash(y)，而 Python 为实用性留了例外，例如 hash('\0B ') = 64 = hash('\0\0C')。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="584" height="260" fill="#ffffff"/>
+  <text x="292.0" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">预哈希：把任意键变成非负整数</text>
+  <g transform="translate(22.0,46.0)">
+  <rect x="0" y="0" width="170" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="85" y="22.2" font-size="12" fill="#1e40af" text-anchor="middle">键：数字 / 字符串 / 元组</text>
+  <rect x="195" y="0" width="150" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="270" y="22.2" font-size="12" fill="#b45309" text-anchor="middle">hash(object)</text>
+  <rect x="370" y="0" width="170" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="455" y="22.2" font-size="12" fill="#166534" text-anchor="middle">非负整数</text>
+  <path d="M175,18 L184,18" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M350,18 L359,18" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="0" y="61" width="540" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="270" y="83.2" font-size="12" fill="#b45309" text-anchor="middle">理论上 x = y ⇔ hash(x) = hash(y)；Python 在实用上会留例外</text>
+  <rect x="0" y="122" width="540" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="270" y="144.2" font-size="12" fill="#9d174d" text-anchor="middle">例：hash('\0B ') = 64 = hash('\0\0C')</text>
+  <text x="270" y="190" font-size="10" fill="#64748b" text-anchor="middle">预哈希只负责把键变成整数，键域本身仍然可能很大。</text>
+  </g>
+</svg>

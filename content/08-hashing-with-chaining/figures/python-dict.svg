@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 494 444" width="494" height="444"
+     role="img" aria-labelledby="fig-python-dict-title fig-python-dict-desc">
+  <title id="fig-python-dict-title">Python 的字典：一次建表，五种查法</title>
+  <desc id="fig-python-dict-desc">建一个字典 d 之后，d.items() 列出全部键值对，d['cool'] 取到 42，d[42] 抛 KeyError，'cool' in d 是 True，42 in d 是 False。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="494" height="444" fill="#ffffff"/>
+  <text x="247.0" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">Python 的字典：一次建表，五种查法</text>
+  <g transform="translate(22.0,46.0)">
+  <rect x="0" y="0" width="450" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="225" y="22.2" font-size="12" fill="#1e40af" text-anchor="middle">d = {'algorithms': 5, 'cool': 42}</text>
+  <rect x="0" y="61" width="185" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="92.5" y="83.2" font-size="12" fill="#1e40af" text-anchor="middle">d.items()</text>
+  <rect x="210" y="61" width="240" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="330" y="83.2" font-size="12" fill="#b45309" text-anchor="middle">[('algorithms', 5),('cool',5)]</text>
+  <path d="M190,79 L199,79" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="0" y="122" width="185" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="92.5" y="144.2" font-size="12" fill="#1e40af" text-anchor="middle">d['cool']</text>
+  <rect x="210" y="122" width="240" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="330" y="144.2" font-size="12" fill="#b45309" text-anchor="middle">42</text>
+  <path d="M190,140 L199,140" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="0" y="183" width="185" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="92.5" y="205.2" font-size="12" fill="#1e40af" text-anchor="middle">d[42]</text>
+  <rect x="210" y="183" width="240" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="330" y="205.2" font-size="12" fill="#b45309" text-anchor="middle">KeyError</text>
+  <path d="M190,201 L199,201" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="0" y="244" width="185" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="92.5" y="266.2" font-size="12" fill="#1e40af" text-anchor="middle">'cool' in d</text>
+  <rect x="210" y="244" width="240" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="330" y="266.2" font-size="12" fill="#b45309" text-anchor="middle">True</text>
+  <path d="M190,262 L199,262" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="0" y="305" width="185" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="92.5" y="327.2" font-size="12" fill="#1e40af" text-anchor="middle">42 in d</text>
+  <rect x="210" y="305" width="240" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="330" y="327.2" font-size="12" fill="#b45309" text-anchor="middle">False</text>
+  <path d="M190,323 L199,323" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="225" y="373" font-size="10" fill="#64748b" text-anchor="middle">同一个字典既能按字符串查也能按整数查；d[42] 抛 KeyError，说明 42 不是键。</text>
+  </g>
+</svg>

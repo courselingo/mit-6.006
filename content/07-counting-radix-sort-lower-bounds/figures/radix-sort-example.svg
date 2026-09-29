@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 543 358" width="543" height="358"
+     role="img" aria-labelledby="fig-radix-sort-example-title fig-radix-sort-example-desc">
+  <title id="fig-radix-sort-example-title">基数排序走一遍：7 个三位数，按每一位从低到高排三次</title>
+  <desc id="fig-radix-sort-example-desc">四个面板从左到右依次是：输入的 329 457 657 839 436 720 355；按最低位排完；按中间位排完；按最高位排完。最后两列写着每一轮用来排序的那一位，绿色写着此前已经排好的位；排完之后是 329 355 436 457 657 720 839。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="543" height="358" fill="#ffffff"/>
+  <text x="286" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">基数排序走一遍：7 个三位数，按每一位从低到高排三次</text>
+  <path d="M114.5,168 L157.5,168" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M264.5,168 L307.5,168" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M414.5,168 L457.5,168" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="26.5" y="90" font-size="12" fill="#1e293b" text-anchor="middle">3</text>
+  <text x="44.5" y="90" font-size="12" fill="#1e293b" text-anchor="middle">2</text>
+  <text x="62.5" y="90" font-size="12" fill="#9d174d" text-anchor="middle">9</text>
+  <text x="26.5" y="116" font-size="12" fill="#1e293b" text-anchor="middle">4</text>
+  <text x="44.5" y="116" font-size="12" fill="#1e293b" text-anchor="middle">5</text>
+  <text x="62.5" y="116" font-size="12" fill="#9d174d" text-anchor="middle">7</text>
+  <text x="26.5" y="142" font-size="12" fill="#1e293b" text-anchor="middle">6</text>
+  <text x="44.5" y="142" font-size="12" fill="#1e293b" text-anchor="middle">5</text>
+  <text x="62.5" y="142" font-size="12" fill="#9d174d" text-anchor="middle">7</text>
+  <text x="26.5" y="168" font-size="12" fill="#1e293b" text-anchor="middle">8</text>
+  <text x="44.5" y="168" font-size="12" fill="#1e293b" text-anchor="middle">3</text>
+  <text x="62.5" y="168" font-size="12" fill="#9d174d" text-anchor="middle">9</text>
+  <text x="26.5" y="194" font-size="12" fill="#1e293b" text-anchor="middle">4</text>
+  <text x="44.5" y="194" font-size="12" fill="#1e293b" text-anchor="middle">3</text>
+  <text x="62.5" y="194" font-size="12" fill="#9d174d" text-anchor="middle">6</text>
+  <text x="26.5" y="220" font-size="12" fill="#1e293b" text-anchor="middle">7</text>
+  <text x="44.5" y="220" font-size="12" fill="#1e293b" text-anchor="middle">2</text>
+  <text x="62.5" y="220" font-size="12" fill="#9d174d" text-anchor="middle">0</text>
+  <text x="26.5" y="246" font-size="12" fill="#1e293b" text-anchor="middle">3</text>
+  <text x="44.5" y="246" font-size="12" fill="#1e293b" text-anchor="middle">5</text>
+  <text x="62.5" y="246" font-size="12" fill="#9d174d" text-anchor="middle">5</text>
+  <text x="44.5" y="278" font-size="10" fill="#64748b" text-anchor="middle">输入</text>
+  <text x="176.5" y="90" font-size="12" fill="#1e293b" text-anchor="middle">7</text>
+  <text x="194.5" y="90" font-size="12" fill="#9d174d" text-anchor="middle">2</text>
+  <text x="212.5" y="90" font-size="12" fill="#166534" text-anchor="middle">0</text>
+  <text x="176.5" y="116" font-size="12" fill="#1e293b" text-anchor="middle">3</text>
+  <text x="194.5" y="116" font-size="12" fill="#9d174d" text-anchor="middle">5</text>
+  <text x="212.5" y="116" font-size="12" fill="#166534" text-anchor="middle">5</text>
+  <text x="176.5" y="142" font-size="12" fill="#1e293b" text-anchor="middle">4</text>
+  <text x="194.5" y="142" font-size="12" fill="#9d174d" text-anchor="middle">3</text>
+  <text x="212.5" y="142" font-size="12" fill="#166534" text-anchor="middle">6</text>
+  <text x="176.5" y="168" font-size="12" fill="#1e293b" text-anchor="middle">4</text>
+  <text x="194.5" y="168" font-size="12" fill="#9d174d" text-anchor="middle">5</text>
+  <text x="212.5" y="168" font-size="12" fill="#166534" text-anchor="middle">7</text>
+  <text x="176.5" y="194" font-size="12" fill="#1e293b" text-anchor="middle">6</text>
+  <text x="194.5" y="194" font-size="12" fill="#9d174d" text-anchor="middle">5</text>
+  <text x="212.5" y="194" font-size="12" fill="#166534" text-anchor="middle">7</text>
+  <text x="176.5" y="220" font-size="12" fill="#1e293b" text-anchor="middle">3</text>
+  <text x="194.5" y="220" font-size="12" fill="#9d174d" text-anchor="middle">2</text>
+  <text x="212.5" y="220" font-size="12" fill="#166534" text-anchor="middle">9</text>
+  <text x="176.5" y="246" font-size="12" fill="#1e293b" text-anchor="middle">8</text>
+  <text x="194.5" y="246" font-size="12" fill="#9d174d" text-anchor="middle">3</text>
+  <text x="212.5" y="246" font-size="12" fill="#166534" text-anchor="middle">9</text>
+  <text x="194.5" y="278" font-size="10" fill="#64748b" text-anchor="middle">按最低位排</text>
+  <text x="326.5" y="90" font-size="12" fill="#9d174d" text-anchor="middle">7</text>
+  <text x="344.5" y="90" font-size="12" fill="#166534" text-anchor="middle">2</text>
+  <text x="362.5" y="90" font-size="12" fill="#166534" text-anchor="middle">0</text>
+  <text x="326.5" y="116" font-size="12" fill="#9d174d" text-anchor="middle">3</text>
+  <text x="344.5" y="116" font-size="12" fill="#166534" text-anchor="middle">2</text>
+  <text x="362.5" y="116" font-size="12" fill="#166534" text-anchor="middle">9</text>
+  <text x="326.5" y="142" font-size="12" fill="#9d174d" text-anchor="middle">4</text>
+  <text x="344.5" y="142" font-size="12" fill="#166534" text-anchor="middle">3</text>
+  <text x="362.5" y="142" font-size="12" fill="#166534" text-anchor="middle">6</text>
+  <text x="326.5" y="168" font-size="12" fill="#9d174d" text-anchor="middle">8</text>
+  <text x="344.5" y="168" font-size="12" fill="#166534" text-anchor="middle">3</text>
+  <text x="362.5" y="168" font-size="12" fill="#166534" text-anchor="middle">9</text>
+  <text x="326.5" y="194" font-size="12" fill="#9d174d" text-anchor="middle">3</text>
+  <text x="344.5" y="194" font-size="12" fill="#166534" text-anchor="middle">5</text>
+  <text x="362.5" y="194" font-size="12" fill="#166534" text-anchor="middle">5</text>
+  <text x="326.5" y="220" font-size="12" fill="#9d174d" text-anchor="middle">4</text>
+  <text x="344.5" y="220" font-size="12" fill="#166534" text-anchor="middle">5</text>
+  <text x="362.5" y="220" font-size="12" fill="#166534" text-anchor="middle">7</text>
+  <text x="326.5" y="246" font-size="12" fill="#9d174d" text-anchor="middle">6</text>
+  <text x="344.5" y="246" font-size="12" fill="#166534" text-anchor="middle">5</text>
+  <text x="362.5" y="246" font-size="12" fill="#166534" text-anchor="middle">7</text>
+  <text x="344.5" y="278" font-size="10" fill="#64748b" text-anchor="middle">按中间位排</text>
+  <text x="476.5" y="90" font-size="12" fill="#166534" text-anchor="middle">3</text>
+  <text x="494.5" y="90" font-size="12" fill="#166534" text-anchor="middle">2</text>
+  <text x="512.5" y="90" font-size="12" fill="#166534" text-anchor="middle">9</text>
+  <text x="476.5" y="116" font-size="12" fill="#166534" text-anchor="middle">3</text>
+  <text x="494.5" y="116" font-size="12" fill="#166534" text-anchor="middle">5</text>
+  <text x="512.5" y="116" font-size="12" fill="#166534" text-anchor="middle">5</text>
+  <text x="476.5" y="142" font-size="12" fill="#166534" text-anchor="middle">4</text>
+  <text x="494.5" y="142" font-size="12" fill="#166534" text-anchor="middle">3</text>
+  <text x="512.5" y="142" font-size="12" fill="#166534" text-anchor="middle">6</text>
+  <text x="476.5" y="168" font-size="12" fill="#166534" text-anchor="middle">4</text>
+  <text x="494.5" y="168" font-size="12" fill="#166534" text-anchor="middle">5</text>
+  <text x="512.5" y="168" font-size="12" fill="#166534" text-anchor="middle">7</text>
+  <text x="476.5" y="194" font-size="12" fill="#166534" text-anchor="middle">6</text>
+  <text x="494.5" y="194" font-size="12" fill="#166534" text-anchor="middle">5</text>
+  <text x="512.5" y="194" font-size="12" fill="#166534" text-anchor="middle">7</text>
+  <text x="476.5" y="220" font-size="12" fill="#166534" text-anchor="middle">7</text>
+  <text x="494.5" y="220" font-size="12" fill="#166534" text-anchor="middle">2</text>
+  <text x="512.5" y="220" font-size="12" fill="#166534" text-anchor="middle">0</text>
+  <text x="476.5" y="246" font-size="12" fill="#166534" text-anchor="middle">8</text>
+  <text x="494.5" y="246" font-size="12" fill="#166534" text-anchor="middle">3</text>
+  <text x="512.5" y="246" font-size="12" fill="#166534" text-anchor="middle">9</text>
+  <text x="494.5" y="278" font-size="10" fill="#64748b" text-anchor="middle">按最高位排</text>
+  <text x="286" y="310" font-size="10" fill="#64748b" text-anchor="middle">红 = 这一轮按这一位排；绿 = 低位已经排好</text>
+  <text x="286" y="334" font-size="10" fill="#64748b" text-anchor="middle">按中间位排之后 720 仍排在 329 前面，因为上一轮就是这样：稳定保住了它</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 544 310" width="544" height="310"
+     role="img" aria-labelledby="fig-hash-functions-title fig-hash-functions-desc">
+  <title id="fig-hash-functions-title">三种哈希函数：除法、乘法、全域</title>
+  <desc id="fig-hash-functions-desc">讲义给三种做法：除法法 h(k) = k mod m，m 要取质数而且除法慢；乘法法 h(k) = [(a·k) mod 2^w] ≫ (w − r)，乘法和取位比除法快；全域哈希 h(k) = [(ak + b) mod p] mod m，a、b 随机、p 是大于 |U| 的大质数，碰撞概率 1/m。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="544" height="310" fill="#ffffff"/>
+  <text x="272.0" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">三种哈希函数：除法、乘法、全域</text>
+  <g transform="translate(22.0,46.0)">
+  <rect x="0" y="0" width="500" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="250" y="22.2" font-size="12" fill="#b45309" text-anchor="middle">除法法　h(k) = k mod m</text>
+  <text x="250" y="40.2" font-size="12" fill="#b45309" text-anchor="middle">m 取质数；但找质数不方便，除法也慢</text>
+  <rect x="0" y="79" width="500" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="250" y="101.2" font-size="12" fill="#6b21a8" text-anchor="middle">乘法法　h(k) = [(a·k) mod 2^w] ≫ (w − r)</text>
+  <text x="250" y="119.2" font-size="12" fill="#6b21a8" text-anchor="middle">a 随机且为奇数；乘法与取位比除法快</text>
+  <rect x="0" y="158" width="500" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="250" y="180.2" font-size="12" fill="#166534" text-anchor="middle">全域哈希　h(k) = [(ak + b) mod p] mod m</text>
+  <text x="250" y="198.2" font-size="12" fill="#166534" text-anchor="middle">a、b 随机；p 是大于 |U| 的大质数，碰撞概率 1/m</text>
+  <text x="250" y="240" font-size="10" fill="#64748b" text-anchor="middle">三种方法的共同目标：让键看起来是均匀落在 m 个槽里的。</text>
+  </g>
+</svg>

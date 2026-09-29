@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 559 260" width="559" height="260"
+     role="img" aria-labelledby="fig-direct-access-problems-title fig-direct-access-problems-desc">
+  <title id="fig-direct-access-problems-title">直接访问表的两个问题</title>
+  <desc id="fig-direct-access-problems-desc">问题 1：键必须是非负整数；问题 2：键的取值范围大就要求同样大的空间，例如取值范围有 2^256 种。两个问题分别由预哈希与哈希来解决。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="559" height="260" fill="#ffffff"/>
+  <text x="279.5" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">直接访问表的两个问题</text>
+  <g transform="translate(22.0,46.0)">
+  <rect x="0" y="0" width="245" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="122.5" y="22.2" font-size="12" fill="#9d174d" text-anchor="middle">问题 1：键必须是非负整数</text>
+  <rect x="270" y="0" width="245" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="392.5" y="22.2" font-size="12" fill="#9d174d" text-anchor="middle">问题 2：键范围大 → 空间大</text>
+  <rect x="0" y="61" width="245" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="122.5" y="83.2" font-size="12" fill="#1e40af" text-anchor="middle">补救：用两个数组，或拆成整数</text>
+  <rect x="270" y="61" width="245" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="392.5" y="83.2" font-size="12" fill="#1e40af" text-anchor="middle">例：取值有 2^256 种，表放不下</text>
+  <rect x="0" y="122" width="515" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="257.5" y="144.2" font-size="12" fill="#166534" text-anchor="middle">解法一：预哈希　｜　解法二：哈希</text>
+  <path d="M122.5,41 L122.5,50" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M387.5,41 L387.5,50" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M122.5,102 L122.5,111" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M387.5,102 L387.5,111" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="257.5" y="190" font-size="10" fill="#64748b" text-anchor="middle">两个问题各有一个解法：预哈希对付第一件，哈希对付第二件。</text>
+  </g>
+</svg>

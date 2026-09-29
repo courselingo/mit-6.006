@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 342" width="760" height="342"
+     role="img" aria-labelledby="fig-counting-sort-title fig-counting-sort-desc">
+  <title id="fig-counting-sort-title">计数排序：k 个桶装一遍，再按桶的次序倒出来</title>
+  <desc id="fig-counting-sort-desc">上头一条链：输入 n 个键，进 k 个空桶，最后按桶的次序拼成输出。下面三行是讲义的三段伪代码，每行末尾标着它的代价：建 k 个空桶是 O(k)，扫一遍输入是 O(n)，倒出所有桶是 O(k+n)。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="342" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">计数排序：k 个桶装一遍，再按桶的次序倒出来</text>
+
+  <path d="M225,82 L239,82" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M455,82 L469,82" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="20" y="64" width="200" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="120" y="86" font-size="12" fill="#1e40af" text-anchor="middle">输入：n 个键</text>
+  <rect x="250" y="64" width="200" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="350" y="86" font-size="12" fill="#b45309" text-anchor="middle">L：k 个空桶</text>
+  <rect x="480" y="64" width="260" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="610" y="86" font-size="12" fill="#166534" text-anchor="middle">输出：按桶的次序拼接</text>
+
+  <rect x="20" y="130" width="720" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="152" font-size="11" fill="#6b21a8" text-anchor="middle">L = k 个空表（链表或 Python 的 list 都行）—— O(k)</text>
+
+  <rect x="20" y="191" width="720" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="213" font-size="11" fill="#6b21a8" text-anchor="middle">for j in range(n)：把 A[j] 追加到 L[key(A[j])] 的末尾 —— O(n)</text>
+
+  <rect x="20" y="252" width="720" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="274" font-size="11" fill="#6b21a8" text-anchor="middle">for i in range(k)：output.extend(L[i]) —— O(k + n)</text>
+
+  <text x="380" y="318" font-size="10" fill="#64748b" text-anchor="middle">时间 Θ(n + k)，空间也是 Θ(n + k)：桶数组这 k 格本身就要占下来</text>
+</svg>

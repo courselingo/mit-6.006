@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 544 200" width="544" height="200"
+     role="img" aria-labelledby="fig-dictionary-adt-title fig-dictionary-adt-desc">
+  <title id="fig-dictionary-adt-title">字典 ADT：三个操作，目标每次 O(1)</title>
+  <desc id="fig-dictionary-adt-desc">字典这种抽象数据类型只规定三个操作：insert(item)、delete(item)、search(key)；平衡 BST 把它们做到 O(lg n)，而这一讲把目标定成每次操作 O(1)。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="544" height="200" fill="#ffffff"/>
+  <text x="272.0" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">字典 ADT：三个操作，目标每次 O(1)</text>
+  <g transform="translate(22.0,46.0)">
+  <rect x="0" y="0" width="150" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="75" y="22.2" font-size="12" fill="#1e40af" text-anchor="middle">insert(item)</text>
+  <rect x="175" y="0" width="150" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="250" y="22.2" font-size="12" fill="#1e40af" text-anchor="middle">delete(item)</text>
+  <rect x="350" y="0" width="150" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="425" y="22.2" font-size="12" fill="#1e40af" text-anchor="middle">search(key)</text>
+  <rect x="0" y="61" width="500" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="250" y="83.2" font-size="12" fill="#b45309" text-anchor="middle">目标：每次操作 O(1)（第 6 讲里平衡 BST 是 O(lg n)）</text>
+  <path d="M75,41 L75,50" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M250,41 L250,50" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M425,41 L425,50" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="250" y="129" font-size="10" fill="#64748b" text-anchor="middle">三个操作都要能插入、删除、按 key 查找；这一讲把它们的代价目标定成常数时间。</text>
+  </g>
+</svg>

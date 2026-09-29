@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220" width="760" height="220"
+     role="img" aria-labelledby="fig-comparison-model-title fig-comparison-model-desc">
+  <title id="fig-comparison-model-title">比较模型：元素是黑盒，只允许比较，代价记作比较次数</title>
+  <desc id="fig-comparison-model-desc">输入是 n 个黑盒，中间只开一个口子：允许比较小于、大于、小于等于；出口是元素的一个次序。下方写明代价的度量方式是比较次数，与时钟、与键的数值都无关。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="220" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">比较模型：元素是黑盒，只允许比较，代价记作比较次数</text>
+
+  <path d="M237,82 L248,82" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M486,82 L497,82" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="20" y="64" width="212" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="126" y="86" font-size="12" fill="#1e40af" text-anchor="middle">输入：n 个黑盒</text>
+  <rect x="259" y="64" width="222" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="370" y="86" font-size="12" fill="#b45309" text-anchor="middle">只允许比较 <tspan font-size="12">&lt;</tspan></text>
+  <rect x="508" y="64" width="232" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="624" y="86" font-size="12" fill="#166534" text-anchor="middle">输出：一个次序</text>
+
+  <rect x="20" y="130" width="720" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="152" font-size="11" fill="#6b21a8" text-anchor="middle">时间代价 = 比较次数：不看时钟，也不看键的数值是多少</text>
+
+  <text x="380" y="196" font-size="10" fill="#64748b" text-anchor="middle">两条下界都是在这个模型里证的：谁只靠比较，就逃不出它</text>
+</svg>
