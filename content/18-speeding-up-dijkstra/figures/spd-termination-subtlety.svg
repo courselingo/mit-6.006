@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 328" width="760" height="328"
+     role="img" aria-labelledby="fig-spd-termination-subtlety-title fig-spd-termination-subtlety-desc">
+  <title id="fig-spd-termination-subtlety-title">终止的微妙处：触发终止的顶点 w 给出 10，而真正的答案取 d(u)+d(u') 那一档的 9</title>
+  <desc id="fig-spd-termination-subtlety-desc">双向搜索终止时，触发终止的顶点 w 不一定是答案经过的顶点：讲义的例子里 df(u) + db(u) = 3 + 6 = 9、df(u') + db(u') = 6 + 3 = 9，而 df(w) + db(w) = 5 + 5 = 10；所以还要在候选里找 df(x) + db(x) 最小的 x。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="328" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">终止的微妙处：触发终止的顶点 w 给出 10，而真正的答案取 d(u)+d(u') 那一档的 9</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">触发终止的顶点记作 w：它被两个队列都删掉了</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="147" font-size="12" fill="#9d174d" text-anchor="middle">但答案要取 df(x) + db(x) 最小的那个 x，w 不一定是它</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="208" font-size="12" fill="#166534" text-anchor="middle">讲义那张小图上的三个和：df(u) + db(u) = 3 + 6 = 9</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="269" font-size="12" fill="#166534" text-anchor="middle">df(u') + db(u') = 6 + 3 = 9，而 df(w) + db(w) = 5 + 5 = 10</text>
+  <text x="380" y="305" font-size="10" fill="#64748b" text-anchor="middle">两个 9 都小于触发终止那个顶点的 10，所以终止信号与答案要分开看</text>
+</svg>

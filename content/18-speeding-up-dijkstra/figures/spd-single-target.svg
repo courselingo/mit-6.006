@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 269" width="760" height="269"
+     role="img" aria-labelledby="fig-spd-single-target-title fig-spd-single-target-desc">
+  <title id="fig-spd-single-target-title">单源单目标：终点被取出来的那一刻就可以停下，依据是「取出即定稿」</title>
+  <desc id="fig-spd-single-target-desc">只求从 s 到 t 的一条最短路时，Dijkstra 只要在取出 u = t 的那一刻停止即可；这条依据来自第 16 讲的「顶点一被取出，它的距离就定稿」。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="269" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">单源单目标：终点被取出来的那一刻就可以停下，依据是「取出即定稿」</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">原版 Dijkstra：队列空了才停，算的是到所有顶点的距离</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="147" font-size="12" fill="#166534" text-anchor="middle">单源单目标：当 u = t 被取出时立刻停，后面的顶点不用管</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="208" font-size="12" fill="#b45309" text-anchor="middle">依据是第 16 讲那条「顶点一被取出就定稿」的性质，不是新定理</text>
+  <text x="380" y="244" font-size="10" fill="#64748b" text-anchor="middle">改动只有一处：循环里多一个提前退出的判断</text>
+</svg>

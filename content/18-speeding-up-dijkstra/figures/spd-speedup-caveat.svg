@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 269" width="760" height="269"
+     role="img" aria-labelledby="fig-spd-speedup-caveat-title fig-spd-speedup-caveat-desc">
+  <title id="fig-spd-speedup-caveat-title">加速的边界：三条技术都不改变最坏情况，减少的是实际访问的顶点数</title>
+  <desc id="fig-spd-speedup-caveat-desc">讲义明确注明：这一讲的加速技术不改变最坏情况的行为，只是在实际中减少访问的顶点数；单源单目标提前退出、双向搜索、A* 与地标都属于这一类。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="269" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">加速的边界：三条技术都不改变最坏情况，减少的是实际访问的顶点数</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="86" font-size="12" fill="#9d174d" text-anchor="middle">三条加速技术都不改变最坏情况的复杂度</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="147" font-size="12" fill="#1e40af" text-anchor="middle">它们减少的是实际访问的顶点数（真实路网数据上很有效）</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="208" font-size="12" fill="#9d174d" text-anchor="middle">所以这一讲讲的是工程收益，不是新的渐进结论</text>
+  <text x="380" y="244" font-size="10" fill="#64748b" text-anchor="middle">读这一讲时要分清：实测更快与渐进更优是两件事</text>
+</svg>
