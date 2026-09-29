@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 328" width="760" height="328"
+     role="img" aria-labelledby="fig-sssp-data-structures-title fig-sssp-data-structures-desc">
+  <title id="fig-sssp-data-structures-title">两个数据结构：d[v] 从无穷大单调下降到真值，Π[v] 记录最佳路径上的前驱</title>
+  <desc id="fig-sssp-data-structures-desc">算法维护两个数组：d[v] 记录当前的最佳距离，初值源点为 0、其余无穷大，终值等于 δ(s,v)，过程中始终不小于真值且单调下降；Π[v] 记录最佳路径上的前驱，源点记作 NIL。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="328" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两个数据结构：d[v] 从无穷大单调下降到真值，Π[v] 记录最佳路径上的前驱</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">d[v] 的初值：源点是 0，其余都是无穷大</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="147" font-size="12" fill="#166534" text-anchor="middle">d[v] 的终值：应当等于真实最短距离 δ(s, v)</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="208" font-size="12" fill="#b45309" text-anchor="middle">过程中始终有 d[v] ≥ δ(s, v)，而且它只会变小</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="269" font-size="12" fill="#6b21a8" text-anchor="middle">Π[v]：到 v 的最佳路径上的前一个顶点，源点记 NIL</text>
+  <text x="380" y="305" font-size="10" fill="#64748b" text-anchor="middle">这两条性质是所有最短路算法的共同契约：让 d 从无穷大一路降到真值</text>
+</svg>

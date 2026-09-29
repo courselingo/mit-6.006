@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 269" width="760" height="269"
+     role="img" aria-labelledby="fig-sssp-optimal-substructure-title fig-sssp-optimal-substructure-desc">
+  <title id="fig-sssp-optimal-substructure-title">最优子结构：如果子路径不是最短的，换掉它就能得到比原路径更短的路径</title>
+  <desc id="fig-sssp-optimal-substructure-desc">定理：最短路径的子路径也是最短路径。证明用反证法：若中间那段 p_ij 有更短的替代，替换后整条路径会比原来的最短路径更短，矛盾；所以子路径也必须是最短的。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="269" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">最优子结构：如果子路径不是最短的，换掉它就能得到比原路径更短的路径</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="86" font-size="12" fill="#166534" text-anchor="middle">定理：最短路径的子路径也是最短路径</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="147" font-size="12" fill="#b45309" text-anchor="middle">反证：若中间那段 p_ij 有更短的替代 p'_ij，换进去整条路就更短</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="208" font-size="12" fill="#9d174d" text-anchor="middle">这与 p 是最短路径矛盾 ⇒ 子路径也必须最短</text>
+  <text x="380" y="244" font-size="10" fill="#64748b" text-anchor="middle">所以最短路径可以由更小的最短路径拼出来，松弛正是沿着这个方向走的</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 328" width="760" height="328"
+     role="img" aria-labelledby="fig-sssp-weighted-graph-title fig-sssp-weighted-graph-desc">
+  <title id="fig-sssp-weighted-graph-title">带权图：顶点是路口，边是有向道路，权重是距离或过路费</title>
+  <desc id="fig-sssp-weighted-graph-desc">把一个行驶问题建成带权图：顶点是路口，边是道路（有向，对应单行道），边的权重是距离或过路费；一条路径的权重是它所有边权重之和。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="328" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">带权图：顶点是路口，边是有向道路，权重是距离或过路费</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">顶点 V = 路口</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="147" font-size="12" fill="#1e40af" text-anchor="middle">边 E = 道路，而且是有向的（单行道）</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="208" font-size="12" fill="#b45309" text-anchor="middle">权重 W(u, v) = 距离或者过路费，可以是负数</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="269" font-size="12" fill="#166534" text-anchor="middle">路径 p = ⟨v0, v1, …, vk⟩：相邻两顶点之间都有边</text>
+  <text x="380" y="305" font-size="10" fill="#64748b" text-anchor="middle">路径的权重是它所有边的权重之和 w(p) = w(v0,v1) + … + w(vk−1,vk)</text>
+</svg>

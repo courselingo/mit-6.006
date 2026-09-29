@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 208" width="760" height="208"
+     role="img" aria-labelledby="fig-sssp-triangle-title fig-sssp-triangle-desc">
+  <title id="fig-sssp-triangle-title">三角不等式：经过 x 绕一下的距离之和，不会小于 u 到 v 的最短距离</title>
+  <desc id="fig-sssp-triangle-desc">三角不等式：对任意顶点 u、v、x，δ(u,v) ≤ δ(u,x) + δ(x,v)；因为经过 x 的那条路本身是一条合法的 u 到 v 路径，而 δ(u,v) 是所有合法路径里最小的那个。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="208" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">三角不等式：经过 x 绕一下的距离之和，不会小于 u 到 v 的最短距离</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="86" font-size="12" fill="#166534" text-anchor="middle">δ(u, v) ≤ δ(u, x) + δ(x, v)</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="147" font-size="12" fill="#1e40af" text-anchor="middle">因为「先到 x 再到 v」本身也是一条 u 到 v 的合法路径</text>
+  <text x="380" y="183" font-size="10" fill="#64748b" text-anchor="middle">它与上一节的最优子结构一内一外，共同支撑了松弛这一步</text>
+</svg>

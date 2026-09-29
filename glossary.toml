@@ -844,3 +844,30 @@ notes = "恰好 n 对括号的平衡串个数，1, 1, 2, 5, 14, 42 …；第 11 
 en = "power series"
 zh = "幂级数"
 notes = "形如 c_0 + c_1x + c_2x² + … 的无穷和；讲义用 Q(x) = 1 + xQ(x)² 说明系数为什么是卡塔兰数"
+
+# ── 第 15 讲（单源最短路径问题）新增 ──────────────────────────────────────
+
+[[term]]
+en = "weight"
+zh = "权重"
+notes = "边上带的实数（距离、过路费）；负权边允许，但可能引出负权环"
+
+[[term]]
+en = "relaxation"
+zh = "松弛"
+notes = "若 d[v] > d[u] + w(u,v) 就更新 d[v] 并把前驱记成 u；所有最短路算法的共同动作"
+
+[[term]]
+en = "predecessor"
+zh = "前驱"
+notes = "Π[v] 记录到 v 的最佳路径上的前一个顶点，源点记作 NIL"
+
+[[term]]
+en = "optimal substructure"
+zh = "最优子结构"
+notes = "最短路径的子路径也是最短路径；松弛之所以成立，依据就是它"
+
+[[term]]
+en = "triangle inequality"
+zh = "三角不等式"
+notes = "δ(u,v) ≤ δ(u,x) + δ(x,v)：绕经 x 的距离之和不小于直达的最短距离"

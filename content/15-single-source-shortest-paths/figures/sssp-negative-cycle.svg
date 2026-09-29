@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 269" width="760" height="269"
+     role="img" aria-labelledby="fig-sssp-negative-cycle-title fig-sssp-negative-cycle-desc">
+  <title id="fig-sssp-negative-cycle-title">负权环：绕一圈总权重是负的，于是绕得越多路径越短，距离失去意义</title>
+  <desc id="fig-sssp-negative-cycle-desc">讲义的例子：环 B → D → C → B 的权重是 −6 + 2 + 3 = −1，是负环；因此到 C、B、D、E 的最短路没有定义（可以绕任意多圈），而到 A 的最短路有定义、权重为 2。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="269" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">负权环：绕一圈总权重是负的，于是绕得越多路径越短，距离失去意义</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="86" font-size="12" fill="#9d174d" text-anchor="middle">环 B → D → C → B 的权重是 −6 + 2 + 3 = −1 &lt; 0，是负环</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="147" font-size="12" fill="#9d174d" text-anchor="middle">于是到 C（以及 B、D、E）的最短路没有定义：可以绕任意多圈</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="208" font-size="12" fill="#166534" text-anchor="middle">而到 A 的最短路有定义，权重是 2</text>
+  <text x="380" y="244" font-size="10" fill="#64748b" text-anchor="middle">负权边本身没问题；一旦能绕成负环，最短距离就不再是一个数</text>
+</svg>
