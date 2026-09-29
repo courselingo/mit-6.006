@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 743 244" width="743" height="244"
+     role="img" aria-labelledby="fig-shrink-waterline-title fig-shrink-waterline-desc">
+  <title id="fig-shrink-waterline-title">两条水位线：掉到 m/4 就减半，涨到 m 就翻倍</title>
+  <desc id="fig-shrink-waterline-desc">左边那条水位线管缩：n 掉到 m/4 时表缩到一半，缩完 α 回到 1/2；右边那条管长：n 涨到 m 时表翻倍，翻完 α 也回到 1/2。两条线之间，α 在 1/4 与 1 之间来回走。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="743" height="244" fill="#ffffff"/>
+  <text x="371.5" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两条水位线：掉到 m/4 就减半，涨到 m 就翻倍</text>
+  <g transform="translate(22.0,46.0)">
+  <rect x="0" y="0" width="337" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="168.5" y="22.2" font-size="12" fill="#9d174d" text-anchor="middle">n 掉到 m/4：缩到一半</text>
+  <text x="168.5" y="40.2" font-size="12" fill="#9d174d" text-anchor="middle">缩完 α 回到 1/2</text>
+  <rect x="362" y="0" width="337" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="530.5" y="22.2" font-size="12" fill="#b45309" text-anchor="middle">n 涨到 m：翻倍</text>
+  <text x="530.5" y="40.2" font-size="12" fill="#b45309" text-anchor="middle">翻完 α 也回到 1/2</text>
+  <path d="M168,59 L168,68" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M530,59 L530,68" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="0" y="79" width="699" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="349.5" y="101.2" font-size="12" fill="#1e40af" text-anchor="middle">两条水位线之间：α 在 1/4 与 1 之间来回走</text>
+  <rect x="0" y="140" width="699" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="349.5" y="162.2" font-size="12" fill="#6b21a8" text-anchor="middle">两侧都留了余量，所以不会缩完立刻又长回去</text>
+  </g>
+</svg>

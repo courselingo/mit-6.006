@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 704 287" width="704" height="287"
+     role="img" aria-labelledby="fig-recap-and-gap-title fig-recap-and-gap-desc">
+  <title id="fig-recap-and-gap-title">第 8 讲的结论与本讲要补的口子</title>
+  <desc id="fig-recap-and-gap-desc">上面是第 8 讲给出的结论：三个操作的期望代价是 Θ(1 + α)，α = n/m 是每条链的期望长度，要让 α = O(1) 就得 m = Θ(n)，而哈希函数里带着 m 与 r。下面是本讲要补的口子：建表的时候不知道 n 会长到多大，于是前半讲管表的长与缩，后半讲做字符串匹配。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="704" height="287" fill="#ffffff"/>
+  <text x="352.0" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">第 8 讲的结论与本讲要补的口子</text>
+  <g transform="translate(22.0,46.0)">
+  <rect x="0" y="0" width="660" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="330" y="22.2" font-size="12" fill="#b45309" text-anchor="middle">第 8 讲：三个操作的期望代价 Θ(1 + α)，哈希函数里带着 m 与 r</text>
+  <rect x="0" y="61" width="317" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="158.5" y="83.2" font-size="12" fill="#1e40af" text-anchor="middle">α = n/m 是每条链的期望长度</text>
+  <rect x="343" y="61" width="317" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="501.5" y="83.2" font-size="12" fill="#1e40af" text-anchor="middle">要让 α = O(1)，就得 m = Θ(n)</text>
+  <rect x="0" y="122" width="660" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="330" y="144.2" font-size="12" fill="#9d174d" text-anchor="middle">本讲的缺口：建表的时候不知道 n 会长到多大</text>
+  <rect x="0" y="183" width="317" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="158.5" y="205.2" font-size="12" fill="#166534" text-anchor="middle">前半讲：表自己长大，也自己缩回</text>
+  <rect x="343" y="183" width="317" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="501.5" y="205.2" font-size="12" fill="#166534" text-anchor="middle">后半讲：字符串匹配与 Karp-Rabin</text>
+  <path d="M170,102 L170,111" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M170,163 L170,172" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  </g>
+</svg>

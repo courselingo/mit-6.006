@@ -678,3 +678,31 @@ notes = "基数排序的起点：先按它排一遍，再往高位走；取某�
 en = "most significant digit"
 zh = "最高位数字"
 notes = "基数排序的终点；走到它，整个序列才真正有序"
+
+# ── 第 9 讲（表倍增与 Karp-Rabin）新增 ──────────────────────────────────────
+
+[[term]]
+en = "table doubling"
+zh = "表倍增"
+notes = "表满（n 追上 m）就把槽数翻倍的做法；n 次插入的总代价从每次加一的 Θ(n²) 降到 Θ(n)"
+
+[[term]]
+en = "rehashing"
+zh = "重哈希"
+notes = "改表尺寸就必须换哈希函数（m 与 r 都会变），于是旧表要逐槽重算搬到新表，代价 Θ(n + m)"
+
+[[term]]
+en = "rolling hash"
+zh = "滚动哈希"
+notes = "维护一段字符串的哈希值，支持末尾追加与从前面删除；两个动作都只要常数时间，窗口滑动时不必重算整段"
+
+[[term]]
+en = "string matching"
+zh = "字符串匹配"
+notes = "判断短串 s 是否作为子串出现在长串 t 里，以及出现的位置与次数"
+
+[[term]]
+en = "Karp-Rabin algorithm"
+key = "karp-rabin"
+zh = "卡普-拉宾算法"
+notes = "先比哈希值、只有哈希相等才逐字符核对的字符串匹配算法；用滚动哈希把每个窗口的哈希做到 O(1)"

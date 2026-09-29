@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 744 348" width="744" height="348"
+     role="img" aria-labelledby="fig-rolling-hash-title fig-rolling-hash-desc">
+  <title id="fig-rolling-hash-title">滚动哈希：三个操作与两个递推</title>
+  <desc id="fig-rolling-hash-desc">左列是 ADT 的三个操作：r() 给出哈希值、r.append(c) 在末尾加一个字符、r.skip(c) 从前面去掉一个字符。右列是实现：哈希值取 u mod p，append 用乘 a 再加编码，skip 减去头部字符乘上它所在的位值。最下面一行说 r 只存 u mod p 与 |x|，两个动作都是常数时间。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="744" height="348" fill="#ffffff"/>
+  <text x="372.0" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">滚动哈希：三个操作与两个递推</text>
+  <g transform="translate(22.0,46.0)">
+  <rect x="0" y="0" width="700" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="350" y="22.2" font-size="12" fill="#1e40af" text-anchor="middle">把字符串 x 看成 a 进制的大整数 u，哈希值取 u mod p（p 是随机取的质数）</text>
+  <rect x="0" y="61" width="337" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="168.5" y="83.2" font-size="12" fill="#b45309" text-anchor="middle">r()：给出当前的哈希值</text>
+  <rect x="362" y="61" width="337" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="530.5" y="83.2" font-size="12" fill="#1e40af" text-anchor="middle">u mod p，p 取 ≈ |s| 或 |t| 的随机质数</text>
+  <path d="M342,79 L351,79" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="0" y="122" width="337" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="168.5" y="144.2" font-size="12" fill="#b45309" text-anchor="middle">r.append(c)：末尾加一个字符</text>
+  <rect x="362" y="122" width="337" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="530.5" y="144.2" font-size="12" fill="#1e40af" text-anchor="middle">[(u mod p) · a + ord(c)] mod p</text>
+  <path d="M342,140 L351,140" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="0" y="183" width="337" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="168.5" y="205.2" font-size="12" fill="#b45309" text-anchor="middle">r.skip(c)：去掉头部一个字符</text>
+  <rect x="362" y="183" width="337" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="530.5" y="205.2" font-size="12" fill="#1e40af" text-anchor="middle">[u − ord(c) · (a^(|x|−1) mod p)] mod p</text>
+  <path d="M342,201 L351,201" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="0" y="244" width="700" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="350" y="266.2" font-size="12" fill="#166534" text-anchor="middle">r 只存 u mod p 与 |x|，u mod p 能放进一个机器字，两个动作都是常数时间</text>
+  </g>
+</svg>
