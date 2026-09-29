@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 328" width="760" height="328"
+     role="img" aria-labelledby="fig-memo-delta-k-title fig-memo-delta-k-desc">
+  <title id="fig-memo-delta-k-title">用更多子问题打破环：加一层参数让依赖分层，结论就是 Bellman-Ford</title>
+  <desc id="fig-memo-delta-k-desc">给子问题加一层参数：δk(s,v) 表示最多用 k 条边的最短路，它只依赖第 k−1 层，环因此被拆掉；取 k = |V|−1 就是答案，粗算是 O(V³)，细算每个子问题只看入边，总时间 Θ(VE)，也就是 Bellman-Ford。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="328" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">用更多子问题打破环：加一层参数让依赖分层，结论就是 Bellman-Ford</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">加一层参数：δk(s, v) = 最多用 k 条边的最短路</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="147" font-size="12" fill="#b45309" text-anchor="middle">递推：δk(s, v) = min{δk−1(s, u) + w(u, v)}，只依赖上一层</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="208" font-size="12" fill="#1e40af" text-anchor="middle">基例：δk(s, s) = 0；δ0(s, v) = ∞（v 不是 s 时）</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="269" font-size="12" fill="#166534" text-anchor="middle">目标 k = |V| − 1；粗算 O(V³)，细算每个子问题只看入边 ⇒ Θ(VE) ⇒ Bellman-Ford</text>
+  <text x="380" y="305" font-size="10" fill="#64748b" text-anchor="middle">加参数把依赖分了层，环被拆掉，而结论正是第 17 讲那个算法</text>
+</svg>

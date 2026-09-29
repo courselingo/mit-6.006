@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 328" width="760" height="328"
+     role="img" aria-labelledby="fig-memo-bottom-up-title fig-memo-bottom-up-desc">
+  <title id="fig-memo-bottom-up-title">自底向上：按依赖顺序填表，相当于对子问题依赖图做拓扑排序</title>
+  <desc id="fig-memo-bottom-up-desc">自底向上的写法从小到大填表，与记忆化做的是完全相同的计算（递归被展开）；填表顺序就是子问题依赖图的拓扑排序，好处是没有递归开销、分析更直白，还可以把空间省到 Θ(1)。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="328" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">自底向上：按依赖顺序填表，相当于对子问题依赖图做拓扑排序</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">另一种写法：for k in 1..n 从小到大填表（递归被展开）</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="147" font-size="12" fill="#b45309" text-anchor="middle">填表顺序就是子问题依赖 DAG 的一个拓扑排序</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="208" font-size="12" fill="#166534" text-anchor="middle">好处一：没有递归开销，实际更快；好处二：代价分析更直白</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="269" font-size="12" fill="#166534" text-anchor="middle">好处三：可以省空间，只留最近两个值就是 Θ(1)</text>
+  <text x="380" y="305" font-size="10" fill="#64748b" text-anchor="middle">两种写法做的是完全一样的计算，差别只在「谁先算」</text>
+</svg>
