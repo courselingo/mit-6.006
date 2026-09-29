@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-dp20-blackjack-title fig-dp20-blackjack-desc">
+  <title id="fig-dp20-blackjack-title">明牌 21 点的五步：子问题是「剩下这些牌怎么打」，猜测是叫几次牌，总时间 Θ(n³)</title>
+  <desc id="fig-dp20-blackjack-desc">明牌 21 点里整副牌的顺序已知，要对「玩家叫几次牌」做决策；子问题 BJ(i) 表示从第 i 张开始怎么打最好（n 个），每个子问题要枚举叫牌次数与庄家的补牌过程，耗时 Θ(n²)，从后往前算，总时间 Θ(n³)，答案是 BJ(0)。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">明牌 21 点的五步：子问题是「剩下这些牌怎么打」，猜测是叫几次牌，总时间 Θ(n³)</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">设定：整副牌的顺序已知，单人对抗「到 17 点就停」的庄家，赌注固定 1 元</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="147" font-size="12" fill="#1e40af" text-anchor="middle">子问题 BJ(i)：从第 i 张牌开始，剩下的牌怎么打最好 —— 共 n 个</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="208" font-size="12" fill="#b45309" text-anchor="middle">猜测：玩家叫几次牌（叫牌就是再摸一张）—— 选择数不超过 n</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="269" font-size="12" fill="#b45309" text-anchor="middle">递推：每种叫牌次数的结果（赢 1 元、平、输 1 元）加上用掉这些牌后的子问题，取最大</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="330" font-size="12" fill="#166534" text-anchor="middle">每子问题 Θ(n²)；顺序从后往前；总时间 Θ(n³)；解是 BJ(0)</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">只顾眼前这一手的贪心会错：有时候故意输一手，能让后面的牌更好</text>
+</svg>

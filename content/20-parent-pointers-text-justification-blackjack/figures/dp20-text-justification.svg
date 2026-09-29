@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-dp20-text-justification-title fig-dp20-text-justification-desc">
+  <title id="fig-dp20-text-justification-title">文本对齐的五步：子问题取后缀、猜测第一行在哪结束、递推取最小值，总时间是 Θ(n²)</title>
+  <desc id="fig-dp20-text-justification-desc">文本对齐把每行的代价定义为 badness：放不下记无穷大，否则取页宽减行长的立方；子问题是后缀 words[i:] 的最小总代价（n 个），猜测是第一行在哪结束（O(n) 种），递推取最小值、边界 DP[n] = 0，从 n 往回算，总时间 Θ(n²)，答案就是 DP[0]。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">文本对齐的五步：子问题取后缀、猜测第一行在哪结束、递推取最小值，总时间是 Θ(n²)</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="86" font-size="12" fill="#9d174d" text-anchor="middle">一行的代价 badness(i, j)：放不下（超出页宽）记无穷大，否则取「页宽 − 行长」的立方</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="147" font-size="12" fill="#1e40af" text-anchor="middle">子问题：从第 i 个词到结尾的最小总代价 —— 共 n 个子问题</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="208" font-size="12" fill="#b45309" text-anchor="middle">猜测：第一行在哪里结束（选一个 j）—— 选择数是 O(n)</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="269" font-size="12" fill="#b45309" text-anchor="middle">递推 DP[i] = min(badness(i, j) + DP[j])，边界 DP[n] = 0</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="330" font-size="12" fill="#166534" text-anchor="middle">顺序：i 从 n 往回算到 0；总时间 Θ(n²)；原问题就是 DP[0]</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">能塞多少塞多少的贪心会留下很难看的行，所以要用可加的代价来权衡</text>
+</svg>

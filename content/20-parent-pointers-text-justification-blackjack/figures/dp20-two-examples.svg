@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450"
+     role="img" aria-labelledby="fig-dp20-two-examples-title fig-dp20-two-examples-desc">
+  <title id="fig-dp20-two-examples-title">五步清单用在两个旧例子上：Fibonacci 与最短路各占一列，每行都是清单里的一步</title>
+  <desc id="fig-dp20-two-examples-desc">把五步清单套在 Fibonacci 与最短路上：Fibonacci 有 n 个子问题、不用猜、每子问题 Θ(1)、总时间 Θ(n)；最短路有 V² 个子问题、猜进入 v 的边、每子问题 Θ(1 + 入度)、总时间 Θ(VE) 加 Θ(V²)，原问题取 k = |V| − 1，额外时间 Θ(V)。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="450" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">五步清单用在两个旧例子上：Fibonacci 与最短路各占一列，每行都是清单里的一步</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">子问题：Fibonacci 是 Fk；最短路是 δk(s, v)</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="147" font-size="12" fill="#1e40af" text-anchor="middle">子问题个数：n 个；最短路是 V² 个</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="208" font-size="12" fill="#b45309" text-anchor="middle">猜测与选择数：Fibonacci 不用猜（1 种）；最短路猜「进入 v 的边」（入度 + 1 种）</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="269" font-size="12" fill="#b45309" text-anchor="middle">每个子问题的时间：Θ(1)；最短路是 Θ(1 + 入度)</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="330" font-size="12" fill="#166534" text-anchor="middle">总时间：Θ(n)；最短路是 Θ(VE)（加 Θ(V²)，除非把入度为 0 的情形处理好）</text>
+  <rect x="22" y="369" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="391" font-size="12" fill="#166534" text-anchor="middle">原问题与额外时间：Fn（Θ(1)）；最短路是 δ 取 k = |V| − 1（额外 Θ(V)）</text>
+  <text x="380" y="427" font-size="10" fill="#64748b" text-anchor="middle">最短路那一行算出来的 Θ(VE)，正是第 17 讲的 Bellman-Ford</text>
+</svg>
