@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 237" width="760" height="237"
+     role="img" aria-labelledby="fig-max-heapify-title fig-max-heapify-desc">
+  <title id="fig-max-heapify-title">max_heapify：把破坏堆性质的那个元素往下渗</title>
+  <desc id="fig-max-heapify-desc">max_heapify 的前提是下标 i 的左右子树都已经是最大堆，只有 A[i] 破坏了堆性质；做法是把它和两个孩子里较大的那个交换，再对交换后的位置递归，所以每一轮只下降一层，代价 O(log n)。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="237" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">max_heapify：把破坏堆性质的那个元素往下渗</text>
+  <rect x="22" y="64" width="80.85714285714286" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="62.42857142857143" y="86" font-size="12" fill="#1e40af" text-anchor="middle">16</text>
+  <rect x="127.85714285714286" y="64" width="80.85714285714286" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="168.28571428571428" y="86" font-size="12" fill="#9d174d" text-anchor="middle">4</text>
+  <rect x="233.71428571428572" y="64" width="80.85714285714286" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="274.14285714285717" y="86" font-size="12" fill="#1e40af" text-anchor="middle">10</text>
+  <rect x="339.57142857142856" y="64" width="80.85714285714286" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">14</text>
+  <rect x="445.42857142857144" y="64" width="80.85714285714286" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="485.8571428571429" y="86" font-size="12" fill="#1e40af" text-anchor="middle">7</text>
+  <rect x="551.2857142857143" y="64" width="80.85714285714286" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="591.7142857142858" y="86" font-size="12" fill="#1e40af" text-anchor="middle">9</text>
+  <rect x="657.1428571428571" y="64" width="80.85714285714286" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="697.5714285714286" y="86" font-size="12" fill="#1e40af" text-anchor="middle">3</text>
+  <path d="M380,105 L 380,118" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <rect x="22" y="129" width="80.85714285714286" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="62.42857142857143" y="151" font-size="12" fill="#1e40af" text-anchor="middle">16</text>
+  <rect x="127.85714285714286" y="129" width="80.85714285714286" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="168.28571428571428" y="151" font-size="12" fill="#1e40af" text-anchor="middle">14</text>
+  <rect x="233.71428571428572" y="129" width="80.85714285714286" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="274.14285714285717" y="151" font-size="12" fill="#1e40af" text-anchor="middle">10</text>
+  <rect x="339.57142857142856" y="129" width="80.85714285714286" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="151" font-size="12" fill="#166534" text-anchor="middle">4</text>
+  <rect x="445.42857142857144" y="129" width="80.85714285714286" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="485.8571428571429" y="151" font-size="12" fill="#1e40af" text-anchor="middle">7</text>
+  <rect x="551.2857142857143" y="129" width="80.85714285714286" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="591.7142857142858" y="151" font-size="12" fill="#1e40af" text-anchor="middle">9</text>
+  <rect x="657.1428571428571" y="129" width="80.85714285714286" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="697.5714285714286" y="151" font-size="12" fill="#1e40af" text-anchor="middle">3</text>
+  <text x="380" y="187" font-size="10" fill="#64748b" text-anchor="middle">下标 2 的 4 比左孩子（下标 4 的 14）小 ⇒ 交换；再对下标 4 递归，它的孩子越界，停</text>
+  <text x="380" y="213" font-size="10" fill="#64748b" text-anchor="middle">每一轮只往下走一层，所以代价是 O(log n)</text>
+</svg>

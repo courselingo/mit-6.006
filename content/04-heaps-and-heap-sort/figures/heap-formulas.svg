@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 147" width="760" height="147"
+     role="img" aria-labelledby="fig-heap-formulas-title fig-heap-formulas-desc">
+  <title id="fig-heap-formulas-title">堆的三个下标公式：父子关系不需要指针</title>
+  <desc id="fig-heap-formulas-desc">下标从 1 开始时，父亲是 i/2（向下取整），左孩子是 2i，右孩子是 2i+1；父子关系因此完全由下标算术给出，不需要指针，树高是 O(lg n)。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="147" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">堆的三个下标公式：父子关系不需要指针</text>
+  <rect x="22" y="64" width="222" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="133" y="84" font-size="11" fill="#b45309" text-anchor="middle">parent(i) = i/2</text>
+  <text x="133" y="101" font-size="11" fill="#b45309" text-anchor="middle">父亲</text>
+  <rect x="269" y="64" width="222" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="84" font-size="11" fill="#b45309" text-anchor="middle">left(i) = 2i</text>
+  <text x="380" y="101" font-size="11" fill="#b45309" text-anchor="middle">左孩子</text>
+  <rect x="516" y="64" width="222" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="627" y="84" font-size="11" fill="#b45309" text-anchor="middle">right(i) = 2i+1</text>
+  <text x="627" y="101" font-size="11" fill="#b45309" text-anchor="middle">右孩子</text>
+  <text x="380" y="122" font-size="10" fill="#64748b" text-anchor="middle">父子关系是下标算术，所以一根指针都不需要；树高只有 O(lg n)</text>
+</svg>

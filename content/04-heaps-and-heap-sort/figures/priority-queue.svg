@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 244" width="760" height="244"
+     role="img" aria-labelledby="fig-priority-queue-title fig-priority-queue-desc">
+  <title id="fig-priority-queue-title">优先队列要支持的四条操作</title>
+  <desc id="fig-priority-queue-desc">优先队列是元素带 key 的集合，支持插入、看最大 key、取出最大者、把某个 key 调大这四件事。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="244" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">优先队列要支持的四条操作</text>
+  <rect x="22" y="64" width="345.5" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194.75" y="86" font-size="12" fill="#1e40af" text-anchor="middle">insert(S, x)</text>
+  <text x="194.75" y="104" font-size="12" fill="#1e40af" text-anchor="middle">插入一个元素</text>
+  <rect x="392.5" y="64" width="345.5" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="565.25" y="86" font-size="12" fill="#1e40af" text-anchor="middle">max(S)</text>
+  <text x="565.25" y="104" font-size="12" fill="#1e40af" text-anchor="middle">看最大的 key 是谁</text>
+  <rect x="22" y="143" width="345.5" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="194.75" y="165" font-size="12" fill="#166534" text-anchor="middle">extract_max(S)</text>
+  <text x="194.75" y="183" font-size="12" fill="#166534" text-anchor="middle">取出最大者并删掉</text>
+  <rect x="392.5" y="143" width="345.5" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="565.25" y="165" font-size="12" fill="#b45309" text-anchor="middle">increase_key(S, x, k)</text>
+  <text x="565.25" y="183" font-size="12" fill="#b45309" text-anchor="middle">把某个 key 调大</text>
+  <text x="380" y="219" font-size="10" fill="#64748b" text-anchor="middle">只关心「最大的那个是谁」，不关心「第 i 个是谁」</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 384" width="760" height="384"
+     role="img" aria-labelledby="fig-build-max-heap-title fig-build-max-heap-desc">
+  <title id="fig-build-max-heap-title">build_max_heap 的紧分析：为什么从 O(n log n) 收紧到 O(n)</title>
+  <desc id="fig-build-max-heap-desc">build_max_heap 从 n/2 循环到 1 调用 max_heapify，初步分析给 O(n log n)；但越靠近底部的节点越矮：n/4 个节点每次只要 O(1)，n/8 个只要 O(2)，加权求和后被常数界住，所以是 O(n)。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="384" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">build_max_heap 的紧分析：为什么从 O(n log n) 收紧到 O(n)</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">n/4 个节点：只比叶子高一层，每次 O(1)</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="147" font-size="12" fill="#1e40af" text-anchor="middle">n/8 个节点：高两层，每次 O(2)</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="208" font-size="12" fill="#b45309" text-anchor="middle">… 越往上节点越少、越高</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="269" font-size="12" fill="#9d174d" text-anchor="middle">1 个根节点：高 lg n 层，每次 O(lg n)</text>
+  <rect x="22" y="308" width="716" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="330" font-size="12" fill="#166534" text-anchor="middle">加权求和 n/4·1c + n/8·2c + n/16·3c + … + 1·lg n·c</text>
+  <text x="380" y="348" font-size="12" fill="#166534" text-anchor="middle">括号里的级数被常数界住 ⇒ 总体是 O(n)</text>
+</svg>

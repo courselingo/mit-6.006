@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 147" width="760" height="147"
+     role="img" aria-labelledby="fig-heap-array-title fig-heap-array-desc">
+  <title id="fig-heap-array-title">堆：数组 [16,14,10,8,7,9,3,2,4,1] 与最大堆性质</title>
+  <desc id="fig-heap-array-desc">堆用一个数组表示一棵近似完全的二叉树，并要求每个节点的 key 不小于它两个孩子的 key；讲义的这个数组是 [16, 14, 10, 8, 7, 9, 3, 2, 4, 1]，下标从 1 开始。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="147" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">堆：数组 [16,14,10,8,7,9,3,2,4,1] 与最大堆性质</text>
+  <rect x="22" y="64" width="49.1" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="46.55" y="86" font-size="12" fill="#1e40af" text-anchor="middle">16</text>
+  <rect x="96.1" y="64" width="49.1" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="120.64999999999999" y="86" font-size="12" fill="#1e40af" text-anchor="middle">14</text>
+  <rect x="170.2" y="64" width="49.1" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194.75" y="86" font-size="12" fill="#1e40af" text-anchor="middle">10</text>
+  <rect x="244.29999999999998" y="64" width="49.1" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="268.84999999999997" y="86" font-size="12" fill="#1e40af" text-anchor="middle">8</text>
+  <rect x="318.4" y="64" width="49.1" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="342.95" y="86" font-size="12" fill="#1e40af" text-anchor="middle">7</text>
+  <rect x="392.5" y="64" width="49.1" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="417.05" y="86" font-size="12" fill="#1e40af" text-anchor="middle">9</text>
+  <rect x="466.59999999999997" y="64" width="49.1" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="491.15" y="86" font-size="12" fill="#1e40af" text-anchor="middle">3</text>
+  <rect x="540.6999999999999" y="64" width="49.1" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="565.2499999999999" y="86" font-size="12" fill="#1e40af" text-anchor="middle">2</text>
+  <rect x="614.8" y="64" width="49.1" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="639.3499999999999" y="86" font-size="12" fill="#1e40af" text-anchor="middle">4</text>
+  <rect x="688.9" y="64" width="49.1" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="713.4499999999999" y="86" font-size="12" fill="#1e40af" text-anchor="middle">1</text>
+  <text x="380" y="122" font-size="10" fill="#64748b" text-anchor="middle">数组下标一律从 1 开始：A[1] = 16 最大，每个节点都不小于它的两个孩子</text>
+</svg>
