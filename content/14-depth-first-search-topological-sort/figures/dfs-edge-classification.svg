@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 244" width="760" height="244"
+     role="img" aria-labelledby="fig-dfs-edge-classification-title fig-dfs-edge-classification-desc">
+  <title id="fig-dfs-edge-classification-title">边的四种分类：树边、回边、前向边、交叉边</title>
+  <desc id="fig-dfs-edge-classification-desc">DFS 会把边分成四类：树边由 parent 记录；回边指向祖先；前向边指向后代；交叉边指向另一棵子树。判断一条边是不是回边，就看它指向的顶点是否还在栈上；无向图里只会出现树边与回边。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="244" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">边的四种分类：树边、回边、前向边、交叉边</text>
+  <rect x="22" y="64" width="345.5" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="194.75" y="86" font-size="12" fill="#166534" text-anchor="middle">树边</text>
+  <text x="194.75" y="104" font-size="12" fill="#166534" text-anchor="middle">由 parent 记录下来的边</text>
+  <rect x="392.5" y="64" width="345.5" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="565.25" y="86" font-size="12" fill="#9d174d" text-anchor="middle">回边</text>
+  <text x="565.25" y="104" font-size="12" fill="#9d174d" text-anchor="middle">指向自己的祖先</text>
+  <rect x="22" y="143" width="345.5" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="194.75" y="165" font-size="12" fill="#6b21a8" text-anchor="middle">前向边</text>
+  <text x="194.75" y="183" font-size="12" fill="#6b21a8" text-anchor="middle">指向自己的后代</text>
+  <rect x="392.5" y="143" width="345.5" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="565.25" y="165" font-size="12" fill="#1e40af" text-anchor="middle">交叉边</text>
+  <text x="565.25" y="183" font-size="12" fill="#1e40af" text-anchor="middle">指向另一棵子树</text>
+  <text x="380" y="219" font-size="10" fill="#64748b" text-anchor="middle">认回边的办法：看这条边指向的顶点是否还在栈上；无向图里只会出现树边与回边</text>
+</svg>

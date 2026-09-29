@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 269" width="760" height="269"
+     role="img" aria-labelledby="fig-topo-correctness-title fig-topo-correctness-desc">
+  <title id="fig-topo-correctness-title">正确性的两种情形：无论谁先被访问，被指向的顶点都先完成</title>
+  <desc id="fig-topo-correctness-desc">对任意边 (u, v)，分两种情形：如果 u 先被访问，那么在 u 结束之前会经由 (u, v) 访问到 v，所以 v 先完成；如果 v 先被访问，由于图无环，从 v 到不了 u，所以 v 也先完成。两种情形都得到 v 先完成，于是倒序之后 u 排在 v 之前。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="269" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">正确性的两种情形：无论谁先被访问，被指向的顶点都先完成</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">情形一：u 先被访问 ⇒ 在 u 结束之前会经由 (u, v) 访问到 v ⇒ v 先完成</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="147" font-size="12" fill="#b45309" text-anchor="middle">情形二：v 先被访问 ⇒ 图无环，从 v 到不了 u ⇒ v 也先完成</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="208" font-size="12" fill="#166534" text-anchor="middle">两种情形都是 v 先完成 ⇒ 倒序之后，u 一定排在 v 之前</text>
+  <text x="380" y="244" font-size="10" fill="#64748b" text-anchor="middle">这条论证只用到「无环」这一个前提，所以它对 DAG 上任意一条边都成立</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 269" width="760" height="269"
+     role="img" aria-labelledby="fig-topo-sort-title fig-topo-sort-desc">
+  <title id="fig-topo-sort-title">拓扑排序：把顶点按完成时间倒序排列</title>
+  <desc id="fig-topo-sort-desc">拓扑排序不需要新算法：在 DFS 每次访问结束（顶点完成）时把顶点追加进 order，全部走完后把 order 倒过来，得到的就是完成时间的逆序。对任意边 (u, v)，v 一定先完成，所以倒序之后 u 排在 v 之前。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="269" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">拓扑排序：把顶点按完成时间倒序排列</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">每次 DFS-visit 结束（顶点完成）时，把它追加进 order</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="147" font-size="12" fill="#b45309" text-anchor="middle">所有顶点走完后，把 order 整个倒过来：order.reverse()</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="208" font-size="12" fill="#166534" text-anchor="middle">得到的顺序就是完成时间的逆序：完成得越晚，排得越前</text>
+  <text x="380" y="244" font-size="10" fill="#64748b" text-anchor="middle">为什么对：对任意边 (u, v)，v 一定先完成，所以倒序后 u 排在 v 之前</text>
+</svg>
