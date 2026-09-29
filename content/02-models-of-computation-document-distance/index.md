@@ -2,7 +2,7 @@
 title = "计算模型与文档距离"
 lecture = 2
 slug = "models-of-computation-document-distance"
-status = "draft"
+status = "reviewed"
 source_kind = "notes"
 source_url = "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/resources/mit6_006f11_lec02/"
 source_title = "Lecture 2: Models of Computation, Python Cost Model, Document Distance"
