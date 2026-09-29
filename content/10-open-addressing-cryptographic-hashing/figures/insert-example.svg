@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 343" width="760" height="343"
      role="img" aria-labelledby="fig-insert-example-title fig-insert-example-desc">
   <title id="fig-insert-example-title">插入 k = 496：探测序列 4、6、1、5</title>
-  <desc id="fig-insert-example-desc">表有 8 个槽：586 在槽 1、133 在槽 2、204 在槽 4、481 在槽 6。插入 496 时按探测序列试槽 4、6、1，三次都撞上别人（204、481、586），第 4 次落在空槽 5，496 就放进槽 5。</desc>
+  <desc id="fig-insert-example-desc">表有 8 个槽：586 在槽 1、133 在槽 2、204 在槽 4、481 在槽 6。插入 496 时按探测序列试槽 4、6、1，三次都撞上别人（204、481、586），图上这三处标 collision；第 4 次落到空槽 5，图上标 free spot!，496 就放进槽 5。</desc>
 
   <defs>
     <style>
