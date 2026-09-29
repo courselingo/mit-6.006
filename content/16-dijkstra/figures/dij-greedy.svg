@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 269" width="760" height="269"
+     role="img" aria-labelledby="fig-dij-greedy-title fig-dij-greedy-desc">
+  <title id="fig-dij-greedy-title">贪心与关键观察：顶点一旦加入定稿集合，它的距离就固定了，所以权重必须非负</title>
+  <desc id="fig-dij-greedy-desc">Dijkstra 是贪心算法：每轮挑 V − S 里距离最小的顶点加入 S。正确性的关键观察是，顶点一加入 S 就有 d[u] = δ(s,u)，从此不再变化；而这条性质要求权重非负，否则已经定稿的顶点还可能被经过负权边的更短路径追上。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="269" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">贪心与关键观察：顶点一旦加入定稿集合，它的距离就固定了，所以权重必须非负</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">策略：贪心，每一轮挑 V − S 里距离最小的顶点加进 S</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="147" font-size="12" fill="#166534" text-anchor="middle">关键观察：顶点一加入 S 就有 d[u] = δ(s, u)，从此不再变</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="208" font-size="12" fill="#9d174d" text-anchor="middle">所以前提是权重非负：若有负权边，已定稿的顶点还可能被更短的路追上</text>
+  <text x="380" y="244" font-size="10" fill="#64748b" text-anchor="middle">带负权的图不能靠这一套，那是 Bellman-Ford 的地盘</text>
+</svg>

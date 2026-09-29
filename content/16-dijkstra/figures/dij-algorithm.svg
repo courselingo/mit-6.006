@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 328" width="760" height="328"
+     role="img" aria-labelledby="fig-dij-algorithm-title fig-dij-algorithm-desc">
+  <title id="fig-dij-algorithm-title">Dijkstra 的四步：把顶点放进优先队列、取出最小的、加入定稿集合、松弛它的出边</title>
+  <desc id="fig-dij-algorithm-desc">Dijkstra 维护一个定稿集合 S 和一个优先队列 Q：每轮从 Q 里取出距离最小的顶点 u，把它加入 S 并从 Q 删除，再松弛 u 的所有出边，而松弛一条出边等于对 Q 做一次隐式的降键操作。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="328" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">Dijkstra 的四步：把顶点放进优先队列、取出最小的、加入定稿集合、松弛它的出边</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="86" font-size="12" fill="#9d174d" text-anchor="middle">前提：对每条边都有 w(u, v) ≥ 0</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="147" font-size="12" fill="#1e40af" text-anchor="middle">S 放已经定稿的顶点，Q 放其余的顶点（用优先队列实现）</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="208" font-size="12" fill="#b45309" text-anchor="middle">每轮：u ← EXTRACT-MIN(Q)，把 u 从 Q 删掉并加入 S</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="269" font-size="12" fill="#b45309" text-anchor="middle">再松弛 u 的所有出边，这一步是隐式的 DECREASE-KEY</text>
+  <text x="380" y="305" font-size="10" fill="#64748b" text-anchor="middle">取最小与降键这两步各自多贵，决定了整个算法的代价</text>
+</svg>

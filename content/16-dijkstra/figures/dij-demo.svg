@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-dij-demo-title fig-dij-demo-desc">
+  <title id="fig-dij-demo-title">Dijkstra 的执行过程：每轮取出当前最小的顶点加入定稿集合，再把它的出边松弛一遍</title>
+  <desc id="fig-dij-demo-desc">讲义那张执行表的过程：初始 d(A) = 0、其余无穷大；取 A 之后 d(B) = 10、d(C) = 3；取 C 之后 d(B) = 7、d(D) = 11、d(E) = 5；取 E 之后没有距离变小；取 B 之后 d(D) 从 11 降到 9。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">Dijkstra 的执行过程：每轮取出当前最小的顶点加入定稿集合，再把它的出边松弛一遍</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">初始：S 为空，d(A) = 0，其余顶点都是无穷大</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="147" font-size="12" fill="#166534" text-anchor="middle">取 A 并加入 S：松弛 A 的出边 ⇒ d(B) = 10、d(C) = 3</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="208" font-size="12" fill="#166534" text-anchor="middle">取 C 并加入 S：松弛 C 的出边 ⇒ d(B) = 7、d(D) = 11、d(E) = 5</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="269" font-size="12" fill="#b45309" text-anchor="middle">取 E 并加入 S：这一轮没有让任何距离变小</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="330" font-size="12" fill="#166534" text-anchor="middle">取 B 并加入 S：松弛 B 的出边 ⇒ d(D) 从 11 降到 9</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">距离在顶点定稿之前可以被反复改小，d(B) 与 d(D) 各自变过一次</text>
+</svg>

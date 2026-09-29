@@ -871,3 +871,20 @@ notes = "最短路径的子路径也是最短路径；松弛之所以成立，�
 en = "triangle inequality"
 zh = "三角不等式"
 notes = "δ(u,v) ≤ δ(u,x) + δ(x,v)：绕经 x 的距离之和不小于直达的最短距离"
+
+# ── 第 16 讲（Dijkstra 算法）新增 ─────────────────────────────────────────
+
+[[term]]
+en = "extract-min"
+zh = "取最小"
+notes = "从优先队列里取出键最小的元素；Dijkstra 每轮做一次，共 Θ(V) 次"
+
+[[term]]
+en = "decrease-key"
+zh = "降键"
+notes = "把队列里某个元素的键改小；Dijkstra 松弛一条出边就是一次隐式的降键，共 Θ(E) 次"
+
+[[term]]
+en = "fibonacci heap"
+zh = "斐波那契堆"
+notes = "取最小 Θ(lg V)、降键摊还 Θ(1) 的优先队列实现；讲义注明 6.006 不覆盖"
