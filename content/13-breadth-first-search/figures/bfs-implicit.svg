@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 361" width="750" height="361"
+     role="img" aria-labelledby="fig-bfs-implicit-title fig-bfs-implicit-desc">
+  <title id="fig-bfs-implicit-title">图也可以不存下来：把邻居算出来就行</title>
+  <desc id="fig-bfs-implicit-desc">讲义给了另一条路，叫隐式图：Adj(u) 不是一张表，而是一个函数，需要的时候现场算出局部结构。魔方就是标准例子，因为它的状态数有两亿多，存不下来。讲义接着列了两种相关的写法：给每个顶点建一个对象、用它的邻居字段代替 Adj[u]；以及把边也做成对象，用关联表存出边，好处是不用哈希就能带上边的数据。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="750" height="361" fill="#ffffff"/>
+  <text x="375.0" y="32" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">图也可以不存下来：把邻居算出来就行</text>
+  <rect x="25" y="60" width="700" height="39.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="375.0" y="84.0" font-size="13" fill="#1e40af" text-anchor="middle">隐式图：Adj(u) 是个函数，现场算</text>
+  <rect x="25" y="127.0" width="336" height="58.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="193.0" y="151.1" font-size="13" fill="#166534" text-anchor="middle">代价</text>
+  <text x="193.0" y="170.6" font-size="12" fill="#166534" text-anchor="middle">不需要存储空间</text>
+  <rect x="389" y="127.0" width="336" height="58.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="557.0" y="151.1" font-size="13" fill="#166534" text-anchor="middle">适用</text>
+  <text x="557.0" y="170.6" font-size="12" fill="#166534" text-anchor="middle">状态数大到存不下，例如魔方</text>
+  <rect x="25" y="213.5" width="700" height="58.5" rx="6" fill="#ffffff" stroke="#64748b"/>
+  <text x="375.0" y="237.6" font-size="13" fill="#1e293b" text-anchor="middle">两种变体</text>
+  <text x="375.0" y="257.1" font-size="12" fill="#1e293b" text-anchor="middle">顶点对象，或者把边也做成对象</text>
+  <rect x="25" y="300.0" width="700" height="36.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="375.0" y="322.2" font-size="12" fill="#b45309" text-anchor="middle">「零空间」这个说法要打引号：算邻居本身要花时间，而那个代价落在每次调用上</text>
+</svg>

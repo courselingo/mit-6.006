@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 292" width="750" height="292"
+     role="img" aria-labelledby="fig-bfs-gods-number-title fig-bfs-gods-number-desc">
+  <title id="fig-bfs-gods-number-title">那张图有多大，以及它的直径是多少</title>
+  <desc id="fig-bfs-gods-number-desc">讲义算的是状态数：八个小块任意摆放是 8 的阶乘，而每个小块有三种扭转，所以是 8! 乘 3 的 8 次方，等于 264,539,520。这个数还可以再去除：除以 24 去掉整体旋转，再除以 3 去掉不可达的那些，因为这张图有三个连通分量。而它的直径，也就是所谓上帝之数，二阶是 11，三阶是 20，n 阶是 Θ(n²/lg n)。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="750" height="292" fill="#ffffff"/>
+  <text x="375.0" y="32" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">那张图有多大，以及它的直径是多少</text>
+  <rect x="25" y="60" width="700" height="39.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="375.0" y="84.0" font-size="13" fill="#1e40af" text-anchor="middle">8! · 3⁸ = 264,539,520 个状态</text>
+  <rect x="25" y="127.0" width="214" height="58.5" rx="6" fill="#ffffff" stroke="#64748b"/>
+  <text x="132.0" y="151.1" font-size="13" fill="#1e293b" text-anchor="middle">8!</text>
+  <text x="132.0" y="170.6" font-size="12" fill="#1e293b" text-anchor="middle">八个小块任意摆放</text>
+  <rect x="267" y="127.0" width="214" height="58.5" rx="6" fill="#ffffff" stroke="#64748b"/>
+  <text x="374.0" y="151.1" font-size="13" fill="#1e293b" text-anchor="middle">3⁸</text>
+  <text x="374.0" y="170.6" font-size="12" fill="#1e293b" text-anchor="middle">每个小块三种扭转</text>
+  <rect x="509" y="127.0" width="214" height="58.5" rx="6" fill="#ffffff" stroke="#64748b"/>
+  <text x="616.0" y="151.1" font-size="13" fill="#1e293b" text-anchor="middle">再除 24 与 3</text>
+  <text x="616.0" y="170.6" font-size="12" fill="#1e293b" text-anchor="middle">去整体旋转，去不可达</text>
+  <rect x="25" y="213.5" width="700" height="54.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="375.0" y="235.7" font-size="12" fill="#b45309" text-anchor="middle">直径：二阶 11，三阶 20，n 阶 Θ(n²/lg n)</text>
+  <text x="375.0" y="253.7" font-size="12" fill="#b45309" text-anchor="middle">这个数就是最坏情况下要走多少步</text>
+</svg>

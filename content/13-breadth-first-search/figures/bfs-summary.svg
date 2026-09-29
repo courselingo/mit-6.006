@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 274" width="750" height="274"
+     role="img" aria-labelledby="fig-bfs-summary-title fig-bfs-summary-desc">
+  <title id="fig-bfs-summary-title">收束：这一讲开了一个新的单元，而它的主角是「层」</title>
+  <desc id="fig-bfs-summary-desc">把整讲串起来：图搜索能用在很多地方，所以先定下图的存法（邻接表 Θ(V+E)，或干脆不存而现场算），再用逐层展开去搜，而「每一层只收新顶点」这一条同时给了线性时间和最短边数。这一讲是图这一块的第一讲，后面的深度优先搜索与拓扑排序会换一种展开方式。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="750" height="274" fill="#ffffff"/>
+  <text x="375.0" y="32" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">收束：这一讲开了一个新的单元，而它的主角是「层」</text>
+  <rect x="25" y="60" width="700" height="39.0" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="375.0" y="84.0" font-size="13" fill="#166534" text-anchor="middle">存法 → 逐层展开 → 线性时间与最短边数</text>
+  <rect x="25" y="127.0" width="214" height="58.5" rx="6" fill="#ffffff" stroke="#64748b"/>
+  <text x="132.0" y="151.1" font-size="13" fill="#1e293b" text-anchor="middle">存法</text>
+  <text x="132.0" y="170.6" font-size="12" fill="#1e293b" text-anchor="middle">邻接表，或者现场算</text>
+  <rect x="267" y="127.0" width="214" height="58.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="374.0" y="151.1" font-size="13" fill="#1e40af" text-anchor="middle">展开</text>
+  <text x="374.0" y="170.6" font-size="12" fill="#1e40af" text-anchor="middle">每层只收新顶点</text>
+  <rect x="509" y="127.0" width="214" height="58.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="616.0" y="151.1" font-size="13" fill="#166534" text-anchor="middle">结果</text>
+  <text x="616.0" y="170.6" font-size="12" fill="#166534" text-anchor="middle">O(V+E)，且 level 是最短边数</text>
+  <rect x="25" y="213.5" width="700" height="36.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="375.0" y="235.7" font-size="12" fill="#b45309" text-anchor="middle">一句话概括这一讲的算法：用「见过没有」这个判断，把一张图切成一层一层</text>
+</svg>

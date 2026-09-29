@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 292" width="750" height="292"
+     role="img" aria-labelledby="fig-bfs-adjacency-title fig-bfs-adjacency-desc">
+  <title id="fig-bfs-adjacency-title">邻接表：每个顶点挂一串邻居，空间是 Θ(V+E)</title>
+  <desc id="fig-bfs-adjacency-desc">讲义给的表示是一组链表：对每个顶点 u，Adj[u] 存它的邻居，也就是那些与它相邻的顶点。如果是有向图，这些就是出边。它的空间是顶点数加边数那一档。在 Python 里它就是一个字典，值是列表或集合，而顶点可以是任何可哈希的对象，比如整数或元组。讲义还点出一个好处：同一批顶点上可以挂多张图。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="750" height="292" fill="#ffffff"/>
+  <text x="375.0" y="32" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">邻接表：每个顶点挂一串邻居，空间是 Θ(V+E)</text>
+  <rect x="25" y="60" width="700" height="39.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="375.0" y="84.0" font-size="13" fill="#1e40af" text-anchor="middle">Adj[u] 存 u 的邻居；有向图里就是出边</text>
+  <rect x="25" y="127.0" width="214" height="58.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="132.0" y="151.1" font-size="13" fill="#166534" text-anchor="middle">空间</text>
+  <text x="132.0" y="170.6" font-size="12" fill="#166534" text-anchor="middle">Θ(V+E)</text>
+  <rect x="267" y="127.0" width="214" height="58.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="374.0" y="151.1" font-size="13" fill="#166534" text-anchor="middle">Python 里</text>
+  <text x="374.0" y="170.6" font-size="12" fill="#166534" text-anchor="middle">字典配列表或集合</text>
+  <rect x="509" y="127.0" width="214" height="58.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="616.0" y="151.1" font-size="13" fill="#166534" text-anchor="middle">顶点</text>
+  <text x="616.0" y="170.6" font-size="12" fill="#166534" text-anchor="middle">任何可哈希的对象</text>
+  <rect x="25" y="213.5" width="700" height="54.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="375.0" y="235.7" font-size="12" fill="#b45309" text-anchor="middle">好处是同一批顶点上可以挂多张图，例如原图与它的反向图</text>
+  <text x="375.0" y="253.7" font-size="12" fill="#b45309" text-anchor="middle">而 Θ(V+E) 这个空间正是后面「线性时间」那句话里的一半</text>
+</svg>

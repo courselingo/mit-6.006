@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 292" width="750" height="292"
+     role="img" aria-labelledby="fig-bfs-shortest-path-tree-title fig-bfs-shortest-path-tree-desc">
+  <title id="fig-bfs-shortest-path-tree-title">level 就是最短边数，而 parent 连成一棵树</title>
+  <desc id="fig-bfs-shortest-path-tree-desc">讲义指出：对每个顶点 v，从起点到它最少要走的边数就是它的层号；如果它没有被赋层号，那就是无穷，也就是走不到。而所有 parent 指针合起来构成一棵最短路径树，它是「每个顶点各取一条最短路径」的并。要找某条具体的最短路径，就从那个顶点顺着 parent 往回走，一直到起点为止。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="750" height="292" fill="#ffffff"/>
+  <text x="375.0" y="32" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">level 就是最短边数，而 parent 连成一棵树</text>
+  <rect x="25" y="60" width="700" height="39.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="375.0" y="84.0" font-size="13" fill="#1e40af" text-anchor="middle">最少边数 = level[v]；没赋层号就是无路可走</text>
+  <rect x="25" y="127.0" width="336" height="58.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="193.0" y="151.1" font-size="13" fill="#166534" text-anchor="middle">parent 指针合起来</text>
+  <text x="193.0" y="170.6" font-size="12" fill="#166534" text-anchor="middle">构成一棵最短路径树</text>
+  <rect x="389" y="127.0" width="336" height="58.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="557.0" y="151.1" font-size="13" fill="#166534" text-anchor="middle">取一条路径</text>
+  <text x="557.0" y="170.6" font-size="12" fill="#166534" text-anchor="middle">顺着 parent 往回走到起点</text>
+  <rect x="25" y="213.5" width="700" height="54.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="375.0" y="235.7" font-size="12" fill="#b45309" text-anchor="middle">注意这里的最短指的是边数最少，而不是带权路径最短</text>
+  <text x="375.0" y="253.7" font-size="12" fill="#b45309" text-anchor="middle">讲义把带权的那种留给了后面几讲，并在这一页标了一句参见</text>
+</svg>

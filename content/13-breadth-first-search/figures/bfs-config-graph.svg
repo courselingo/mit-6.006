@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 361" width="750" height="361"
+     role="img" aria-labelledby="fig-bfs-config-graph-title fig-bfs-config-graph-desc">
+  <title id="fig-bfs-config-graph-title">魔方也是一张图：一个状态一个顶点，一次转动一条边</title>
+  <desc id="fig-bfs-config-graph-desc">讲义拿二阶魔方做例子。构型图的建法是：每个可能的状态是一个顶点，从某个状态做一次基本转动到另一个状态就画一条边。因为转动可以反着来，所以这张图是无向的。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="750" height="361" fill="#ffffff"/>
+  <text x="375.0" y="32" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">魔方也是一张图：一个状态一个顶点，一次转动一条边</text>
+  <rect x="25" y="60" width="700" height="39.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="375.0" y="84.0" font-size="13" fill="#1e40af" text-anchor="middle">构型图：状态是顶点，转动是边</text>
+  <rect x="25" y="127.0" width="336" height="58.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="193.0" y="151.1" font-size="13" fill="#166534" text-anchor="middle">顶点</text>
+  <text x="193.0" y="170.6" font-size="12" fill="#166534" text-anchor="middle">每一个可能的状态</text>
+  <rect x="389" y="127.0" width="336" height="58.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="557.0" y="151.1" font-size="13" fill="#166534" text-anchor="middle">边</text>
+  <text x="557.0" y="170.6" font-size="12" fill="#166534" text-anchor="middle">一次基本转动，例如转九十度</text>
+  <rect x="25" y="213.5" width="700" height="58.5" rx="6" fill="#ffffff" stroke="#64748b"/>
+  <text x="375.0" y="237.6" font-size="13" fill="#1e293b" text-anchor="middle">图是无向的</text>
+  <text x="375.0" y="257.1" font-size="12" fill="#1e293b" text-anchor="middle">因为转动可以反着来</text>
+  <rect x="25" y="300.0" width="700" height="36.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="375.0" y="322.2" font-size="12" fill="#b45309" text-anchor="middle">这张图大到没法完整存下来，而讲义下面就要算它到底有多大</text>
+</svg>

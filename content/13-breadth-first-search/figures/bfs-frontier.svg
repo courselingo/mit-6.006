@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 292" width="750" height="292"
+     role="img" aria-labelledby="fig-bfs-frontier-title fig-bfs-frontier-desc">
+  <title id="fig-bfs-frontier-title">跑一遍那个例子：四层 frontier 依次是什么</title>
+  <desc id="fig-bfs-frontier-desc">讲义给了一个起点加七个顶点的例子。第一层 frontier 是起点自己；第二层是 a 与 x；第三层是 z、d、c；第四层是 f 与 v。讲义特意标了一句：第三层里之所以没有 x、c、d，是因为它们在前面的层里已经出现过。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="750" height="292" fill="#ffffff"/>
+  <text x="375.0" y="32" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">跑一遍那个例子：四层 frontier 依次是什么</text>
+  <rect x="25" y="60" width="700" height="39.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="375.0" y="84.0" font-size="13" fill="#1e40af" text-anchor="middle">起点 s 出发，四层依次展开</text>
+  <rect x="25" y="127.0" width="154" height="58.5" rx="6" fill="#ffffff" stroke="#64748b"/>
+  <text x="102.0" y="151.1" font-size="13" fill="#1e293b" text-anchor="middle">第一层</text>
+  <text x="102.0" y="170.6" font-size="12" fill="#1e293b" text-anchor="middle">{s}</text>
+  <rect x="207" y="127.0" width="154" height="58.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="284.0" y="151.1" font-size="13" fill="#1e40af" text-anchor="middle">第二层</text>
+  <text x="284.0" y="170.6" font-size="12" fill="#1e40af" text-anchor="middle">{a, x}</text>
+  <rect x="389" y="127.0" width="154" height="58.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="466.0" y="151.1" font-size="13" fill="#1e40af" text-anchor="middle">第三层</text>
+  <text x="466.0" y="170.6" font-size="12" fill="#1e40af" text-anchor="middle">{z, d, c}</text>
+  <rect x="571" y="127.0" width="154" height="58.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="648.0" y="151.1" font-size="13" fill="#166534" text-anchor="middle">第四层</text>
+  <text x="648.0" y="170.6" font-size="12" fill="#166534" text-anchor="middle">{f, v}</text>
+  <rect x="25" y="213.5" width="700" height="54.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="375.0" y="235.7" font-size="12" fill="#b45309" text-anchor="middle">第三层本来还能连到 x、c、d，而它们已经被前面几层收走了</text>
+  <text x="375.0" y="253.7" font-size="12" fill="#b45309" text-anchor="middle">「已经见过就不再收」这一条在这里看得最清楚</text>
+</svg>

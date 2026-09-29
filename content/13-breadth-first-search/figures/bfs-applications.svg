@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 324" width="750" height="324"
+     role="img" aria-labelledby="fig-bfs-applications-title fig-bfs-applications-desc">
+  <title id="fig-bfs-applications-title">图搜索能用的地方，讲义一口气列了七类</title>
+  <desc id="fig-bfs-applications-desc">讲义列的用途包括：爬网页（搜索引擎靠它找页面）、社交网络里的找朋友、网络里的广播路由、垃圾回收、有限状态机上的模型检验、检验数学猜想、以及解谜与游戏。它们的共同点是状态与转移构成一张图，而我们想在图上从某处出发找点什么。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="750" height="324" fill="#ffffff"/>
+  <text x="375.0" y="32" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">图搜索能用的地方，讲义一口气列了七类</text>
+  <rect x="25" y="60" width="700" height="39.0" rx="6" fill="#ffffff" stroke="#64748b"/>
+  <text x="375.0" y="84.0" font-size="13" fill="#1e293b" text-anchor="middle">七类用途，共同点是「状态加转移构成一张图」</text>
+  <rect x="25" y="127.0" width="336" height="90.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="193.0" y="149.2" font-size="12" fill="#1e40af" text-anchor="middle">爬网页</text>
+  <text x="193.0" y="167.2" font-size="12" fill="#1e40af" text-anchor="middle">社交找朋友</text>
+  <text x="193.0" y="185.2" font-size="12" fill="#1e40af" text-anchor="middle">广播路由</text>
+  <text x="193.0" y="203.2" font-size="12" fill="#1e40af" text-anchor="middle">垃圾回收</text>
+  <rect x="389" y="127.0" width="336" height="90.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="557.0" y="158.2" font-size="12" fill="#1e40af" text-anchor="middle">模型检验</text>
+  <text x="557.0" y="176.2" font-size="12" fill="#1e40af" text-anchor="middle">检验猜想</text>
+  <text x="557.0" y="194.2" font-size="12" fill="#1e40af" text-anchor="middle">解谜与游戏</text>
+  <rect x="25" y="245.0" width="700" height="54.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="375.0" y="267.2" font-size="12" fill="#b45309" text-anchor="middle">它们要的东西并不相同：有的要找一条路径，有的要访问全部可达顶点</text>
+  <text x="375.0" y="285.2" font-size="12" fill="#b45309" text-anchor="middle">而这两件事用同一套逐层展开就能办到</text>
+</svg>

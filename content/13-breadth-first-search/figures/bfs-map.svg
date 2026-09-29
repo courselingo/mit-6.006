@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 292" width="750" height="292"
+     role="img" aria-labelledby="fig-bfs-map-title fig-bfs-map-desc">
+  <title id="fig-bfs-map-title">这一讲的三件事：应用、表示、以及逐层搜索本身</title>
+  <desc id="fig-bfs-map-desc">讲义第一页的目录分三块。第一块是图搜索能用来做什么；第二块是图在机器里怎么表示；第三块才是搜索算法本身。三块的顺序有讲究：先把用途铺开，再定下数据的存法，最后才写算法，因为算法的代价直接取决于第二块怎么选。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="750" height="292" fill="#ffffff"/>
+  <text x="375.0" y="32" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">这一讲的三件事：应用、表示、以及逐层搜索本身</text>
+  <rect x="25" y="60" width="700" height="39.0" rx="6" fill="#ffffff" stroke="#64748b"/>
+  <text x="375.0" y="84.0" font-size="13" fill="#1e293b" text-anchor="middle">三块，顺序有讲究</text>
+  <rect x="25" y="127.0" width="214" height="58.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="132.0" y="151.1" font-size="13" fill="#1e40af" text-anchor="middle">应用</text>
+  <text x="132.0" y="170.6" font-size="12" fill="#1e40af" text-anchor="middle">图搜索能做什么</text>
+  <rect x="267" y="127.0" width="214" height="58.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="374.0" y="151.1" font-size="13" fill="#1e40af" text-anchor="middle">表示</text>
+  <text x="374.0" y="170.6" font-size="12" fill="#1e40af" text-anchor="middle">图在机器里怎么存</text>
+  <rect x="509" y="127.0" width="214" height="58.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="616.0" y="151.1" font-size="13" fill="#166534" text-anchor="middle">搜索</text>
+  <text x="616.0" y="170.6" font-size="12" fill="#166534" text-anchor="middle">逐层展开</text>
+  <rect x="25" y="213.5" width="700" height="54.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="375.0" y="235.7" font-size="12" fill="#b45309" text-anchor="middle">先铺用途，再定存法，最后写算法</text>
+  <text x="375.0" y="253.7" font-size="12" fill="#b45309" text-anchor="middle">因为算法的代价直接取决于第二块怎么选</text>
+</svg>

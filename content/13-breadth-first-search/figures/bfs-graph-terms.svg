@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 361" width="750" height="361"
+     role="img" aria-labelledby="fig-bfs-graph-terms-title fig-bfs-graph-terms-desc">
+  <title id="fig-bfs-graph-terms-title">图就是两个集合，而边的方向决定它是哪种图</title>
+  <desc id="fig-bfs-graph-terms-desc">讲义先复习定义：图由顶点集与边集组成，顶点带任意标签，边是顶点对。而顶点对是有序还是无序，决定了这张图是有向还是无向：有序对是有向边，无序对是无向边。讲义给的两张例子图，顶点数分别是四和三。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="750" height="361" fill="#ffffff"/>
+  <text x="375.0" y="32" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">图就是两个集合，而边的方向决定它是哪种图</text>
+  <rect x="25" y="60" width="700" height="39.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="375.0" y="84.0" font-size="13" fill="#1e40af" text-anchor="middle">图 G 由顶点集 V 与边集 E 组成</text>
+  <rect x="25" y="127.0" width="336" height="58.5" rx="6" fill="#ffffff" stroke="#64748b"/>
+  <text x="193.0" y="151.1" font-size="13" fill="#1e293b" text-anchor="middle">顶点</text>
+  <text x="193.0" y="170.6" font-size="12" fill="#1e293b" text-anchor="middle">带任意标签，不一定是数字</text>
+  <rect x="389" y="127.0" width="336" height="58.5" rx="6" fill="#ffffff" stroke="#64748b"/>
+  <text x="557.0" y="151.1" font-size="13" fill="#1e293b" text-anchor="middle">边</text>
+  <text x="557.0" y="170.6" font-size="12" fill="#1e293b" text-anchor="middle">顶点对</text>
+  <rect x="25" y="213.5" width="700" height="58.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="375.0" y="237.6" font-size="13" fill="#166534" text-anchor="middle">有序对 ⇒ 有向边</text>
+  <text x="375.0" y="257.1" font-size="13" fill="#166534" text-anchor="middle">无序对 ⇒ 无向边</text>
+  <rect x="25" y="300.0" width="700" height="36.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="375.0" y="322.2" font-size="12" fill="#b45309" text-anchor="middle">方向这件事后面会反复用到：邻接表里存的是出边，而遍历时要按方向走</text>
+</svg>

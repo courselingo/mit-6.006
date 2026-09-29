@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 292" width="750" height="292"
+     role="img" aria-labelledby="fig-bfs-levels-title fig-bfs-levels-desc">
+  <title id="fig-bfs-levels-title">逐层展开：第 i 层是走 i 条边能到、而更少步到不了的顶点</title>
+  <desc id="fig-bfs-levels-desc">讲义把逐层这件事说得很干净：第零层只有起点；第 i 层是那些能用 i 条边的路径到达、但不能用更少边到达的顶点。造第 i 层的时候，把上一层每个顶点的所有出边都试一遍，而把之前各层已经出现过的顶点忽略掉。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="750" height="292" fill="#ffffff"/>
+  <text x="375.0" y="32" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">逐层展开：第 i 层是走 i 条边能到、而更少步到不了的顶点</text>
+  <rect x="25" y="60" width="700" height="39.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="375.0" y="84.0" font-size="13" fill="#1e40af" text-anchor="middle">第 0 层 = {s}；第 i 层 = 走 i 条边能到而更少步到不了</text>
+  <rect x="25" y="127.0" width="336" height="58.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="193.0" y="151.1" font-size="13" fill="#1e40af" text-anchor="middle">怎么造下一层</text>
+  <text x="193.0" y="170.6" font-size="12" fill="#1e40af" text-anchor="middle">试上一层的所有出边</text>
+  <rect x="389" y="127.0" width="336" height="58.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="557.0" y="151.1" font-size="13" fill="#1e40af" text-anchor="middle">怎么去重</text>
+  <text x="557.0" y="170.6" font-size="12" fill="#1e40af" text-anchor="middle">忽略之前各层出现过的顶点</text>
+  <rect x="25" y="213.5" width="700" height="54.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="375.0" y="235.7" font-size="12" fill="#b45309" text-anchor="middle">「更少步到不了」这个限定是全部要害</text>
+  <text x="375.0" y="253.7" font-size="12" fill="#b45309" text-anchor="middle">它保证了每个顶点只会进某一层一次，而那一条正是后面线性时间的根据</text>
+</svg>

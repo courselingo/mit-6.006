@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 379" width="750" height="379"
+     role="img" aria-labelledby="fig-bfs-linear-time-title fig-bfs-linear-time-desc">
+  <title id="fig-bfs-linear-time-title">为什么是线性：每个顶点的邻居表只会被翻一遍</title>
+  <desc id="fig-bfs-linear-time-desc">分析只有两步。第一步：每个顶点进入 next 之后就不再进入，因为它已经被赋了层号（起点是那个不需要赋号的例外）。第二步：既然每个顶点只进一次 frontier，那它的邻居表 Adj[v] 就只会被翻一遍。于是全部翻表的总量是所有顶点的邻居表长度之和，在有向图里是边数，在无向图里是边数的两倍。所以时间是 O(E)。如果要连那些从起点到不了的顶点也列出来，总代价是 O(V+E)，讲义把它叫线性时间。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="750" height="379" fill="#ffffff"/>
+  <text x="375.0" y="32" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">为什么是线性：每个顶点的邻居表只会被翻一遍</text>
+  <rect x="25" y="60" width="700" height="39.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="375.0" y="84.0" font-size="13" fill="#1e40af" text-anchor="middle">第一步：每个顶点只进 next 一次</text>
+  <rect x="25" y="127.0" width="700" height="58.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="375.0" y="151.1" font-size="13" fill="#166534" text-anchor="middle">第二步：所以每张邻居表只翻一遍</text>
+  <text x="375.0" y="170.6" font-size="12" fill="#166534" text-anchor="middle">总量 = Σ|Adj[v]|</text>
+  <rect x="25" y="213.5" width="214" height="58.5" rx="6" fill="#ffffff" stroke="#64748b"/>
+  <text x="132.0" y="237.6" font-size="13" fill="#1e293b" text-anchor="middle">有向图</text>
+  <text x="132.0" y="257.1" font-size="12" fill="#1e293b" text-anchor="middle">= |E|</text>
+  <rect x="267" y="213.5" width="214" height="58.5" rx="6" fill="#ffffff" stroke="#64748b"/>
+  <text x="374.0" y="237.6" font-size="13" fill="#1e293b" text-anchor="middle">无向图</text>
+  <text x="374.0" y="257.1" font-size="12" fill="#1e293b" text-anchor="middle">= 2|E|</text>
+  <rect x="509" y="213.5" width="214" height="58.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="616.0" y="237.6" font-size="13" fill="#166534" text-anchor="middle">含不可达顶点</text>
+  <text x="616.0" y="257.1" font-size="12" fill="#166534" text-anchor="middle">O(V+E)</text>
+  <rect x="25" y="300.0" width="700" height="54.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="375.0" y="322.2" font-size="12" fill="#b45309" text-anchor="middle">两步是连着的：第一步不成立，第二步就不成立</text>
+  <text x="375.0" y="340.2" font-size="12" fill="#b45309" text-anchor="middle">而第一步成立的原因是那个「更少步到不了」的限定</text>
+</svg>

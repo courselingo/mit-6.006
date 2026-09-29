@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 307" width="750" height="307"
+     role="img" aria-labelledby="fig-bfs-algorithm-title fig-bfs-algorithm-desc">
+  <title id="fig-bfs-algorithm-title">算法骨架：三个字典加一个会换掉的 frontier</title>
+  <desc id="fig-bfs-algorithm-desc">讲义给的伪代码里，level 记每个顶点在第几层，parent 记它是从哪个顶点来的，frontier 是上一层，next 是正在造的下一层。外层循环每转一圈，frontier 整个换成 next。讲义说队列版本的实现可以去看 CLRS。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="750" height="307" fill="#ffffff"/>
+  <text x="375.0" y="32" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">算法骨架：三个字典加一个会换掉的 frontier</text>
+  <rect x="25" y="60" width="700" height="54.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="375.0" y="82.2" font-size="12" fill="#1e40af" text-anchor="middle">level 记层号 ｜ parent 记来路 ｜ frontier 是上一层</text>
+  <text x="375.0" y="100.2" font-size="12" fill="#1e40af" text-anchor="middle">每轮：把 frontier 整个换成 next，层号加一</text>
+  <rect x="25" y="142.0" width="336" height="58.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="193.0" y="166.1" font-size="13" fill="#166534" text-anchor="middle">进入 next 的条件</text>
+  <text x="193.0" y="185.6" font-size="12" fill="#166534" text-anchor="middle">还没被赋过层号</text>
+  <rect x="389" y="142.0" width="336" height="58.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="557.0" y="166.1" font-size="13" fill="#166534" text-anchor="middle">于是</text>
+  <text x="557.0" y="185.6" font-size="12" fill="#166534" text-anchor="middle">每个顶点只会被放进 next 一次</text>
+  <rect x="25" y="228.5" width="700" height="54.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="375.0" y="250.7" font-size="12" fill="#b45309" text-anchor="middle">frontier 这个变量是整个算法的状态</text>
+  <text x="375.0" y="268.7" font-size="12" fill="#b45309" text-anchor="middle">它不是累加，而是整批替换，这一点与前面那些排序算法不同</text>
+</svg>
