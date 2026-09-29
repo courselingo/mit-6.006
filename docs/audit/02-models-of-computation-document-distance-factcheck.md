@@ -1,10 +1,12 @@
 # 事实核对 · MIT 6.006 第 2 讲 计算模型与文档距离
 
 - 核对人：非作者（`fig-pruner`。**没有**参与本讲任何一轮写作，也没有与作者 `mit6006-author` 讨论过本讲内容）
-- 核对日期：2026-09-29
-- 被核对版本：`content/02-models-of-computation-document-distance/index.md`，归一化 SHA256 前16 = **D191F6A3DCE5CBB8**
-  （全 64 位 `D191F6A3DCE5CBB886543A03930B81DCCFE02205DEF5E400D7540BB27FBB586D`，14715 B）
+- 核对日期：2026-09-29（**同日重钉，见文末「重钉」一节**）
+- 被核对版本：`content/02-models-of-computation-document-distance/index.md`
+  - **旧基线**：归一化 SHA256 前16 = **D191F6A3DCE5CBB8**（全 64 位 `D191F6A3DCE5CBB886543A03930B81DCCFE02205DEF5E400D7540BB27FBB586D`，14715 B）⇒ §P0/§P1/§P2 的 12 条针对这一版
+  - **当前基线（重钉）**：归一化 SHA256 前16 = **505A19BA71BB829F**（全 64 位 `505A19BA71BB829F012C9EA526D4CD6B4C2C56345C916ABDCB63C32AB464572F`，16255 B，即作者 `2d46af3` 交付的版本）⇒ §重钉 一节针对这一版
   - 归一化 = `path.read_bytes().replace(b"\r\n", b"\n")` 之后再算 SHA256（工作区 CRLF、git 存 LF）
+  - 重钉时一并核到本页配图：`figures/model-of-computation.svg` 归一化 SHA256 前16 = `9A7155CC8B390CE5`（2378 B）
 - 源材料（本次实际依据的，逐个列出）：
   1. **6.006 Fall 2011 Lecture 2 typed notes**（8 页；第 8 页是 OCW 版权页）
      - 抓取 URL：<https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/6b9b20992d8c6a0f3f10a34ff7878aa9_MIT6_006F11_lec02.pdf>
@@ -17,7 +19,9 @@
 
 ## 结论
 
-P0（事实错误）：**2 条** ｜ P1（易误解/依据不足）：**5 条** ｜ P2（措辞）：**5 条**
+**旧基线 `D191F6A3DCE5CBB8`**：P0（事实错误）**2 条** ｜ P1（易误解/依据不足）**5 条** ｜ P2（措辞）**5 条**（共 12 条，逐条见下）
+
+**当前基线 `505A19BA71BB829F`（重钉）**：P0 **0 条** ｜ P1 **0 条** ｜ P2 **1 条**（12 条全部闭合；新增 1 条可选观察，见 §重钉）
 
 ## P0 · 事实错误
 
@@ -82,4 +86,31 @@ P0（事实错误）：**2 条** ｜ P1（易误解/依据不足）：**5 条** 
 
 ---
 
-**核对人声明**：本记录只覆盖开头钉住的基线版本（前16 `D191F6A3DCE5CBB8`）。页面若再改动，结论不自动成立。本记录**不修改**任何正文、配图或 `status`——`status` 由 Lead 处理。
+## 重钉 · 新基线 `505A19BA71BB829F`（作者 `2d46af3` 交付，2026-09-29）
+
+范围：**只**核作者声称改动的那 12 处（2 P0 + 5 P1 + 5 P2），并顺带核了同页被牵动的配图 `figures/model-of-computation.svg`（归一化前16 `9A7155CC8B390CE5`，2378 B）。
+
+| 原编号 | 新版本位置 | 判定 | 依据（新版本逐字 / 回源核对） |
+| --- | --- | --- | --- |
+| P0-1 指针机包含方向 | L46 | ✅ 已改对 | 「换句话说，**它能做的 RAM 都能做**，反过来不成立：RAM 能表达的东西更多。」与源 p.2 `weaker than (can be implemented on) RAM` 方向一致 |
+| P0-2 长文显得更远 | L81 | ✅ 已改对 | 「而这里的 \(d'\) 是距离，数大就代表远，于是结果成了「重合得越多反而显得越远」：长文档带着 99% 的重合，却比只有 10% 重合的短文档显得更远。」与源 p.5 `long documents with 99% same words seem farther than short documents with 10% same words` 一致 |
+| P1-1 `algorithm` 词源 | L18 + 溯源第 7 条（L155） | ✅ 已改对（归属已标） | 正文：「顺带说一句**讲义里没有写的事**：algorithm 这个词本身就是他名字的拉丁化（经中世纪拉丁语 algorismus）」；溯源第 7 条单列 |
+| P1-2 副标题三件事 | L14 | ✅ 已改对 | 「副标题是「**计算模型**、Python 的代价模型、文档距离」这三件事；讲义开头的 Lecture Overview 列的是**五条**：什么算算法与什么算时间、random access machine、pointer machine、Python 模型、以及 document distance」——与 OCW 资源页 `<title>` 及讲义 p.1 的五条 bullet 逐条一致 |
+| P1-3 讲义 Figure 1 读法 | L20 + 溯源第 8 条（L156） | ✅ 已改对，并采纳了「不推断箭头」这条限制 | 「两列三行：左列自上而下是 program、programming language、computer，右列自上而下是 algorithm、pseudocode、model of computation；图例 analog 在正上方，built on top of 在最右侧。…**不替它推断连线**」——与我解出的文本坐标（program 76.7／programming language 58.7+44.3／computer 22.5；algorithm 76.5／pseudocode 52.5／model of computation 29.0+14.6；analog 101.3,98.5；built on top of 234.8–240.5,68.5–54.1）**逐项一致** |
+| P1-4 `psuedopolynomial` 出处 | 溯源末段第二处登记（L158） | ✅ 已改对 | 「**OCW 日历页第 21 讲标题**里的 `psuedopolynomial` 是 OCW 原文的拼写（…本讲讲义只有 8 页，不存在第 21 页）」 |
+| P1-5 溯源「第一步」 | 溯源第 5 条（L153） | ✅ 已改对 | 「讲义把**第二步里「先排序」那条路线**的代价写成 O(k log k · \|word\|)」 |
+| P2-1 引文少 `bits` | L38 | ✅ 已改对 | 「讲义写的是 \(w \ge \lg(\text{memory size})\) **bits**。」 |
+| P2-2 「期望 Θ(1)」未标 | L105 + 溯源第 4 条（L152） | ✅ 已改对 | 「w.h.p. 说的是「高概率成立」；至于「字典的查找与插入是期望意义下 Θ(1)」**这半句是我们的补充**，讲义两处都只写了概率式（`θ(1) time w.h.p.` 与 `O(|doc|) w.h.p.`）」——所引两式我回源核过：p.4 与 p.6 逐字一致 |
+| P2-3 清单完整性 | L57 | ✅ 已改对 | 「（它另外还列了 `len(L)` 与 `L.sort()`，以及 tuple/str、dict、set、heapq、long 这几类的模型，这里只展开最常用的五项）」——与源 p.3–p.4 的 (f)(g) 与第 2–6 类逐项一致 |
+| P2-4 「讲义的两张 Figure」 | 溯源（L147） | ✅ 已改对 | 「讲义的两张**编号** Figure 与若干未编号示意图一律重画，不转载」 |
+| P2-5 「好几个数量级」没有出处 | L12 | ✅ 已改对 | 「耗时能差出好几个数量级（这个量级感来自讲义**第 7 页**那张实测表：228.1 秒到 0.2 秒）」——源 p.7 确实是那份实测表 |
+
+**12/12 全部改对；重钉范围内也没有发现改动引入新的、与源冲突的断言。**
+
+### 重钉时新增的一条 P2（可选，不影响事实）
+
+- **溯源第 8 条那句「箭头的指向…一个字都没有替它推断」指的是讲义 Figure 1；而本页自绘的 `model-of-computation.svg` 里有两条箭头（计算模型 → 程序、计算模型 → 算法）与一句注脚「计算模型给两者定价」。** 那两条箭头的依据是**讲义文字**（p.1 `cost of algorithm = sum of operation costs`），不是源图，所以不算错；但建议在溯源第 8 条补半句「本页自绘的模型图只按讲义文字画关系（p.1），不表示源图也是这个连法」，免得读者把两者混起来。
+
+---
+
+**核对人声明**：本记录有两份基线 —— 旧基线前16 `D191F6A3DCE5CBB8`（§P0／§P1／§P2 的 12 条）与当前基线前16 `505A19BA71BB829F`（§重钉）。**当前结论以 §重钉 为准**；页面若再改动，结论不自动成立。本记录**不修改**任何正文、配图或 `status`——`status` 由 Lead 处理。
