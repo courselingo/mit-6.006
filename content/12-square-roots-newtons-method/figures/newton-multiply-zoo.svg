@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 306" width="750" height="306"
+     role="img" aria-labelledby="fig-newton-multiply-zoo-title fig-newton-multiply-zoo-desc">
+  <title id="fig-newton-multiply-zoo-title">讲义顺手回顾的乘法五条，一条比一条快</title>
+  <desc id="fig-newton-multiply-zoo-desc">讲义把当时已知的高精度乘法列了五条：朴素分治是 d 的平方；Karatsuba 是 d 的 1.584 次方；Toom-Cook 把它推广成切成 k 份，取 k=3 得到 d 的 1.465 次方；Schönhage-Strassen 用快速傅里叶变换做到几乎线性，是 d lg d lg lg d；Fürer 在 2007 年做到 n log n 乘上 2 的 log 星号 n 次方。讲义说这些在 gmpy 里都有。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="750" height="306" fill="#ffffff"/>
+  <text x="375.0" y="32" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">讲义顺手回顾的乘法五条，一条比一条快</text>
+  <rect x="25" y="60" width="700" height="39.0" rx="6" fill="#ffffff" stroke="#64748b"/>
+  <text x="375.0" y="84.0" font-size="13" fill="#1e293b" text-anchor="middle">五条乘法，指数一路往下走</text>
+  <rect x="25" y="127.0" width="700" height="72.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="375.0" y="149.2" font-size="12" fill="#1e40af" text-anchor="middle">朴素分治 Θ(d²) ｜ Karatsuba Θ(d^1.584) ｜ Toom-Cook Θ(d^1.465)</text>
+  <text x="375.0" y="167.2" font-size="12" fill="#1e40af" text-anchor="middle">Schönhage-Strassen Θ(d lg d lg lg d)（用快速傅里叶变换）</text>
+  <text x="375.0" y="185.2" font-size="12" fill="#1e40af" text-anchor="middle">Fürer (2007) Θ(n log n · 2^(O(log* n)))</text>
+  <rect x="25" y="227.0" width="700" height="54.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="375.0" y="249.2" font-size="12" fill="#b45309" text-anchor="middle">第五条里那个 log 星号，是把 log 反复作用到结果不大于 1 所需的最少次数</text>
+  <text x="375.0" y="267.2" font-size="12" fill="#b45309" text-anchor="middle">这份清单的作用是交代：乘法那一侧已经解决得差不多了，所以焦点转到除法</text>
+</svg>

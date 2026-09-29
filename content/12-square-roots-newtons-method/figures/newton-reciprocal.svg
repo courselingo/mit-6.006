@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 273" width="750" height="273"
+     role="img" aria-labelledby="fig-newton-reciprocal-title fig-newton-reciprocal-desc">
+  <title id="fig-newton-reciprocal-title">算 R/b 也用牛顿法，而这次的式子只需要乘</title>
+  <desc id="fig-newton-reciprocal-desc">讲义对 f(x) = 1/x − b/R 用牛顿法。这个函数的零点是 x = R/b，正是要算的东西。代入化简后得到 χ_(i+1) = 2χ_i − (b/R)·χ_i²。式子里只有乘法和一次除以 R，而除 R 是移位。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="750" height="273" fill="#ffffff"/>
+  <text x="375.0" y="32" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">算 R/b 也用牛顿法，而这次的式子只需要乘</text>
+  <rect x="25" y="60" width="700" height="39.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="375.0" y="84.0" font-size="13" fill="#1e40af" text-anchor="middle">对 f(x) = 1/x − b/R 用牛顿法，零点是 x = R/b</text>
+  <rect x="25" y="127.0" width="700" height="39.0" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="375.0" y="151.1" font-size="13" fill="#166534" text-anchor="middle">化简后：χᵢ₊₁ = 2χᵢ − (b/R)·χᵢ²</text>
+  <rect x="25" y="194.0" width="700" height="54.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="375.0" y="216.2" font-size="12" fill="#b45309" text-anchor="middle">这一步是整讲的枢纽：一个原本要除法的迭代，被换成了只乘不除的迭代</text>
+  <text x="375.0" y="234.2" font-size="12" fill="#b45309" text-anchor="middle">而代价是它每步要两次乘法，这也是后面算复杂度时那些规模不同的乘法的来源</text>
+</svg>

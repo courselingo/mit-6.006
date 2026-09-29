@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 292" width="750" height="292"
+     role="img" aria-labelledby="fig-newton-two-levels-title fig-newton-two-levels-desc">
+  <title id="fig-newton-two-levels-title">开方：两层牛顿法，而它的复杂度还是那一档</title>
+  <desc id="fig-newton-two-levels-desc">算开方要用两层牛顿法：外层对 f(x) = x² − a 用牛顿法求 √a，而它每步要一次除法；除法内部又是牛顿法，那是内层。如果一开始就把精度定成 d 位，那外层要 lg d 步，代价就写成 d^α lg d。可是我们并不需要一开始就给足精度。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="750" height="292" fill="#ffffff"/>
+  <text x="375.0" y="32" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">开方：两层牛顿法，而它的复杂度还是那一档</text>
+  <rect x="25" y="60" width="700" height="39.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="375.0" y="84.0" font-size="13" fill="#1e40af" text-anchor="middle">外层算 √a，每步一次除法；除法的内层也是牛顿法</text>
+  <rect x="25" y="127.0" width="336" height="58.5" rx="6" fill="#ffffff" stroke="#ef4444"/>
+  <text x="193.0" y="151.1" font-size="13" fill="#b45309" text-anchor="middle">若一开始就定 d 位</text>
+  <text x="193.0" y="170.6" font-size="12" fill="#b45309" text-anchor="middle">Θ(d^α · lg d)</text>
+  <rect x="389" y="127.0" width="336" height="58.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="557.0" y="151.1" font-size="13" fill="#166534" text-anchor="middle">而精度是从小长上来的</text>
+  <text x="557.0" y="170.6" font-size="12" fill="#166534" text-anchor="middle">同样的求和 ⇒ Θ(d^α)</text>
+  <rect x="25" y="213.5" width="700" height="54.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="375.0" y="235.7" font-size="12" fill="#b45309" text-anchor="middle">差别的来源只有一条：前期那几步用的位数本来就不需要那么多</text>
+  <text x="375.0" y="253.7" font-size="12" fill="#b45309" text-anchor="middle">于是「先少算、再补算」比「一开始就按最高精度算」更省</text>
+</svg>

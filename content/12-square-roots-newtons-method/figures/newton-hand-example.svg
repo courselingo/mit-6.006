@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 288" width="750" height="288"
+     role="img" aria-labelledby="fig-newton-hand-example-title fig-newton-hand-example-desc">
+  <title id="fig-newton-hand-example-title">一个能口算的例子：R=65536、b=5</title>
+  <desc id="fig-newton-hand-example-desc">讲义给的例子取 R = 2^16 = 65536、b = 5，要算的 R/b = 13107.2。初始猜 2^14 = 16384，然后三步走到 12288、13056、13107。第三步已经落到整数部分，而每一步里都只有乘法和移位。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="750" height="288" fill="#ffffff"/>
+  <text x="375.0" y="32" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">一个能口算的例子：R=65536、b=5</text>
+  <rect x="25" y="60" width="700" height="39.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="375.0" y="84.0" font-size="13" fill="#1e40af" text-anchor="middle">R = 65536，b = 5，目标 R/b = 13107.2</text>
+  <rect x="25" y="127.0" width="154" height="54.0" rx="6" fill="#ffffff" stroke="#64748b"/>
+  <text x="102.0" y="149.2" font-size="12" fill="#1e293b" text-anchor="middle">χ₀</text>
+  <text x="102.0" y="167.2" font-size="12" fill="#1e293b" text-anchor="middle">16384</text>
+  <rect x="207" y="127.0" width="154" height="54.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="284.0" y="149.2" font-size="12" fill="#1e40af" text-anchor="middle">χ₁</text>
+  <text x="284.0" y="167.2" font-size="12" fill="#1e40af" text-anchor="middle">12288</text>
+  <rect x="389" y="127.0" width="154" height="54.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="466.0" y="149.2" font-size="12" fill="#1e40af" text-anchor="middle">χ₂</text>
+  <text x="466.0" y="167.2" font-size="12" fill="#1e40af" text-anchor="middle">13056</text>
+  <rect x="571" y="127.0" width="154" height="54.0" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="648.0" y="149.2" font-size="12" fill="#166534" text-anchor="middle">χ₃</text>
+  <text x="648.0" y="167.2" font-size="12" fill="#166534" text-anchor="middle">13107</text>
+  <rect x="25" y="209.0" width="700" height="54.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="375.0" y="231.2" font-size="12" fill="#b45309" text-anchor="middle">四步之间隔的都是乘法与移位，没有出现除法</text>
+  <text x="375.0" y="249.2" font-size="12" fill="#b45309" text-anchor="middle">而误差那一格的推导说明为什么它这么快：ε 被平方</text>
+</svg>

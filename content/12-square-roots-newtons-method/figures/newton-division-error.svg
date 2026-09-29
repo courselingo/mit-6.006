@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 292" width="750" height="292"
+     role="img" aria-labelledby="fig-newton-division-error-title fig-newton-division-error-desc">
+  <title id="fig-newton-division-error-title">除法的误差分析：同一个平方，只是符号换了一下</title>
+  <desc id="fig-newton-division-error-desc">讲义设 χ_i = (R/b)(1+ε_i)，代进 χ_(i+1) = 2χ_i − (b/R)χ_i² 化简，得到 1 − ε_i²，也就是 ε_(i+1) = −ε_i²。误差同样被平方，只是每一步翻一次符号。所以除法和开方收敛得一样快。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="750" height="292" fill="#ffffff"/>
+  <text x="375.0" y="32" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">除法的误差分析：同一个平方，只是符号换了一下</text>
+  <rect x="25" y="60" width="700" height="39.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="375.0" y="84.0" font-size="13" fill="#1e40af" text-anchor="middle">设 χᵢ = (R/b)(1+εᵢ) ⇒ 化简得 1 − εᵢ²</text>
+  <rect x="25" y="127.0" width="336" height="58.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="193.0" y="151.1" font-size="13" fill="#166534" text-anchor="middle">于是 εᵢ₊₁ = −εᵢ²</text>
+  <text x="193.0" y="170.6" font-size="12" fill="#166534" text-anchor="middle">误差被平方，符号每步翻一次</text>
+  <rect x="389" y="127.0" width="336" height="58.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="557.0" y="151.1" font-size="13" fill="#b45309" text-anchor="middle">迭代次数的账</text>
+  <text x="557.0" y="170.6" font-size="12" fill="#b45309" text-anchor="middle">要 d 位，就要 lg d 步</text>
+  <rect x="25" y="213.5" width="700" height="54.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="375.0" y="235.7" font-size="12" fill="#b45309" text-anchor="middle">右边那一格是下一页要推翻的第一个直觉</text>
+  <text x="375.0" y="253.7" font-size="12" fill="#b45309" text-anchor="middle">因为「lg d 步」很容易被读成「比乘法慢 lg d 倍」</text>
+</svg>

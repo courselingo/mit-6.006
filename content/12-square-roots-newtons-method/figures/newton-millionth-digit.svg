@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 295" width="750" height="295"
+     role="img" aria-labelledby="fig-newton-millionth-digit-title fig-newton-millionth-digit-desc">
+  <title id="fig-newton-millionth-digit-title">想要 √2 的第一百万位，就先把它变成一个整数问题</title>
+  <desc id="fig-newton-millionth-digit-desc">讲义的目标是取 √2 的第一百万位。做法是把小数点移走：设 d = 10^6，则 √2 的第一百万位等于 √(2·10^(2d)) 取整数部分。于是「算一个无理数的很多位」被换成了「算一个整数的平方根取整」，后面全部讨论都落在这个整数问题上。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="750" height="295" fill="#ffffff"/>
+  <text x="375.0" y="32" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">想要 √2 的第一百万位，就先把它变成一个整数问题</text>
+  <rect x="25" y="60" width="700" height="42.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="375.0" y="85.9" font-size="14" fill="#1e40af" text-anchor="middle">目标：√2 的第一百万位</text>
+  <rect x="25" y="130.0" width="336" height="58.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="193.0" y="154.1" font-size="13" fill="#166534" text-anchor="middle">换成整数问题</text>
+  <text x="193.0" y="173.6" font-size="12" fill="#166534" text-anchor="middle">√(2·10^(2d)) 取整，d = 10^6</text>
+  <rect x="389" y="130.0" width="336" height="58.5" rx="6" fill="#ffffff" stroke="#64748b"/>
+  <text x="557.0" y="154.1" font-size="13" fill="#1e293b" text-anchor="middle">为什么可以换</text>
+  <text x="557.0" y="173.6" font-size="12" fill="#1e293b" text-anchor="middle">小数点只是记法，位数才是工作量</text>
+  <rect x="25" y="216.5" width="700" height="54.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="375.0" y="238.7" font-size="12" fill="#b45309" text-anchor="middle">这一步换法的意义：把「精度」这个说法变成「位数」这个可以数的量</text>
+  <text x="375.0" y="256.7" font-size="12" fill="#b45309" text-anchor="middle">后面所有的复杂度都用 d 来写，而 d 就是我们要求出的位数</text>
+</svg>

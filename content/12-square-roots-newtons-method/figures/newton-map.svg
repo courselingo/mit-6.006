@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 312" width="750" height="312"
+     role="img" aria-labelledby="fig-newton-map-title fig-newton-map-desc">
+  <title id="fig-newton-map-title">这一讲的四件事：回顾、除法、误差分析、终止性</title>
+  <desc id="fig-newton-map-desc">讲义第一页的目录分三块。第一块回顾前两讲的高精度算术与乘法；第二块是除法，含算法与误差分析；第三块是终止性。全讲的骨架就是：先承认开方要用除法，再把除法做出来，最后回答取整会不会卡住。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="750" height="312" fill="#ffffff"/>
+  <text x="375.0" y="32" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">这一讲的四件事：回顾、除法、误差分析、终止性</text>
+  <rect x="25" y="60" width="700" height="39.0" rx="6" fill="#ffffff" stroke="#64748b"/>
+  <text x="375.0" y="84.0" font-size="13" fill="#1e293b" text-anchor="middle">回顾：高精度算术与乘法</text>
+  <rect x="25" y="127.0" width="336" height="78.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="193.0" y="151.1" font-size="13" fill="#1e40af" text-anchor="middle">除法</text>
+  <text x="193.0" y="170.6" font-size="12" fill="#1e40af" text-anchor="middle">算法</text>
+  <text x="193.0" y="188.6" font-size="12" fill="#1e40af" text-anchor="middle">误差分析</text>
+  <rect x="389" y="127.0" width="336" height="78.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="557.0" y="160.8" font-size="13" fill="#b45309" text-anchor="middle">终止性</text>
+  <text x="557.0" y="180.3" font-size="12" fill="#b45309" text-anchor="middle">取整会不会卡住</text>
+  <rect x="25" y="233.0" width="700" height="54.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="375.0" y="255.2" font-size="12" fill="#b45309" text-anchor="middle">第二块是主体：它占的篇幅最长，而且分算法与误差两条线</text>
+  <text x="375.0" y="273.2" font-size="12" fill="#b45309" text-anchor="middle">第三块只有一页，而它问的是前两块都不管的那件事</text>
+</svg>

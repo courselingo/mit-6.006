@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 288" width="750" height="288"
+     role="img" aria-labelledby="fig-newton-division-cost-title fig-newton-division-cost-desc">
+  <title id="fig-newton-division-cost-title">为什么除法不比乘法贵：每一步的位数都在长</title>
+  <desc id="fig-newton-division-cost-desc">讲义先点出那个直觉：要 lg d 步，每步一次乘法，看起来除法应该是乘法的 lg d 倍。它接着推翻它。关键是每一步乘的两个数不一样大：开始很小，后来长到 d 位。把各步的代价加起来是一个等比级数，而它的和小于 2c·d^α，也就是同阶。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="750" height="288" fill="#ffffff"/>
+  <text x="375.0" y="32" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">为什么除法不比乘法贵：每一步的位数都在长</text>
+  <rect x="25" y="60" width="700" height="39.0" rx="6" fill="#ffffff" stroke="#ef4444"/>
+  <text x="375.0" y="84.0" font-size="13" fill="#b45309" text-anchor="middle">直觉：lg d 步 × 每步一次乘法 ⇒ 慢 lg d 倍</text>
+  <rect x="25" y="127.0" width="700" height="54.0" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="375.0" y="149.2" font-size="12" fill="#166534" text-anchor="middle">而每一步乘的数不一样大：c·1^α + c·2^α + c·4^α + … + c·(d/2)^α + c·d^α</text>
+  <text x="375.0" y="167.2" font-size="12" fill="#166534" text-anchor="middle">这个和小于 2c·d^α —— 同阶</text>
+  <rect x="25" y="209.0" width="700" height="54.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="375.0" y="231.2" font-size="12" fill="#b45309" text-anchor="middle">这里的 α 是乘法的指数：乘法的代价写成 Θ(d^α)</text>
+  <text x="375.0" y="249.2" font-size="12" fill="#b45309" text-anchor="middle">整页的要点是那个等比级数：后面算开方时会用同一个求和</text>
+</svg>

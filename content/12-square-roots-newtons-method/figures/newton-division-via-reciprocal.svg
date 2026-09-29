@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 292" width="750" height="292"
+     role="img" aria-labelledby="fig-newton-division-via-reciprocal-title fig-newton-division-via-reciprocal-desc">
+  <title id="fig-newton-division-via-reciprocal-title">除法的绕法：先算倒数，再乘一次</title>
+  <desc id="fig-newton-division-via-reciprocal-desc">讲义不直接算 a/b，而是先算 1/b 的高精度表示，再把 a 乘上去。为了让中间那一步好办，引入一个很大的 R，先算 R/b，最后把结果除以 R。取 R 为 2 的 k 次方时，除以 R 只是移位，不算真正的除法。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="750" height="292" fill="#ffffff"/>
+  <text x="375.0" y="32" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">除法的绕法：先算倒数，再乘一次</text>
+  <rect x="25" y="60" width="700" height="39.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="375.0" y="84.0" font-size="13" fill="#1e40af" text-anchor="middle">要算 a 除以 b，先算 1 除以 b 的高精度表示</text>
+  <rect x="25" y="127.0" width="336" height="58.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="193.0" y="151.1" font-size="13" fill="#166534" text-anchor="middle">引入一个大数 R</text>
+  <text x="193.0" y="170.6" font-size="12" fill="#166534" text-anchor="middle">先算 R/b，再除以 R</text>
+  <rect x="389" y="127.0" width="336" height="58.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="557.0" y="151.1" font-size="13" fill="#166534" text-anchor="middle">取 R = 2^k</text>
+  <text x="557.0" y="170.6" font-size="12" fill="#166534" text-anchor="middle">除以 R 变成移位，不算除法</text>
+  <rect x="25" y="213.5" width="700" height="54.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="375.0" y="235.7" font-size="12" fill="#b45309" text-anchor="middle">取二的幂这一步是整页的关键：它把「除法」这个难点挪出了内层循环</text>
+  <text x="375.0" y="253.7" font-size="12" fill="#b45309" text-anchor="middle">于是内层只剩乘法和移位，而乘法前面已经解决了</text>
+</svg>

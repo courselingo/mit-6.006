@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 292" width="750" height="292"
+     role="img" aria-labelledby="fig-newton-termination-title fig-newton-termination-desc">
+  <title id="fig-newton-termination-title">最后一个问题：取整会不会卡住</title>
+  <desc id="fig-newton-termination-desc">前面的推导都在实数上做，而程序里每一步都要取下整：χ_(i+1) = ⌊(χ_i + ⌊a/χ_i⌋)/2⌋。讲义把取整造成的那一点点差写成 γ，并证明 0 ≤ γ &lt; 1。于是每步至多减掉不到 1，而 χ_i + a/χ_i 那部分一直不小于 2√a，所以减完仍然不小于 ⌊√a⌋，不会掉到下面去。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="750" height="292" fill="#ffffff"/>
+  <text x="375.0" y="32" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">最后一个问题：取整会不会卡住</text>
+  <rect x="25" y="60" width="700" height="39.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="375.0" y="84.0" font-size="13" fill="#1e40af" text-anchor="middle">程序里每步取下整：χᵢ₊₁ = ⌊(χᵢ + ⌊a/χᵢ⌋)/2⌋</text>
+  <rect x="25" y="127.0" width="336" height="58.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="193.0" y="151.1" font-size="13" fill="#166534" text-anchor="middle">把取整的差写成 γ</text>
+  <text x="193.0" y="170.6" font-size="12" fill="#166534" text-anchor="middle">0 ≤ γ &lt; 1，每步至多减不到 1</text>
+  <rect x="389" y="127.0" width="336" height="58.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="557.0" y="151.1" font-size="13" fill="#166534" text-anchor="middle">而它不会掉下去</text>
+  <text x="557.0" y="170.6" font-size="12" fill="#166534" text-anchor="middle">减完仍 ≥ ⌊√a⌋，不会卡在下面</text>
+  <rect x="25" y="213.5" width="700" height="54.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="375.0" y="235.7" font-size="12" fill="#b45309" text-anchor="middle">讲义在这一页加了一个前提：初始猜测要满足 ε &lt; 1，否则上界那一边守不住</text>
+  <text x="375.0" y="253.7" font-size="12" fill="#b45309" text-anchor="middle">这一页是全讲唯一一处「数值方法回到离散」的地方</text>
+</svg>

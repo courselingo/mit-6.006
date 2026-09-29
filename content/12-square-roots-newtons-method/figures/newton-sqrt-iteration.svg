@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 295" width="750" height="295"
+     role="img" aria-labelledby="fig-newton-sqrt-iteration-title fig-newton-sqrt-iteration-desc">
+  <title id="fig-newton-sqrt-iteration-title">牛顿法算 √a：每步一次除法，这就是麻烦的入口</title>
+  <desc id="fig-newton-sqrt-iteration-desc">讲义给的迭代是 χ_0 = 1，χ_(i+1) = (χ_i + a/χ_i)/2。它收敛得很快，而每一步里那个 a/χ_i 是一次高精度除法。于是「怎么算开方」变成了「怎么算除法」。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="750" height="295" fill="#ffffff"/>
+  <text x="375.0" y="32" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">牛顿法算 √a：每步一次除法，这就是麻烦的入口</text>
+  <rect x="25" y="60" width="700" height="42.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="375.0" y="85.9" font-size="14" fill="#1e40af" text-anchor="middle">χ₀ = 1 ｜ χᵢ₊₁ = (χᵢ + a/χᵢ) / 2</text>
+  <rect x="25" y="130.0" width="336" height="58.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="193.0" y="154.1" font-size="13" fill="#166534" text-anchor="middle">它收敛得快</text>
+  <text x="193.0" y="173.6" font-size="12" fill="#166534" text-anchor="middle">正确位数每步大约翻倍</text>
+  <rect x="389" y="130.0" width="336" height="58.5" rx="6" fill="#ffffff" stroke="#ef4444"/>
+  <text x="557.0" y="154.1" font-size="13" fill="#b45309" text-anchor="middle">而每步要做一次</text>
+  <text x="557.0" y="173.6" font-size="12" fill="#b45309" text-anchor="middle">a 除以 χᵢ，高精度除法</text>
+  <rect x="25" y="216.5" width="700" height="54.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="375.0" y="238.7" font-size="12" fill="#b45309" text-anchor="middle">下一页把「收敛得快」写成一条可以推的式子</text>
+  <text x="375.0" y="256.7" font-size="12" fill="#b45309" text-anchor="middle">而右边那一格就是这一讲剩下全部内容的起因</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 292" width="750" height="292"
+     role="img" aria-labelledby="fig-newton-error-squaring-title fig-newton-error-squaring-desc">
+  <title id="fig-newton-error-squaring-title">收敛有多快：误差被平方掉</title>
+  <desc id="fig-newton-error-squaring-desc">讲义设 χ_n = √a·(1+ε_n)，把迭代代进去化简，得到 ε_(n+1) = ε_n²/(2(1+ε_n))。分子的平方是主要的那一项，所以误差大致被平方；而一个误差被平方，意味着正确位数翻倍。这叫平方收敛。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="750" height="292" fill="#ffffff"/>
+  <text x="375.0" y="32" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">收敛有多快：误差被平方掉</text>
+  <rect x="25" y="60" width="700" height="39.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="375.0" y="84.0" font-size="13" fill="#1e40af" text-anchor="middle">设 χₙ = √a·(1+εₙ) ⇒ εₙ₊₁ = εₙ² / (2(1+εₙ))</text>
+  <rect x="25" y="127.0" width="336" height="58.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="193.0" y="151.1" font-size="13" fill="#166534" text-anchor="middle">分子的平方是主导项</text>
+  <text x="193.0" y="170.6" font-size="12" fill="#166534" text-anchor="middle">误差被平方掉</text>
+  <rect x="389" y="127.0" width="336" height="58.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="557.0" y="151.1" font-size="13" fill="#166534" text-anchor="middle">于是正确位数翻倍</text>
+  <text x="557.0" y="170.6" font-size="12" fill="#166534" text-anchor="middle">这就是「平方收敛」</text>
+  <rect x="25" y="213.5" width="700" height="54.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="375.0" y="235.7" font-size="12" fill="#b45309" text-anchor="middle">注意分母里的 (1+εₙ)：只要 εₙ 还没大到接近 1，它就只是个接近 1 的系数</text>
+  <text x="375.0" y="253.7" font-size="12" fill="#b45309" text-anchor="middle">而这也是下面讨论终止性时那个「初始猜测要好」的来源</text>
+</svg>
