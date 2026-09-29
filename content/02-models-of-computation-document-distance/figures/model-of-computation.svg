@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 247" width="760" height="247"
      role="img" aria-labelledby="fig-model-of-computation-title fig-model-of-computation-desc">
   <title id="fig-model-of-computation-title">程序、算法与计算模型的关系</title>
-  <desc id="fig-model-of-computation-desc">上排是程序与算法，下排是计算模型：计算模型规定算法允许哪些操作、每个操作多少代价，算法代价就是它用到的所有操作代价之和。</desc>
+  <desc id="fig-model-of-computation-desc">上排左边是程序，右边是算法（程序背后的数学抽象）；下排是计算模型：它规定算法允许哪些操作、每个操作多少代价，算法代价就是它用到的所有操作代价之和。</desc>
 
   <defs>
     <style>
@@ -15,16 +15,16 @@
 
   <rect x="0" y="0" width="760" height="247" fill="#ffffff"/>
   <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">程序、算法与计算模型的关系</text>
-  <rect x="22" y="64" width="353" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="198.5" y="86" font-size="12" fill="#1e40af" text-anchor="middle">程序</text>
-  <text x="198.5" y="104" font-size="12" fill="#1e40af" text-anchor="middle">用编程语言或伪代码写出</text>
-  <rect x="400" y="64" width="338" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
-  <text x="569" y="86" font-size="12" fill="#166534" text-anchor="middle">算法</text>
-  <text x="569" y="104" font-size="12" fill="#166534" text-anchor="middle">可以在计算机上执行</text>
+  <rect x="22" y="64" width="345.5" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194.75" y="86" font-size="12" fill="#1e40af" text-anchor="middle">程序</text>
+  <text x="194.75" y="104" font-size="12" fill="#1e40af" text-anchor="middle">用编程语言或伪代码写出</text>
+  <rect x="392.5" y="64" width="345.5" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="565.25" y="86" font-size="12" fill="#166534" text-anchor="middle">算法</text>
+  <text x="565.25" y="104" font-size="12" fill="#166534" text-anchor="middle">程序背后的数学抽象</text>
   <rect x="22" y="143" width="716" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
   <text x="380" y="165" font-size="12" fill="#b45309" text-anchor="middle">计算模型</text>
   <text x="380" y="183" font-size="12" fill="#b45309" text-anchor="middle">规定允许哪些操作、每个操作花多少代价</text>
-  <path d="M198.5,138 L 198.5,129" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
-  <path d="M569,138 L 569,129" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
-  <text x="380" y="222" font-size="10" fill="#64748b" text-anchor="middle">算法代价 = 用到的操作代价之和；所以先得有「一步值多少」</text>
+  <path d="M194.75,138 L 194.75,129" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M565.25,138 L 565.25,129" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <text x="380" y="222" font-size="10" fill="#64748b" text-anchor="middle">算法是抽象，程序是它落到某种语言上的样子；计算模型给两者定价</text>
 </svg>

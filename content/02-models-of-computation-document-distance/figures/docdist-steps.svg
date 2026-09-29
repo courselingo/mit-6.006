@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 225" width="760" height="225"
      role="img" aria-labelledby="fig-docdist-steps-title fig-docdist-steps-desc">
   <title id="fig-docdist-steps-title">文档距离的三步与各自代价：拆词、计数、点积</title>
-  <desc id="fig-docdist-steps-desc">第一步把文档切成词，逐字符扫一遍是 Θ(|doc|)；第二步计数，排序法是 O(k log k)，字典法是 O(|doc|) 但只在高概率下成立；第三步算点积，双重循环是 O(k₁·k₂)，两份表排好序后可以归并式地降到 O(k₁+k₂)。</desc>
+  <desc id="fig-docdist-steps-desc">第一步把文档切成词，逐字符扫一遍是 Θ(|doc|)；第二步计数，排序法是 O(|doc| log |doc|)，字典法是 O(|doc|) 但只在高概率下成立；第三步算点积，双重循环是 O(u₁·u₂)，归并式是 O(u₁+u₂)，u 是不同词数。w.h.p. 说的是高概率成立，代价是期望代价，两者不是一回事。</desc>
 
   <defs>
     <style>
@@ -27,10 +27,10 @@
   <text x="133" y="145" font-size="11" fill="#b45309" text-anchor="middle">逐字符扫一遍</text>
   <text x="133" y="162" font-size="11" fill="#b45309" text-anchor="middle">Θ(|doc|)，正则可能指数级</text>
   <rect x="269" y="125" width="222" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
-  <text x="380" y="145" font-size="11" fill="#b45309" text-anchor="middle">排序法 O(k log k)</text>
+  <text x="380" y="145" font-size="11" fill="#b45309" text-anchor="middle">排序法 O(|doc| log |doc|)</text>
   <text x="380" y="162" font-size="11" fill="#b45309" text-anchor="middle">或字典法 O(|doc|) w.h.p.</text>
   <rect x="516" y="125" width="222" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
-  <text x="627" y="145" font-size="11" fill="#b45309" text-anchor="middle">双重循环 O(k₁·k₂)</text>
-  <text x="627" y="162" font-size="11" fill="#b45309" text-anchor="middle">或归并式 O(k₁+k₂)</text>
-  <text x="380" y="199" font-size="10" fill="#64748b" text-anchor="middle">第二步的 w.h.p. 是期望代价，最坏情况会退化，那是第三单元要处理的事</text>
+  <text x="627" y="145" font-size="11" fill="#b45309" text-anchor="middle">双重循环 O(u₁·u₂)</text>
+  <text x="627" y="162" font-size="11" fill="#b45309" text-anchor="middle">或归并式 O(u₁+u₂)，u 是不同词数</text>
+  <text x="380" y="199" font-size="10" fill="#64748b" text-anchor="middle">第二步 w.h.p. 成立，代价是期望代价；这与最坏情况不是一回事</text>
 </svg>

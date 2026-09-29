@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 235" width="760" height="235"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 273" width="760" height="273"
      role="img" aria-labelledby="fig-document-distance-vectors-title fig-document-distance-vectors-desc">
   <title id="fig-document-distance-vectors-title">文档距离：把文档变成词向量，用夹角表示距离</title>
-  <desc id="fig-document-distance-vectors-desc">两篇文档先变成词向量，每一维是一个出现过的词，坐标是出现次数；点积除以两个向量的长度再做反余弦，得到两个向量的夹角：0 度说明完全相同，90 度说明没有共同词。</desc>
+  <desc id="fig-document-distance-vectors-desc">两篇文档先切出词，词表是两篇共用的一套维度，每维的坐标是这个词在该文档里的出现次数；先算点积，再除以两个向量的长度，最后取反余弦，得到两个向量的夹角：0 度说明完全相同，90 度说明没有共同词。</desc>
 
   <defs>
     <style>
@@ -13,20 +13,24 @@
     </marker>
   </defs>
 
-  <rect x="0" y="0" width="760" height="235" fill="#ffffff"/>
+  <rect x="0" y="0" width="760" height="273" fill="#ffffff"/>
   <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">文档距离：把文档变成词向量，用夹角表示距离</text>
-  <rect x="22" y="64" width="353" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="198.5" y="86" font-size="12" fill="#1e40af" text-anchor="middle">D1：the cat</text>
-  <rect x="400" y="64" width="338" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
-  <text x="569" y="86" font-size="12" fill="#166534" text-anchor="middle">D2：the dog</text>
-  <rect x="22" y="125" width="222" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
-  <text x="133" y="147" font-size="12" fill="#b45309" text-anchor="middle">the</text>
-  <rect x="269" y="125" width="222" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
-  <text x="380" y="147" font-size="12" fill="#b45309" text-anchor="middle">cat</text>
-  <rect x="516" y="125" width="222" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
-  <text x="627" y="147" font-size="12" fill="#b45309" text-anchor="middle">dog</text>
-  <text x="133" y="182" font-size="10" fill="#64748b" text-anchor="middle">D1 是 1，D2 是 1</text>
-  <text x="380" y="182" font-size="10" fill="#64748b" text-anchor="middle">D1 是 1，D2 是 0</text>
-  <text x="627" y="182" font-size="10" fill="#64748b" text-anchor="middle">D1 是 0，D2 是 1</text>
-  <text x="380" y="210" font-size="10" fill="#64748b" text-anchor="middle">两个向量除以各自长度后取反余弦：夹角 0 度全同，90 度没有共同词</text>
+  <rect x="22" y="64" width="345.5" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194.75" y="86" font-size="12" fill="#1e40af" text-anchor="middle">D1：the cat</text>
+  <rect x="392.5" y="64" width="345.5" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="565.25" y="86" font-size="12" fill="#166534" text-anchor="middle">D2：the dog</text>
+  <path d="M194.75,105 L 194.75,114" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M565.25,105 L 565.25,114" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <rect x="22" y="125" width="716" height="95" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="6,4"/>
+  <text x="32" y="141" font-size="11" fill="#64748b">词表：两篇共用一套维度</text>
+  <rect x="32" y="155" width="215.33" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="139.66500000000002" y="177" font-size="12" fill="#b45309" text-anchor="middle">the</text>
+  <rect x="272.33000000000004" y="155" width="215.33" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="379.99500000000006" y="177" font-size="12" fill="#b45309" text-anchor="middle">cat</text>
+  <rect x="512.6600000000001" y="155" width="215.33" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="620.325" y="177" font-size="12" fill="#b45309" text-anchor="middle">dog</text>
+  <text x="139.67" y="212" font-size="10" fill="#64748b" text-anchor="middle">D1 是 1，D2 是 1</text>
+  <text x="380" y="212" font-size="10" fill="#64748b" text-anchor="middle">D1 是 1，D2 是 0</text>
+  <text x="620.33" y="212" font-size="10" fill="#64748b" text-anchor="middle">D1 是 0，D2 是 1</text>
+  <text x="380" y="248" font-size="10" fill="#64748b" text-anchor="middle">先算点积，再除以两个向量的长度，最后取反余弦：夹角 0 度全同，90 度没有共同词</text>
 </svg>
